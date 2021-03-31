@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Box</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
+    
     <!--Set up for loop to iterate through the recipes in our database and display the contents of each field-->
     {% for recipe in recipes %}
         {{ recipe.recipe_name }}<br>
@@ -17,5 +12,5 @@
         {{ recipe.method }}<br>
         {{ recipe.added_by }}<br>
     {% endfor %}
-</body>
-</html>
+
+{% endblock %}

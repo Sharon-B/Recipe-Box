@@ -17,11 +17,17 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 # Set up secret key
 app.secret_key = os.environ.get("SECRET_KEY")
 
+# Create an instance of PyMongo
+mongo = PyMongo(app)
 
-# Tester function
+
 @app.route("/")
-def hello():
-    return "Hello World!"
+# Check we are connected to MongoDB by getting info from our sample
+# recipe in our database and rendering it in recipes.html
+@app.route("/get_recipes")
+def get_recipes():
+    recipes = mongo.db.recipes.find()
+    return render_template("recipes.html", recipes=recipes)
 
 
 # Set how & where to run the app

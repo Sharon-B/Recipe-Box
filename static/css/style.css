@@ -8,9 +8,16 @@
     font-size: 10px;
 }
 
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 /*------ Colors -------*/
 
-#bg-header-color {
+#bg-header-color,
+#bg-color-footer {
     background-color: #9FD1D9;
 }
 
@@ -37,4 +44,32 @@
 
 .nav-item {
     padding-left: 1.2rem;
+}
+
+/*------ Footer -------*/
+
+.footer {
+    min-height: 5.5rem;
+    margin-top: auto;
+}
+
+#social-icon-links {
+    list-style: none;
+    text-align: right;
+    padding-top: 1rem;
+}
+
+#social-icon-links li {
+    display: inline;
+    font-size: 2rem;
+}
+
+#social-icon-links li a {
+    text-decoration: none;
+}
+
+#social-icon-links .fab {
+    font-size: 2rem;
+    padding: 1rem;
+    color:  #3D3D3D;
 }

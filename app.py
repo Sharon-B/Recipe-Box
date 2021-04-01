@@ -22,6 +22,11 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
+@app.route("/index")
+def index():
+    return render_template("index.html")
+
+
 # Check we are connected to MongoDB by getting info from our sample
 # recipe in our database and rendering it in recipes.html
 @app.route("/get_recipes")

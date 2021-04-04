@@ -21,14 +21,14 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+# Index
 @app.route("/")
 @app.route("/index")
 def index():
     return render_template("index.html")
 
 
-# Check we are connected to MongoDB by getting info from our sample
-# recipe in our database and rendering it in recipes.html
+# Recipes
 @app.route("/get_recipes")
 def get_recipes():
     recipes = mongo.db.recipes.find()

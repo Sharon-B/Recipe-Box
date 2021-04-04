@@ -1,4 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
 
+    <!-- Hero Banner -->
+    <section>
+        <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="{{ url_for('static', filename='images/hero-image.png') }}" alt="Bowl of salad with yogurt dressing and a side dish of spiced chickpeas" id="hero-image">
+                        <div class="text-box">
+                            <p id="welcome-message">
+                                Welcome to Recipe Box, a place to find & share recipes
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section>
+        Recipe Cards
+    </section>
+
 {% endblock %}

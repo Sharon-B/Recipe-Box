@@ -57,8 +57,7 @@ body {
 }
 
 .text-box {
-    width: 220px;
-    height: 150px;
+    max-width: 450px;
     background-color: #444040;
     z-index: 1;
     border-radius: 2rem;
@@ -67,7 +66,6 @@ body {
     align-items: center;
     margin-left: 3rem;
     margin-top: 4rem;
-
 }
 
 #welcome-message {

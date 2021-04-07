@@ -26,7 +26,7 @@ body {
     font-family: "Playfair Display", cursive;
     font-weight: 700;
     font-style: italic;
-    font-size: 5rem;
+    font-size: 3.6rem;
     color: #0A0F10;
     padding: 0;
     margin-left: .5rem;
@@ -46,6 +46,14 @@ body {
     padding-left: 1.2rem;
 }
 
+.navbar-toggler {
+    margin-right: 1rem;
+}
+
+.navbar {
+    padding: 0;
+}
+
 /*------ Hero Banner -------*/
 
 #hero-image {
@@ -57,21 +65,23 @@ body {
 }
 
 .text-box {
-    max-width: 450px;
+    max-width: 90%;
+    height: 10vh;
     background-color: #444040;
     z-index: 1;
-    border-radius: 2rem;
+    border-radius: .5rem;
     opacity: 75%;
     display: flex;
     align-items: center;
-    margin-left: 3rem;
-    margin-top: 4rem;
+    text-align: center;
+    margin: .5rem auto;
 }
 
 #welcome-message {
     color: #FEFFFC;
     z-index: 2;
-    font-size: 2rem;
+    font-size: 1.6rem;
+    font-weight: 700;
     padding: 2rem;
 }
 

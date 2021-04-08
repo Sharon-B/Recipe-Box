@@ -57,6 +57,14 @@ body {
     font-size: 1.6rem;
 }
 
+.page-heading {
+    font-family: "Playfair Display";
+    font-size: 2.8rem;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
 /*------ Navigation -------*/
 #nav-menu {
     margin-left: auto;
@@ -142,6 +150,31 @@ body {
     width: 90%;
     margin: 0 auto;
 }
+
+/*------ Register Page-------*/
+
+#register-wrapper {
+    margin-bottom: 2rem;
+    max-width: 65vh;
+    max-height: 70vh;
+}
+
+#register-image {
+    max-height: 70vh;
+    margin: 0 auto;
+}
+
+.image-overlay {
+    background-color: #C4C4C4;
+    opacity: 65%;
+    top: 15%;
+    right: 15%;
+    bottom: 15%;
+    left: 15%;
+}
+
+
+
 
 /*------ Footer -------*/
 

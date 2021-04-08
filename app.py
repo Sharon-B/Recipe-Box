@@ -37,6 +37,12 @@ def get_recipes():
     return render_template("recipes.html", recipes=recipes)
 
 
+# Register
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    return render_template("register.html")
+
+
 # Set how & where to run the app
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

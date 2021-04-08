@@ -17,37 +17,36 @@
             </div>
     </section>
 
-    <section>
+    <section id="recipes-section">
             <div class="container">
                 <div class="row">
                     <div class="col">
                         <h3 class="recipes-heading">Recipes</h3>
                     </div>
                 </div>
-            </div>
+           
 
             
-            <div class="row recipe-card recipes">
-                <div class="col-12 col-md-4">
-                    <div class="card">
-                        {% for recipe in recipes %}
-                        <img src="{{ recipe.recipe_url }}" class="card-img-top" alt="...">
-                        <div class="card-body">                 
-                            <h4 class="recipe-title">{{ recipe.recipe_name }}</h4>
-                            <h5 class="card-sub-heading">
-                                <i class="fas fa-stopwatch"></i> Prep time: {{ recipe.prep_time }} Cook time: {{ recipe.cook_time }}
-                            </h5>
-                            <p class="card-text">{{ recipe.recipe_description }}
-                            </p>
-                            
+                <div class="row recipe-card recipes">
+                    <div class="col-12 col-md-4">
+                        <div class="card">
+                            {% for recipe in recipes %}
+                            <img src="{{ recipe.recipe_url }}" class="card-img-top" alt="...">
+                            <div class="card-body">                 
+                                <h4 class="recipe-title">{{ recipe.recipe_name }}</h4>
+                                <h5 class="card-sub-heading">
+                                    <i class="fas fa-stopwatch"></i> Prep time: {{ recipe.prep_time }} Cook time: {{ recipe.cook_time }}
+                                </h5>
+                                <p class="card-text">{{ recipe.recipe_description }}
+                                </p>
+                                
+                            </div>
+                            {% endfor %}
                         </div>
-                        {% endfor %}
-                    </div>
+                    </div> 
                 </div>
-                
-            </div>
            
-            
+            </div>
 
     </section>
 

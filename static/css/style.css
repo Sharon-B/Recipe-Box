@@ -112,6 +112,10 @@ body {
 
 /*------ Recipe Cards -------*/
 
+#recipes-section {
+    margin-top: 2rem;
+}
+
 #recipe-cards-home {
     margin: 1rem auto;
 }
@@ -165,4 +169,78 @@ body {
     font-size: 2rem;
     padding: 1rem;
     color:  #3D3D3D;
+}
+
+/*------------- Media Queries -------------*/
+/*-- Small Screen--*/
+@media only screen and (min-width: 375px) {
+
+}
+
+/*-- Medium Screen--*/
+
+@media only screen and (min-width: 768px) {
+ 
+    .text-box {
+        height: 50%;
+        top: 10%;
+        left: 5%;
+    }
+
+    #welcome-message {
+        font-size: 2rem;
+        padding: 2rem;
+    }
+
+    #hero-image {
+        height: 20vh;
+    }
+
+    #recipes-section {
+        margin-top: 15rem;
+    }
+    
+    .recipe-card .card {
+        width: 23rem;
+    }
+}
+
+/*-- Large Screen--*/
+@media only screen and (min-width: 992px) {
+
+    #logo {
+        font-size: 5rem;
+    }
+
+    .text-box {
+        height: 30%;
+        top: 20%;
+        left: 15%;
+    }
+
+    #welcome-message {
+        font-size: 2.5rem;
+        padding: 2rem;
+    }
+
+    #recipes-section {
+        margin-top: 18rem;
+    }
+
+    .recipe-card .card {
+        width: 28rem;
+    }
+
+}
+
+/*-- Extra Large Screen--*/
+@media only screen and (min-width: 1200px) {
+     
+    #nav-menu {
+        margin-right: 2rem;
+    }
+    
+    #hero-image {
+        height: 45vh;
+    } 
 }

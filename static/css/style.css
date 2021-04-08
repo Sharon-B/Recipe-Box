@@ -134,6 +134,11 @@ body {
     justify-content: center;
 }
 
+.card-img-top {
+    width: 90%;
+    margin: 0 auto;
+}
+
 /*------ Footer -------*/
 
 .footer {

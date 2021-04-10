@@ -9,7 +9,24 @@
                     <img src="{{ url_for('static', filename='images/register-image.png') }}" id="register-image"
                         class="card-img" alt="...">
                     <div class="card-img-overlay image-overlay">
-                        <p class="card-text">Test</p>
+                        <form id="register-form" method="POST" action="{{ url_for('register') }}">
+                            {{ form.csrf_token }}
+                            <div class="form-username form-input">
+                                {{ form.username }}
+                            </div>
+                            <div class="form-password form-input">
+                                {{ form.password }}
+                            </div>
+                            <div class="form-email form-input">
+                                {{ form.email }}
+                            </div>
+                        
+                            <input class="submit-button" type="submit" value="Register">
+                            
+                            <p>Already Registered? <a href="...">Log In</a>
+                            </p>
+
+                        </form>
                     </div>
                 </div>
             </div>

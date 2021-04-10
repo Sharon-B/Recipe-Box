@@ -165,15 +165,39 @@ body {
 }
 
 .image-overlay {
-    background-color: #C4C4C4;
-    opacity: 65%;
+    background-color: rgba(196, 196, 196, .7);
     top: 15%;
-    right: 15%;
+    right: 20%;
     bottom: 15%;
-    left: 15%;
+    left: 20%;
+    border-radius: 1rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
+.form-input {
+    margin: 1rem auto;
+}
 
+input#username:focus,
+input#password:focus,
+input#email:focus {
+    outline-color: #71B7C2;
+}
+
+form p {
+    margin: 1.5rem auto;
+}
+
+.submit-button {
+    background-color: #CFEFF4;
+    margin-top: 1rem;
+    margin-left: 3rem;
+    border: 1px solid #0A0F10;
+    border-radius: .3rem;
+    padding: .2rem .4rem;
+}
 
 
 /*------ Footer -------*/

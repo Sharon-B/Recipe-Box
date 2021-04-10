@@ -65,6 +65,13 @@ body {
     text-align: center;
 }
 
+/*------ Flash Messages -------*/
+
+.flashes {
+    line-height: 2;
+    margin: 1rem auto;
+}
+
 /*------ Navigation -------*/
 #nav-menu {
     margin-left: auto;

@@ -59,8 +59,23 @@
         </nav>
     </header>
     
+    <main>
     {% block content %}
     {% endblock %}
+    </main>
+
+    <section>
+        <!-- flash messages -->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="row flashes">
+                        <h4 class="flash-message">{{ message }}</h4>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </section>
    
     <footer id="bg-color-footer" class="container-fluid footer">
         <div class="row">

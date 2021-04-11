@@ -1,16 +1,36 @@
 {% extends "base.html" %}
 {% block content %}
-    
-    <!--Set up for loop to iterate through the recipes in our database and display the contents of each field-->
-    {% for recipe in recipes %}
-        {{ recipe.recipe_name }}<br>
-        {{ recipe.recipe_description }}<br>
-        {{ recipe.category_name }}<br>
-        {{ recipe.prep_time }}<br>
-        {{ recipe.cook_time }}<br>
-        {{ recipe.ingredients }}<br>
-        {{ recipe.method }}<br>
-        {{ recipe.added_by }}<br>
-    {% endfor %}
+
+    <section id="all-recipes-section">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2 class="page-heading">Recipes</h2>
+                </div>
+            </div>
+       
+
+        
+            <div class="row recipe-card recipes">
+                <div class="col-12 col-md-4">
+                    {% for recipe in recipes %}
+                    <div class="card">  
+                        <img src="{{ recipe.recipe_url }}" class="card-img-top" alt="...">
+                        <div class="card-body">                 
+                            <h4 class="recipe-title">{{ recipe.recipe_name }}</h4>
+                            <h5 class="card-sub-heading">
+                                <i class="fas fa-stopwatch"></i> Prep time: {{ recipe.prep_time }} Cook time: {{ recipe.cook_time }}
+                            </h5>
+                            <p class="card-text">{{ recipe.recipe_description }}
+                            </p>   
+                        </div> 
+                    </div>
+                    {% endfor %}
+                </div> 
+            </div>
+            
+        </div>
+
+    </section>
 
 {% endblock %}

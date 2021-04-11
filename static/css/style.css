@@ -199,11 +199,24 @@ form p {
 
 .submit-button {
     background-color: #CFEFF4;
+    font-size: 1.6rem;
     margin-top: 1rem;
     margin-left: 3rem;
     border: 1px solid #0A0F10;
     border-radius: .3rem;
     padding: .2rem .4rem;
+}
+
+/*------ Add Recipe -------*/
+
+#add-recipe-form {
+    text-align: center;
+}
+
+.add-recipe {
+    width: 85%;
+    font-size: 1.6rem;
+    padding: .3rem;
 }
 
 

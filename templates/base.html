@@ -38,7 +38,7 @@
                             <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}">Profile</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Add Recipe</a>
+                            <a class="nav-link" href="{{ url_for('add_recipe') }}">Add Recipe</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Manage Categories</a>

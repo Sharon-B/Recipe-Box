@@ -111,6 +111,14 @@ def profile(username):
     return redirect(url_for("login"))
 
 
+# Log Out
+@app.route("/logout")
+def logout():
+    session.pop("user")
+    flash("You are now logged out")
+    return redirect(url_for("login"))
+
+
 # Set how & where to run the app
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

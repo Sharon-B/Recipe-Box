@@ -63,7 +63,7 @@ def register():
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
         return redirect(url_for(
-            "register", username=session["user"]))      # Update redirect
+            "profile", username=session["user"]))
     return render_template("register.html")
 
 
@@ -82,6 +82,8 @@ def login():
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome, {}".format(
                     request.form.get("username")))
+                return redirect(url_for(
+                    "profile", username=session["user"]))
 
             else:
                 # If invalid password match

@@ -104,7 +104,11 @@ def profile(username):
     # Get the session user's username from the database
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    return render_template("profile.html", username=username)
+    # Once session['user] cookie is truthy return their profile page
+    if session["user"]:
+        return render_template("profile.html", username=username)
+
+    return redirect(url_for("login"))
 
 
 # Set how & where to run the app

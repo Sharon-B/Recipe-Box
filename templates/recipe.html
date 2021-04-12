@@ -2,6 +2,36 @@
 {% block content %}
 
     <h2 class="page-heading">{{ recipe.recipe_name }}</h2>
+
+    <img src="{{ recipe.recipe_url }}" class="" alt="...">
+
+    <h5 class="sub-heading">
+        <i class="fas fa-stopwatch"></i> Prep time: {{ recipe.prep_time }} Cook time: {{ recipe.cook_time }}
+    </h5>
+
+    <div>{{ recipe.category_name }}
+    </div>
+
+    <p>{{ recipe.recipe_description }}
+    </p>
+
+    
+    <ul>
+        {% for ingredient in recipe.ingredients %}
+            <li style="white-space: pre-wrap;">{{ ingredient }}</li>
+        {% endfor %}
+    </ul>
     
 
+    <ul>
+    {% for meth in recipe.method %}
+        <li style="white-space: pre-wrap;">{{ meth }}</li>
+    {% endfor %}
+    </ul>  
+
+
+    <div>{{ recipe.added_by }}</div>
+
+
 {% endblock %}
+

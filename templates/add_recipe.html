@@ -7,7 +7,7 @@
             </div>
         </div>
    
-        <form id="add-recipe-form" method="POST" action="">
+        <form id="add-recipe-form" method="POST" action="{{ url_for('add_recipe')}}">
             <!-- Recipe Name -->
             <div class="row">
                 <div class="col-12 form-recipe-name form-input">
@@ -63,8 +63,12 @@
                         placeholder="Recipe Image URL" required>
                 </div>
             </div>
-        
-            <input class="submit-button" type="submit" value="Add Recipe">
+            <!-- Submit Button -->
+            <div class="row">
+                <div class="col">
+                    <input class="submit-button" type="submit" value="Add Recipe">
+                </div>
+            </div>
         </form>
 
     </div>

@@ -21,7 +21,9 @@
                                 <i class="fas fa-stopwatch"></i> Prep time: {{ recipe.prep_time }} Cook time: {{ recipe.cook_time }}
                             </h5>
                             <p class="card-text">{{ recipe.recipe_description }}
-                            </p>   
+                            </p>
+                            <p class="card-text">Added by: {{ recipe.added_by }}
+                            </p> 
                         </div> 
                     </div>
                     {% endfor %}

@@ -72,6 +72,28 @@ body {
     margin: 1rem auto;
 }
 
+
+/*------ Buttons -------*/
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.delete-button {
+    background-color: #F4CFCF;
+    margin: 1rem;
+    width: 6rem;
+    border: .1rem solid #7f8487;
+}
+
+.edit-button {
+    background-color: #CFEFF4;
+    margin: 1rem;
+    width: 6rem;
+    border: .1rem solid #7f8487;
+}
+
 /*------ Navigation -------*/
 #nav-menu {
     margin-left: auto;
@@ -225,6 +247,7 @@ form p {
 }
 
 .recipe-added-by {
+    font-size: 1.2rem;
     text-align: right;
     color: #596264;
     font-style: italic;

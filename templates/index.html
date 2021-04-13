@@ -3,55 +3,47 @@
 
     <!-- Hero Banner -->
     <section>
-        <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12">
-                        <img src="{{ url_for('static', filename='images/hero-image.png') }}" alt="Bowl of salad with yogurt dressing and a side dish of spiced chickpeas" id="hero-image">
-                        <div class="text-box">
-                            <p id="welcome-message">
-                                Welcome to Recipe Box, a place to find & share recipes
-                            </p>
-                        </div>
-                    </div>
-                </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/hero-image.png') }}" id="hero-image" class="card-img" alt="Salad bowl with yogurt dressing with a side dish of spiced chickpeas">
+            <div class="card-img-overlay hero-image-overlay">
+                <p id="welcome-message">
+                    Welcome to Recipe Box a place to keep, find & share your favourite recipes
+                </p>
             </div>
+        </div>
     </section>
 
+    <!-- Recipes -->
     <section id="recipes-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <h3 class="recipes-heading">Recipes</h3>
-                    </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h3 class="recipes-heading">Recipes</h3>
                 </div>
-           
-
-                
-                <div class="row recipe-card recipes">
-                    {% for recipe in recipes %}
-                    <div class="col-12 col-md-4">
-                        <div class="card">
-                            <img src="{{ recipe.recipe_url }}" class="card-img-top" alt="...">
-                            <div class="card-body">                 
-                                <h4 class="recipe-title"><a href="{{ url_for('recipe', recipe_id=recipe._id) }}">{{ recipe.recipe_name }}</a></h4>
-                                <h5 class="card-sub-heading">
-                                    <i class="fas fa-stopwatch"></i> Prep time: {{ recipe.prep_time }} Cook time: {{ recipe.cook_time }}
-                                </h5>
-                                <p class="card-text">{{ recipe.recipe_description }}
-                                </p>
-                                <p class="card-text">Added by: {{ recipe.added_by }}
-                                </p>
-                                
-                            </div>
-                            
-                        </div>
-                        
-                    </div>
-                    {% endfor %}
-                </div>
-           
             </div>
-
+            <!-- Recipe Card -->
+            <div class="row recipe-card recipes">
+                {% for recipe in recipes %}
+                <div class="col-12 col-md-4">
+                    <div class="card">
+                        <img src="{{ recipe.recipe_url }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4 class="recipe-title"><a href="{{ url_for('recipe', recipe_id=recipe._id) }}">{{
+                                    recipe.recipe_name }}</a></h4>
+                            <h5 class="card-sub-heading">
+                                <i class="fas fa-stopwatch"></i> Prep time: {{ recipe.prep_time }} Cook time: {{
+                                recipe.cook_time }}
+                            </h5>
+                            <p class="card-text">{{ recipe.recipe_description }}
+                            </p>
+                            <p class="card-text">Added by: {{ recipe.added_by }}
+                            </p>
+                        </div>  
+                    </div>
+                </div>
+                {% endfor %}
+            </div>    
+        </div>   
     </section>
 
 {% endblock %}

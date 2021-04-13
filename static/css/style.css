@@ -61,7 +61,7 @@ body {
     font-family: "Playfair Display";
     font-size: 2.8rem;
     font-style: italic;
-    margin-bottom: 1.5rem;
+    margin: 1.5rem auto; 
     text-align: center;
 }
 
@@ -216,6 +216,28 @@ form p {
     width: 85%;
     font-size: 1.6rem;
     padding: .3rem;
+}
+
+/*------ Single Recipe Page -------*/
+
+.recipe-image {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.recipe-list-item {
+    white-space: pre-wrap;
+    list-style: none;
+}
+
+.recipe-added-by {
+    text-align: right;
+    color: #596264;
+    font-style: italic;
+}
+
+.fas {
+    color: #596264;
 }
 
 

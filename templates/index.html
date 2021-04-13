@@ -39,10 +39,12 @@
                             <p class="card-text recipe-added-by">Added by: {{ recipe.added_by }}
                             </p>
                             <!-- Edit/Delete buttons -->
+                            {% if session.user|lower == recipe.added_by|lower %}
                             <div class="buttons">
                                     <a href="" class="btn delete-button">Delete</a>
                                     <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn edit-button">Edit</a>  
                             </div>
+                            {% endif %}
                         </div>  
                     </div>
                 </div>

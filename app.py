@@ -32,8 +32,8 @@ def index():
 
 
 # Recipes
-@app.route("/get_recipes")
-def get_recipes():
+@app.route("/all_recipes")
+def all_recipes():
     recipes = mongo.db.recipes.find()
     return render_template("recipes.html", recipes=recipes)
 
@@ -143,7 +143,7 @@ def add_recipe():
         }
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe Successfully Added")
-        return redirect(url_for("get_recipes", username=session["user"]))
+        return redirect(url_for("all_recipes", username=session["user"]))
         # Update redirect to user profile??
 
     categories = mongo.db.categories.find().sort("category_name", 1)

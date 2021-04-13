@@ -77,11 +77,10 @@
                         placeholder="Recipe Image URL" value="{{ recipe.recipe_url }}" required>
                 </div>
             </div>
-            <!-- Submit Button -->
-            <div class="row">
-                <div class="col">
-                    <input class="submit-button" type="submit" value="Edit Recipe">
-                </div>
+            <!-- Edit/Delete buttons -->
+            <div class="buttons">
+                <a href="{{ url_for('profile', username=session['user']) }}" class="btn delete-button">Cancel</a>
+                <input class="submit-button" type="submit" value="Edit Recipe">  
             </div>
         </form>
 

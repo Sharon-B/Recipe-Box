@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 class="page-heading">Edit Recipe</h2>
+            </div>
+        </div>
+   
+        <form id="add-recipe-form" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id)}}">
+            <!-- Recipe Name -->
+            <div class="row">
+                <div class="col-12 form-recipe-name form-input">
+                    <input id="recipe_name" name="recipe_name" type="text" minlength="5" maxlength="45"
+                        pattern="^[a-zA-Z0-9_][a-zA-Z0-9_ ]*[a-zA-Z0-9_]{5,45}$" class="add-recipe validate" placeholder="Recipe Name" required>
+                </div>
+            </div>
+            <!-- Recipe Description -->
+            <div class="row">
+                <div class="col-12 form-recipe-name form-input">
+                    <textarea name="recipe_description" id="recipe_description" class="add-recipe validate"
+                        placeholder="Recipe description" minlength="5" maxlength="150" required></textarea>
+                </div>
+            </div>
+            <!-- Category Select -->
+            <div class="row">
+                <div class="col-sm-12 col-md-3 category-select form-input">
+                    <select id="category_name" class="add-recipe validate" name="category_name" form="add-recipe-form" required>
+                        <option value="" class="selected disabled">Select Category:</option>
+                        {% for category in categories %}
+                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <!-- Prep Time -->
+                <div class="col-sm-6 col-md-3 form-prep form-input">
+                    <input id="prep_time" name="prep_time" type="text" minlength="3" maxlength="10"
+                        pattern="^[a-zA-Z0-9_][a-zA-Z0-9_ ]*[a-zA-Z0-9_]{3,10}$" class="add-recipe validate" placeholder="Prep Time" required>
+                </div>
+                <!-- Cook Time -->
+                <div class="col-sm-6 col-md-3 form-prep form-input">
+                    <input id="cook_time" name="cook_time" type="text" minlength="3" maxlength="10"
+                        pattern="^[a-zA-Z0-9_][a-zA-Z0-9_ ]*[a-zA-Z0-9_]{3,10}$" class="add-recipe validate" placeholder="Cook Time" required>
+                </div>
+            </div>
+            <!-- Ingredients -->
+            <div class="row">
+                <div class="col-12 form-ingredients form-input">
+                    <textarea name="ingredients" id="ingredients" class="add-recipe validate" rows="8" placeholder="Ingredients"
+                        required></textarea>
+                </div>
+            </div>
+            <!-- Method -->
+            <div class="row">
+                <div class="col-12 form-method form-input">
+                    <textarea name="method" id="method" class="add-recipe validate" rows="12" placeholder="Method" required></textarea>
+                </div>
+            </div>
+            <!-- Recipe Image URL -->
+            <div class="row">
+                <div class="col-12 form-image-url form-input">
+                    <input id="recipe_url" name="recipe_url" type="text" class="add-recipe validate"
+                        placeholder="Recipe Image URL" required>
+                </div>
+            </div>
+            <!-- Submit Button -->
+            <div class="row">
+                <div class="col">
+                    <input class="submit-button" type="submit" value="Edit Recipe">
+                </div>
+            </div>
+        </form>
+
+    </div>
+{% endblock %}

@@ -1,37 +1,77 @@
 {% extends "base.html" %}
 {% block content %}
-
-    <h2 class="page-heading">{{ recipe.recipe_name }}</h2>
-
-    <img src="{{ recipe.recipe_url }}" class="" alt="...">
-
-    <h5 class="sub-heading">
-        <i class="fas fa-stopwatch"></i> Prep time: {{ recipe.prep_time }} Cook time: {{ recipe.cook_time }}
-    </h5>
-
-    <div>{{ recipe.category_name }}
-    </div>
-
-    <p>{{ recipe.recipe_description }}
-    </p>
-
-    
-    <ul>
-        {% for ingredient in recipe.ingredients %}
-            <li style="white-space: pre-wrap;">{{ ingredient }}</li>
-        {% endfor %}
-    </ul>
-    
-
-    <ul>
-    {% for meth in recipe.method %}
-        <li style="white-space: pre-wrap;">{{ meth }}</li>
-    {% endfor %}
-    </ul>  
-
-
-    <div>{{ recipe.added_by }}</div>
-
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 class="page-heading">{{ recipe.recipe_name }}</h2>
+            </div>
+        </div>
+        <!-- Recipe image -->
+        <div class="row">
+            <div class="col-10 offset-1">
+                <img src="{{ recipe.recipe_url }}" class="recipe-image" alt="...">
+            </div>
+        </div>
+        <!-- Recipe timings -->
+        <div class="row">
+            <div class="col">
+                <div class="sub-heading">
+                    <i class="fas fa-stopwatch"></i> Prep time: {{ recipe.prep_time }} Cook time: {{ recipe.cook_time }}
+                </div>
+            </div>
+        </div>
+        <!-- Recipe category -->
+        <div class="row">
+            <div class="col">
+                <div class="sub-heading">
+                    <i class="fas fa-utensils"></i> {{ recipe.category_name }}
+                </div>
+            </div>
+        </div>  
+        <!-- Recipe description -->
+        <div class="row">
+            <div class="col">
+                <p>{{ recipe.recipe_description }}
+                </p>
+            </div>
+        </div>
+        <!-- Recipe ingredients -->
+        <div class="row">
+            <div class="col">
+                <h3 class="sub-heading">Ingredients</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col recipe-list">
+                <ul>
+                    {% for ingredient in recipe.ingredients %}
+                        <li class="recipe-list-item">{{ ingredient }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <!-- Recipe method -->
+        <div class="row">
+            <div class="col">
+                <h3 class="sub-heading">Method</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <ul>
+                {% for meth in recipe.method %}
+                    <li class="recipe-list-item">{{ meth }}</li>
+                {% endfor %}
+                </ul>  
+            </div>
+        </div>
+        <!-- Recipe added by -->
+        <div class="row">
+            <div class="col">
+                <div class="recipe-added-by">Added by: {{ recipe.added_by }}</div>
+                </div>
+            </div>
+        </div>
 
 {% endblock %}
 

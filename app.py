@@ -183,6 +183,13 @@ def delete_recipe(recipe_id):
     return redirect(url_for("profile", username=session["user"]))
 
 
+# Manage Recipes
+@app.route("/manage_recipes")
+def manage_recipes():
+    recipes = list(mongo.db.recipes.find().sort("recipe_name", 1))
+    return render_template("manage_recipes.html", recipes=recipes)
+
+
 # Set how & where to run the app
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

@@ -200,6 +200,14 @@ def manage_categories():
 # Add Category
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
+    if request.method == "POST":
+        category = {
+            "category_name": request.form.get("category_name")
+        }
+        mongo.db.categories.insert_one(category)
+        flash("New Category Added")
+        return redirect(url_for("manage_categories"))
+
     return render_template("add_category.html")
 
 

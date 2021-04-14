@@ -5,7 +5,7 @@
     
     <div class="container">
         <div class="row">
-            <div class="col-3">
+            <div class="col buttons">
                 <a href="{{ url_for('add_category') }}" class="btn add-button">Add Category</a>
             </div>
         </div>
@@ -14,7 +14,7 @@
         {% for category in categories %}
             <div class="row">
                 <div class="col-3">
-                    <span>{{ category.category_name }}</span>
+                    <span class="cat-display">{{ category.category_name }}</span>
                 </div>
                 <div class="buttons">   
                     <a href="" class="btn edit-button">Edit</a>

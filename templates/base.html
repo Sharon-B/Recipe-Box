@@ -42,7 +42,16 @@
                         </li>
                         {% if session.user == "admin"|lower %}
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url_for('manage_recipes') }}">Manage Recipes</a>
+                                <div class="dropdown">
+                                    <span class="nav-link" id="admin-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Admin Menu <i class="fas fa-caret-down"></i>
+                                    </span>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                      <a class="dropdown-item" href="{{ url_for('manage_recipes') }}">Manage Recipes</a>
+                                      <a class="dropdown-item" href="{{ url_for('manage_categories') }}">Manage Categories</a>
+                                      <a class="dropdown-item" href="#">Manage Users</a>
+                                    </div>
+                                  </div>
                             </li>
                         {% endif %}
                         <li class="nav-item">

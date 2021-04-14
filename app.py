@@ -190,6 +190,13 @@ def manage_recipes():
     return render_template("manage_recipes.html", recipes=recipes)
 
 
+# Manage Categories
+@app.route("/manage_categories")
+def manage_categories():
+    categories = list(mongo.db.categories.find().sort("category_name", 1))
+    return render_template("manage_categories.html", categories=categories)
+
+
 # Set how & where to run the app
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

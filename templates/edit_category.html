@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="recipes-heading">Edit Category</h3>
+    
+    <div class="container">
+        <form id="add-cat-form" method="POST" action="{{ url_for('edit_category', category_id=category._id) }}">
+            <input id="category_name" name="category_name" type="text" minlength="3" maxlength="12"
+                value="{{ category.category_name }}" pattern="^[a-zA-Z0-9_][a-zA-Z0-9_ ]*[a-zA-Z0-9_]{3,10}$" class="add_cat validate" required>
+
+                <div class="buttons">
+                    <a href="{{ url_for('manage_categories') }}" class="btn delete-button">Cancel</a>
+                    <button type="submit" class="submit-button">Edit</button>
+                </div>        
+        </form>
+    </div>
+    
+
+{% endblock %}

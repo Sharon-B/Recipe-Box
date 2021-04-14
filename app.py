@@ -197,6 +197,12 @@ def manage_categories():
     return render_template("manage_categories.html", categories=categories)
 
 
+# Add Category
+@app.route("/add_category", methods=["GET", "POST"])
+def add_category():
+    return render_template("add_category.html")
+
+
 # Set how & where to run the app
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

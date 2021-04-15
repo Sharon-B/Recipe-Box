@@ -235,6 +235,13 @@ def delete_category(category_id):
     return redirect(url_for("manage_categories"))
 
 
+# Manage Users
+@app.route("/manage_users")
+def manage_users():
+    users = list(mongo.db.users.find().sort("username", 1))
+    return render_template("manage_users.html", users=users)
+
+
 # Set how & where to run the app
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

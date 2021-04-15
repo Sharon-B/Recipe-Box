@@ -38,6 +38,14 @@ def all_recipes():
     return render_template("all_recipes.html", recipes=recipes)
 
 
+# Search Recipes
+@app.route("/search_recipes", methods=["GET", "POST"])
+def search_recipes():
+    query = request.form.get("query")
+    recipes = mongo.db.recipes.find({"$text": {"$search": query}})
+    return render_template("all_recipes.html", recipes=recipes)
+
+
 # Register
 @app.route("/register", methods=["GET", "POST"])
 def register():

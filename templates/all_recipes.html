@@ -9,7 +9,27 @@
                     <h2 class="page-heading">Recipes</h2>
                 </div>
             </div>
-       
+
+            <div class="row">
+                <div class="col">
+                    <form action="{{ url_for('search_recipes') }}" method="POST">
+                        <div class="row">
+                            <div class="col-8">
+                                <label for="query" class="cat-display"><i class="fas fa-search"></i></label>
+                                <input id="query" name="query" type="text" minlength="3" class="add_cat validate" placeholder="Search..." required>
+                            </div>
+                            <div class="col buttons">
+                                <a href="{{ url_for('all_recipes') }}" class="btn delete-button">Reset</a>
+                                <button type="submit" class="submit-button">
+                                    <i class="fas fa-search"></i> Search
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            {% if recipes.count() > 0 %}
             <div class="row recipe-card recipes">
                 {% for recipe in recipes %}
                 <div class="col-12 col-md-4">
@@ -38,6 +58,9 @@
                 </div> 
                 {% endfor %}
             </div>
+            {% else %}
+                <h3>No results found</h3>
+            {% endif %}
 
         </div>
     </section>

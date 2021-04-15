@@ -12,7 +12,7 @@
             <input id="email" name="email" type="email" class="validate add_cat" value="{{ user.email }}" required>
 
                 <div class="buttons">
-                    <a href="" class="btn delete-button">Cancel</a>
+                    <a href="{{ url_for('manage_users') }}" class="btn delete-button">Cancel</a>
                     <button type="submit" class="submit-button">Edit</button>
                 </div>        
         </form>

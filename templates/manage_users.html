@@ -20,7 +20,7 @@
                     <span class="cat-display">{{ user.email }}</span>
                 </div>
                 <div class="buttons">   
-                    <a href="" class="btn edit-button">Edit</a>
+                    <a href="{{ url_for('edit_user', user_id=user._id) }}" class="btn edit-button">Edit</a>
                     <a href="" class="btn delete-button">Delete</a> 
                 </div>
             </div>

@@ -259,6 +259,14 @@ def edit_user(user_id):
     return render_template("edit_user.html", user=user)
 
 
+# Delete User
+@app.route("/delete_user/<user_id>")
+def delete_user(user_id):
+    mongo.db.users.remove({"_id": ObjectId(user_id)})
+    flash("User Deleted")
+    return redirect(url_for("manage_users"))
+
+
 # Set how & where to run the app
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

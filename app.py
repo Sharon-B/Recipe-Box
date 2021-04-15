@@ -245,6 +245,16 @@ def manage_users():
 # Edit User
 @app.route("/edit_user/<user_id>", methods=["GET", "POST"])
 def edit_user(user_id):
+    if request.method == "POST":
+        update_user = {
+            "username": request.form.get("username"),
+            "email": request.form.get("email")
+        }
+        mongo.db.users.update(
+            {"_id": ObjectId(user_id)}, update_user)
+        flash("User Updated")
+        return redirect(url_for("manage_users"))
+
     user = mongo.db.users.find_one({"_id": ObjectId(user_id)})
     return render_template("edit_user.html", user=user)
 

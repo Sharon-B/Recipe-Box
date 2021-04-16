@@ -2,6 +2,25 @@
 {% block content %}
 
     <h2 class="page-heading">Manage Categories</h2>
+
+    <div class="row">
+        <div class="col">
+            <form action="{{ url_for('search_categories') }}" method="POST">
+                <div class="row">
+                    <div class="col-8">
+                        <label for="query" class="cat-display"><i class="fas fa-search"></i></label>
+                        <input id="query" name="query" type="text" minlength="3" class="add_cat validate" placeholder="Search..." required>
+                    </div>
+                    <div class="col buttons">
+                        <a href="{{ url_for('manage_categories') }}" class="btn delete-button">Reset</a>
+                        <button type="submit" class="submit-button">
+                            <i class="fas fa-search"></i> Search
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
     
     <div class="container">
         <div class="row">
@@ -11,17 +30,21 @@
         </div>
     
         <h2 class="recipes-heading">All Categories</h2>
-        {% for category in categories %}
-            <div class="row">
-                <div class="col-3">
-                    <span class="cat-display">{{ category.category_name }}</span>
+        {% if categories|length > 0 %}
+            {% for category in categories %}
+                <div class="row">
+                    <div class="col-3">
+                        <span class="cat-display">{{ category.category_name }}</span>
+                    </div>
+                    <div class="buttons">   
+                        <a href="{{ url_for('edit_category', category_id=category._id) }}" class="btn edit-button">Edit</a>
+                        <a href="{{ url_for('delete_category', category_id=category._id) }}" class="btn delete-button">Delete</a> 
+                    </div>
                 </div>
-                <div class="buttons">   
-                    <a href="{{ url_for('edit_category', category_id=category._id) }}" class="btn edit-button">Edit</a>
-                    <a href="{{ url_for('delete_category', category_id=category._id) }}" class="btn delete-button">Delete</a> 
-                </div>
-            </div>
-        {% endfor %}
+            {% endfor %}
+        {% else %}
+            <h3>No results found</h3>
+        {% endif %}
     
     </div>
 {% endblock %}

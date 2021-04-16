@@ -114,7 +114,9 @@ def profile(username):
         {"username": session["user"]})["username"]
     # Once session['user] cookie is truthy return their profile page
     if session["user"]:
-        return render_template("profile.html", username=username)
+        recipes = mongo.db.recipes.find()
+        return render_template(
+            "profile.html", username=username, recipes=recipes)
 
     return redirect(url_for("login"))
 

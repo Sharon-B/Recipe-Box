@@ -258,6 +258,14 @@ def manage_users():
     return render_template("manage_users.html", users=users)
 
 
+# Search Users
+@app.route("/search_users", methods=["GET", "POST"])
+def search_users():
+    query = request.form.get("query")
+    users = list(mongo.db.users.find({"$text": {"$search": query}}))
+    return render_template("manage_users.html", users=users)
+
+
 # Edit User
 @app.route("/edit_user/<user_id>", methods=["GET", "POST"])
 def edit_user(user_id):

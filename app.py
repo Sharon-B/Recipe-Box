@@ -205,6 +205,14 @@ def manage_categories():
     return render_template("manage_categories.html", categories=categories)
 
 
+# Search Categories
+@app.route("/search_categories", methods=["GET", "POST"])
+def search_categories():
+    query = request.form.get("query")
+    categories = list(mongo.db.categories.find({"$text": {"$search": query}}))
+    return render_template("manage_categories.html", categories=categories)
+
+
 # Add Category
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():

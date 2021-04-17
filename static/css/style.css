@@ -15,7 +15,7 @@ body {
 
 #bg-header-color,
 #bg-color-footer {
-    background-color: #9FD1D9;
+    background-color: #2e7f8c;
 }
 
 #bg-body-color {
@@ -24,11 +24,10 @@ body {
 
 /*------ Logo -------*/
 #logo {
-    font-family: "Playfair Display", cursive;
-    font-weight: 700;
-    font-style: italic;
+    font-family: "Playfair Display", sans-serif;
+    font-weight: 600;
     font-size: 3.8rem;
-    color: #0A0F10;
+    color: #fffcf3;
     padding: 0;
     margin-left: .5rem;
 }

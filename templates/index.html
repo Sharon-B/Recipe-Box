@@ -28,7 +28,7 @@
                     <div class="card">
                         <img src="{{ recipe.recipe_url }}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h3 ><a class="recipe-title capitalize" href="{{ url_for('recipe', recipe_id=recipe._id) }}">{{
+                            <h3><a class="recipe-title capitalize" href="{{ url_for('recipe', recipe_id=recipe._id) }}">{{
                                     recipe.recipe_name }}</a></h3>
                             <div class="timings">
                                 <i class="fas fa-stopwatch"></i> <strong>Prep time:</strong> {{ recipe.prep_time }} <strong>Cook time:</strong> {{recipe.cook_time }}

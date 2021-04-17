@@ -257,9 +257,9 @@ form p {
     background-color: #CFEFF4;
     font-size: 1.6rem;
     margin-top: 1rem;
-    margin-left: 3rem;
+    margin-left: 1rem;
     margin-bottom: 1rem;
-    border: 1px solid #0A0F10;
+    border: .1rem solid #7f8487;
     border-radius: .3rem;
     padding: .2rem .4rem;
 }
@@ -310,6 +310,18 @@ form p {
     width: 30rem;
     padding: .5rem;
     font-size: 1.6rem;
+}
+
+/*------ Search-------*/
+
+.search-input {
+    width: 100%;
+    padding: .5rem;
+    font-size: 1.6rem;
+}
+
+.fa-search {
+    font-size: 2rem;
 }
 
 /*------ Footer -------*/

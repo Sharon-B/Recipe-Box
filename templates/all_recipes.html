@@ -14,14 +14,15 @@
                 <div class="col">
                     <form action="{{ url_for('search_recipes') }}" method="POST">
                         <div class="row">
-                            <div class="col-8">
+                            <div class="col-1">
                                 <label for="query" class="cat-display"><i class="fas fa-search"></i></label>
-                                <input id="query" name="query" type="text" minlength="3" class="add_cat validate" placeholder="Search..." required>
+                            </div>
+                            <div class="col-10">
+                                <input id="query" name="query" type="text" minlength="3" class="search-input validate" placeholder="Search..." required>
                             </div>
                             <div class="col buttons">
                                 <a href="{{ url_for('all_recipes') }}" class="btn delete-button">Reset</a>
-                                <button type="submit" class="submit-button">
-                                    <i class="fas fa-search"></i> Search
+                                <button type="submit" class="submit-button">Search
                                 </button>
                             </div>
                         </div>
@@ -37,13 +38,13 @@
                     <div class="card">  
                         <img src="{{ recipe.recipe_url }}" class="card-img-top" alt="...">
                         <div class="card-body">                 
-                            <h4 class="recipe-title"><a href="{{ url_for('recipe', recipe_id=recipe._id) }}">{{ recipe.recipe_name }}</a></h4>
-                            <h5 class="card-sub-heading">
-                                <i class="fas fa-stopwatch"></i> Prep time: {{ recipe.prep_time }} Cook time: {{ recipe.cook_time }}
-                            </h5>
+                            <h3><a href="{{ url_for('recipe', recipe_id=recipe._id) }}" class="recipe-title capitalize">{{ recipe.recipe_name }}</a></h3>
+                            <div class="timings">
+                                <i class="fas fa-stopwatch"></i> <strong>Prep time:</strong> {{ recipe.prep_time }} <strong>Cook time:</strong> {{recipe.cook_time }}
+                            </div>
                             <p class="card-text">{{ recipe.recipe_description }}
                             </p>
-                            <p class="card-text">Added by: {{ recipe.added_by }}
+                            <p class="recipe-added-by">Added by: {{ recipe.added_by }}
                             </p> 
                             <!-- Edit/Delete buttons -->
                             {% if session.user|lower == recipe.added_by|lower %}

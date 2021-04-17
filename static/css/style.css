@@ -157,6 +157,21 @@ body {
     padding: 0;
 }
 
+i.fas.fa-caret-down {
+    color: #fffcf3;
+    font-size: 1.8rem;
+}
+
+.dd-menu {
+    background-color: #2e7f8c;
+    text-align: right;
+}
+
+.dd-item {
+    color: #fffcf3;
+    font-size: 1.6rem;
+}
+
 /*------ Hero Banner -------*/
 
 #hero-image {

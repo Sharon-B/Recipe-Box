@@ -30,7 +30,7 @@
                         <div class="card-body">
                             <h3 ><a class="recipe-title capitalize" href="{{ url_for('recipe', recipe_id=recipe._id) }}">{{
                                     recipe.recipe_name }}</a></h3>
-                            <div>
+                            <div class="timings">
                                 <i class="fas fa-stopwatch"></i> <strong>Prep time:</strong> {{ recipe.prep_time }} <strong>Cook time:</strong> {{recipe.cook_time }}
                             </div>
                             <p class="card-text">{{ recipe.recipe_description }}

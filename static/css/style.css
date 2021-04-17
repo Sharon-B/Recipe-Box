@@ -202,11 +202,16 @@ body {
     max-height: 20rem;
 }
 
+.timings {
+    margin: .8rem auto;
+}
+
 .recipe-added-by {
     font-size: 1.2rem;
     text-align: right;
     color: #596264;
     font-style: italic;
+    margin: .5rem 0;
 }
 
 /*------ Register Page-------*/

@@ -9,6 +9,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: Roboto;
+    color: #1b2425;;
 }
 
 /*------ Colors -------*/
@@ -34,23 +36,21 @@ body {
 
 /*------ Headings/Fonts -------*/
 
-.recipes-heading {
-    font-family: "Playfair Display";
-    font-size: 3.2rem;
-    font-style: italic;
-    margin-bottom: 1.5rem;
-    text-align: center;
+.capitalize {
+    text-transform: capitalize;
 }
 
 .recipe-title {
     font-family: "Playfair Display";
     font-size: 2.4rem;
     font-style: italic;
+    color: #2e7f8c;
     text-align: center;
 }
 
-.card-sub-heading {
-    font-size: 1rem;
+.recipe-title:hover {
+    color: #2e7f8c;
+    text-decoration: underline;
 }
 
 .card-text {
@@ -58,9 +58,10 @@ body {
 }
 
 .page-heading {
+    color: #2e7f8c;
     font-family: "Playfair Display";
-    font-size: 3.2rem;
-    font-style: italic;
+    font-weight: 500;
+    font-size: 3.6rem;
     margin: 1.5rem auto; 
     text-align: center;
 }
@@ -174,10 +175,6 @@ body {
 
 /*------ Recipe Cards -------*/
 
-#recipes-section {
-    margin-top: 2rem;
-}
-
 #recipe-cards-home {
     margin: 1rem auto;
 }
@@ -201,6 +198,15 @@ body {
 .card-img-top {
     width: 90%;
     margin: 0 auto;
+    max-width: 25rem;
+    max-height: 20rem;
+}
+
+.recipe-added-by {
+    font-size: 1.2rem;
+    text-align: right;
+    color: #596264;
+    font-style: italic;
 }
 
 /*------ Register Page-------*/
@@ -275,13 +281,6 @@ form p {
 .recipe-list-item {
     white-space: pre-wrap;
     list-style: none;
-}
-
-.recipe-added-by {
-    font-size: 1.2rem;
-    text-align: right;
-    color: #596264;
-    font-style: italic;
 }
 
 .fas {

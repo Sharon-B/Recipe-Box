@@ -18,6 +18,10 @@ body {
     background-color: #9FD1D9;
 }
 
+#bg-body-color {
+    background-color: #FAFBF6;
+}
+
 /*------ Logo -------*/
 #logo {
     font-family: "Playfair Display", cursive;

@@ -118,12 +118,15 @@ body {
 
 /*------ Navigation -------*/
 #nav-menu {
+    text-align: right;
+    margin-right: 1.5rem;
     margin-left: auto;
     font-size: 3rem;
 }
 
 #nav-menu .nav-link {
     font-size: 1.8rem;
+    color: #fffcf3;
 }
 
 .nav-item {
@@ -132,6 +135,12 @@ body {
 
 .navbar-toggler {
     margin-right: 1rem;
+    color: #fffcf3;
+}
+
+.navbar-dark .navbar-toggler {
+    color: rgb(255, 252, 243);
+    border-color: rgba(255,252,243,.2);
 }
 
 .navbar {

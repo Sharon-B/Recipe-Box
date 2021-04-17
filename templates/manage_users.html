@@ -9,14 +9,15 @@
             <div class="col">
                 <form action="{{ url_for('search_users') }}" method="POST">
                     <div class="row">
-                        <div class="col-8">
+                        <div class="col-1">
                             <label for="query" class="cat-display"><i class="fas fa-search"></i></label>
-                            <input id="query" name="query" type="text" minlength="3" class="add_cat validate" placeholder="Search by username..." required>
+                        </div>
+                        <div class="col-10">
+                            <input id="query" name="query" type="text" minlength="3" class="search-input validate" placeholder="Search Users..." required>
                         </div>
                         <div class="col buttons">
                             <a href="{{ url_for('manage_users') }}" class="btn delete-button">Reset</a>
-                            <button type="submit" class="submit-button">
-                                <i class="fas fa-search"></i> Search
+                            <button type="submit" class="submit-button">Search
                             </button>
                         </div>
                     </div>
@@ -24,17 +25,17 @@
             </div>
         </div>
                     
-        <h2 class="recipes-heading">All Users</h2>
+        <h2 class="heading">All Users</h2>
         {% if users|length > 0 %}
             {% for user in users %}
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-sm-12 col-md-4">
                         <span class="cat-display">{{ user.username }}</span>
                     </div>
-                    <div class="col-3">
+                    <div class="col-sm-12 col-md-4">
                         <span class="cat-display">{{ user.email }}</span>
                     </div>
-                    <div class="buttons">   
+                    <div class="col-sm-12 col-md-4 buttons">   
                         <a href="{{ url_for('edit_user', user_id=user._id) }}" class="btn edit-button">Edit</a>
                         <a href="{{ url_for('delete_user', user_id=user._id) }}" class="btn delete-button">Delete</a> 
                     </div>

@@ -117,7 +117,8 @@ body {
 }
 
 .add-button {
-    background-color: #bec2c4;
+    background-color: #2e7f8c;
+    color: #fffcf3;
     margin: 1rem;
     width: 18rem;
     font-size: 1.6rem;

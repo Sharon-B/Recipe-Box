@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h2 class="page-heading">Contact Us!</h2>
+
+    <div id="form-wrapper" class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/contact-image.png') }}" id="form-bg-image"
+                        class="card-img" alt="...">
+                    <div class="card-img-overlay image-overlay contact-ol">
+                        <form id="contact-form" method="POST" action="">
+                            <!-- Name -->
+                            <div class="row">
+                                <div class="col form-input">
+                                    <input id="name" name="name" type="text" class="validate" placeholder="Name" required>
+                                </div>
+                            </div>
+                            <!-- Email -->
+                            <div class="row">
+                                <div class="col form-input">
+                                    <input id="email" name="email" type="email" class="validate" placeholder="Email" required>
+                                </div>
+                            </div>
+                            <!-- Message -->
+                            <div class="row">
+                                <div class="col form-input">
+                                    <textarea name="message" id="message" rows="10" placeholder="Message..." required></textarea>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col">
+                                    <input class="submit-button" type="submit" value="Send">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

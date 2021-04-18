@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+
 {% block content %}
 
     <h2 class="page-heading">Contact Us!</h2>
@@ -10,7 +11,7 @@
                     <img src="{{ url_for('static', filename='images/contact-image.png') }}" id="form-bg-image"
                         class="card-img" alt="...">
                     <div class="card-img-overlay image-overlay contact-ol">
-                        <form id="contact-form" method="POST" action="">
+                        <form id="contact-form" onsubmit="return sendMail(this);">
                             <!-- Name -->
                             <div class="row">
                                 <div class="col form-input">
@@ -20,7 +21,7 @@
                             <!-- Email -->
                             <div class="row">
                                 <div class="col form-input">
-                                    <input id="email" name="email" type="email" class="validate" placeholder="Email" required>
+                                    <input id="emailaddress" name="emailaddress" type="email" class="validate" placeholder="Email" required>
                                 </div>
                             </div>
                             <!-- Message -->
@@ -43,3 +44,16 @@
     </div>
 
 {% endblock %}
+
+{% block scripts %}
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+</script>
+<script type="text/javascript"> 
+        (function(){
+            emailjs.init("user_K634cTmyvbT1ZBLjKZdzA");
+        })();
+ </script>
+{% endblock %}
+
+

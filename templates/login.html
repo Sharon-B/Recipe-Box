@@ -2,11 +2,11 @@
 {% block content %}
 
     <h2 class="page-heading">Login</h2>
-    <div id="login-wrapper" class="container">
+    <div id="form-wrapper" class="container">
         <div class="row">
             <div class="col">
                 <div class="card">
-                    <img src="{{ url_for('static', filename='images/login-image.png') }}" id="login-image"
+                    <img src="{{ url_for('static', filename='images/login-image.png') }}" id="form-bg-image"
                         class="card-img" alt="...">
                     <div class="card-img-overlay image-overlay">
                         <form id="login-form" method="POST" action="{{ url_for('login') }}">

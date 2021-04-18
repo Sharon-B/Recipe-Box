@@ -241,13 +241,14 @@ i.fas.fa-caret-down {
 
 /*------ Register Page-------*/
 
+#form-wrapper,
 #register-wrapper {
     margin-bottom: 2rem;
     max-width: 65vh;
     max-height: 70vh;
 }
 
-#register-image {
+#form-bg-image {
     max-height: 70vh;
     margin: 0 auto;
 }
@@ -262,10 +263,15 @@ i.fas.fa-caret-down {
     align-items: center;
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 
 .form-input {
-    margin: 1rem auto;
+    width: 60%;
+    line-height: 1.6rem;
+    font-size: 1.6rem;
+    padding: 1rem;
+    margin: 1rem;
 }
 
 input#username:focus,
@@ -347,6 +353,33 @@ form p {
 
 .fa-search {
     font-size: 2rem;
+}
+
+/*------ Contact Page-------*/
+
+#contact-wrapper {
+    border-radius: .5rem;
+    width: 60%;
+    margin: 4rem auto;
+}
+
+.contact-ol {
+    top: 10%;
+    bottom: 5%;
+}
+
+.contact-input {
+    width: 60%;
+    line-height: 1.6rem;
+    font-size: 1.6rem;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.send {
+    width: 20%;
+    min-width: 7rem;
+    padding: 1rem .6rem;
 }
 
 /*------ Footer -------*/

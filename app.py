@@ -295,6 +295,12 @@ def delete_user(user_id):
     return redirect(url_for("manage_users"))
 
 
+# Contact
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
+
+
 # Set how & where to run the app
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

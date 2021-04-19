@@ -3,35 +3,35 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h2 class="page-heading">{{ recipe.recipe_name }}</h2>
+                <h2 class="page-heading capitalize">{{ recipe.recipe_name }}</h2>
             </div>
         </div>
         <!-- Recipe image -->
-        <div class="row">
-            <div class="col-10 offset-1">
+        <div class="row center-it">
+            <div class="col-10 col-md-6">
                 <img src="{{ recipe.recipe_url }}" class="recipe-image" alt="...">
             </div>
         </div>
         <!-- Recipe timings -->
         <div class="row">
             <div class="col">
-                <div class="sub-heading">
-                    <i class="fas fa-stopwatch"></i> Prep time: {{ recipe.prep_time }} Cook time: {{ recipe.cook_time }}
+                <div class="recipe-info">
+                    <i class="fas fa-stopwatch recipe-info"></i> <strong class="recipe-info">Prep time:</strong> {{ recipe.prep_time }} <strong class="recipe-info">Cook time:</strong> {{recipe.cook_time }}
                 </div>
             </div>
         </div>
         <!-- Recipe category -->
         <div class="row">
             <div class="col">
-                <div class="sub-heading">
-                    <i class="fas fa-utensils"></i> {{ recipe.category_name }}
+                <div class="recipe-info">
+                    <i class="fas fa-utensils recipe-info"></i><strong class="recipe-info"> {{ recipe.category_name }}</strong>
                 </div>
             </div>
         </div>  
         <!-- Recipe description -->
         <div class="row">
             <div class="col">
-                <p>{{ recipe.recipe_description }}
+                <p class="description">{{ recipe.recipe_description }}
                 </p>
             </div>
         </div>

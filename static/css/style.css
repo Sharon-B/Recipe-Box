@@ -74,6 +74,17 @@ body {
     margin: 1.5rem 0;
 }
 
+.sub-heading {
+    color: #2e7f8c;
+    font-family: "Playfair Display";
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.center-it {
+    justify-content: center;
+}
+
 /*------ White-space pre-wrap -------*/
 
 .ws-pw {
@@ -322,12 +333,22 @@ form p {
 }
 
 .recipe-list-item {
+    font-size: 1.6rem;
     white-space: pre-wrap;
     list-style: none;
 }
 
 .fas {
     color: #596264;
+}
+
+.recipe-info {
+    font-size: 1.8rem;
+}
+
+.description {
+    font-size: 1.8rem;
+    margin-top: 1.4rem;
 }
 
 /*------ Manage Categories -------*/

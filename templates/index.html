@@ -26,7 +26,7 @@
                 {% for recipe in recipes %}
                 <div class="col-12 col-md-4">
                     <div class="card">
-                        <img src="{{ recipe.recipe_url }}" class="card-img-top" alt="...">
+                        <img src="{{ recipe.recipe_url }}" class="card-img-top" alt="{{ recipe.recipe_name }}">
                         <div class="card-body">
                             <h3><a class="recipe-title capitalize" href="{{ url_for('recipe', recipe_id=recipe._id) }}">{{
                                     recipe.recipe_name }}</a></h3>

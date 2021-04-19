@@ -82,9 +82,16 @@ body {
 
 /*------ Flash Messages -------*/
 
-.flashes {
-    line-height: 2;
-    margin: 1rem auto;
+.flash {
+    background-color: #CFEFF4;
+}
+
+.flash-msg {
+    line-height: 5rem;
+    margin: 0 auto;
+    font-size: 3rem;
+    padding: .5rem;
+    color: #2b5d65;
 }
 
 

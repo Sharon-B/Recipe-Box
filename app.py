@@ -28,14 +28,15 @@ mongo = PyMongo(app)
 @app.route("/index")
 def index():
     recipes = mongo.db.recipes.find()
-    return render_template("index.html", recipes=recipes)
+    return render_template("index.html", recipes=recipes, title="Home")
 
 
 # Recipes
 @app.route("/all_recipes")
 def all_recipes():
     recipes = mongo.db.recipes.find()
-    return render_template("all_recipes.html", recipes=recipes)
+    return render_template(
+        "all_recipes.html", recipes=recipes, title="All Recipes")
 
 
 # Search Recipes
@@ -43,7 +44,8 @@ def all_recipes():
 def search_recipes():
     query = request.form.get("query")
     recipes = mongo.db.recipes.find({"$text": {"$search": query}})
-    return render_template("all_recipes.html", recipes=recipes)
+    return render_template(
+        "all_recipes.html", recipes=recipes, title="Search Results")
 
 
 # Register
@@ -72,7 +74,7 @@ def register():
         flash("Registration Successful!")
         return redirect(url_for(
             "profile", username=session["user"]))
-    return render_template("register.html")
+    return render_template("register.html", title="Register")
 
 
 # Log In
@@ -103,7 +105,7 @@ def login():
             flash("Incorrect Username/Password")
             return redirect(url_for("login"))
 
-    return render_template("login.html")
+    return render_template("login.html", title="Log In")
 
 
 # Profile
@@ -116,7 +118,8 @@ def profile(username):
     if session["user"]:
         recipes = mongo.db.recipes.find()
         return render_template(
-            "profile.html", username=username, recipes=recipes)
+            "profile.html", username=username,
+            recipes=recipes, title="Profile")
 
     return redirect(url_for("login"))
 
@@ -133,7 +136,7 @@ def logout():
 @app.route("/recipe/<recipe_id>")
 def recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    return render_template("recipe.html", recipe=recipe)
+    return render_template("recipe.html", recipe=recipe, title="Recipe")
 
 
 # Add Recipe
@@ -156,7 +159,8 @@ def add_recipe():
         return redirect(url_for("profile", username=session["user"]))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("add_recipe.html", categories=categories)
+    return render_template(
+        "add_recipe.html", categories=categories, title="Add Recipe")
 
 
 # Edit Recipe
@@ -182,7 +186,8 @@ def edit_recipe(recipe_id):
 
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template(
-        "edit_recipe.html", recipe=recipe, categories=categories)
+        "edit_recipe.html", recipe=recipe,
+        categories=categories, title="Edit Recipe")
 
 
 # Delete Recipe
@@ -197,14 +202,17 @@ def delete_recipe(recipe_id):
 @app.route("/manage_recipes")
 def manage_recipes():
     recipes = list(mongo.db.recipes.find().sort("recipe_name", 1))
-    return render_template("manage_recipes.html", recipes=recipes)
+    return render_template(
+        "manage_recipes.html", recipes=recipes, title="Manage Recipes")
 
 
 # Manage Categories
 @app.route("/manage_categories")
 def manage_categories():
     categories = list(mongo.db.categories.find().sort("category_name", 1))
-    return render_template("manage_categories.html", categories=categories)
+    return render_template(
+        "manage_categories.html", categories=categories,
+        title="Manage Categories")
 
 
 # Search Categories
@@ -212,7 +220,9 @@ def manage_categories():
 def search_categories():
     query = request.form.get("query")
     categories = list(mongo.db.categories.find({"$text": {"$search": query}}))
-    return render_template("manage_categories.html", categories=categories)
+    return render_template(
+        "manage_categories.html", categories=categories,
+        title="Search Categories")
 
 
 # Add Category
@@ -226,7 +236,7 @@ def add_category():
         flash("New Category Added")
         return redirect(url_for("manage_categories"))
 
-    return render_template("add_category.html")
+    return render_template("add_category.html", title="Add Category")
 
 
 # Edit Catgory
@@ -242,7 +252,8 @@ def edit_category(category_id):
         return redirect(url_for("manage_categories"))
 
     category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
-    return render_template("edit_category.html", category=category)
+    return render_template(
+        "edit_category.html", category=category, title="Edit Category")
 
 
 # Delete Category
@@ -257,7 +268,8 @@ def delete_category(category_id):
 @app.route("/manage_users")
 def manage_users():
     users = list(mongo.db.users.find().sort("username", 1))
-    return render_template("manage_users.html", users=users)
+    return render_template(
+        "manage_users.html", users=users, title="Manage Users")
 
 
 # Search Users
@@ -265,7 +277,8 @@ def manage_users():
 def search_users():
     query = request.form.get("query")
     users = list(mongo.db.users.find({"$text": {"$search": query}}))
-    return render_template("manage_users.html", users=users)
+    return render_template(
+        "manage_users.html", users=users, title="Search Users")
 
 
 # Edit User
@@ -284,7 +297,7 @@ def edit_user(user_id):
         return redirect(url_for("manage_users"))
 
     user = mongo.db.users.find_one({"_id": ObjectId(user_id)})
-    return render_template("edit_user.html", user=user)
+    return render_template("edit_user.html", user=user, title="Edit User")
 
 
 # Delete User
@@ -298,7 +311,7 @@ def delete_user(user_id):
 # Contact
 @app.route("/contact")
 def contact():
-    return render_template("contact.html")
+    return render_template("contact.html", title="Contact")
 
 
 # Set how & where to run the app

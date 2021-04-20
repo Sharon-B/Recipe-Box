@@ -91,6 +91,18 @@ body {
     white-space: pre-wrap;
 }
 
+/*------ Pagination -------*/
+
+.pagination  {
+    justify-content: center;
+}
+
+.page-item.active .page-link {    
+    background-color: #2e7f8c;
+}
+
+
+
 /*------ Flash Messages -------*/
 
 .flash {

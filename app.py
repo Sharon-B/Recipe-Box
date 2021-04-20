@@ -4,6 +4,7 @@ from flask import (
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from flask_paginate import Pagination, get_page_args
 # from forms import RegisterForm
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
@@ -21,6 +22,26 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 # Create an instance of PyMongo
 mongo = PyMongo(app)
+
+# Pagination  recipes per page
+PER_PAGE = 6
+
+
+# Pagination
+def paginated(recipes):
+    page, per_page, offset = get_page_args(
+        page_parameter='page', per_page_parameter='per_page')
+    offset = page * PER_PAGE - PER_PAGE
+
+    return recipes[offset: offset + PER_PAGE]
+
+
+def pagination_args(recipes):
+    page, per_page, offset = get_page_args(
+        page_parameter='page', per_page_parameter='per_page')
+    total = len(recipes)
+
+    return Pagination(page=page, per_page=PER_PAGE, total=total)
 
 
 # Index

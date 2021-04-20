@@ -41,7 +41,8 @@ def pagination_args(recipes):
         page_parameter='page', per_page_parameter='per_page')
     total = len(recipes)
 
-    return Pagination(page=page, per_page=PER_PAGE, total=total)
+    return Pagination(page=page, per_page=PER_PAGE,
+                      css_framework='bootstrap4', total=total)
 
 
 # Index

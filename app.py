@@ -49,8 +49,11 @@ def pagination_args(recipes):
 @app.route("/")
 @app.route("/index")
 def index():
-    recipes = (mongo.db.recipes.find())
-    return render_template("index.html", recipes=recipes, title="Home")
+    recipes = list(mongo.db.recipes.find())
+    recipes_paginated = paginated(recipes)
+    pagination = pagination_args(recipes)
+    return render_template("index.html", recipes=recipes_paginated,
+                           pagination=pagination, title="Home")
 
 
 # Recipes

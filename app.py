@@ -71,9 +71,12 @@ def all_recipes():
 @app.route("/search_recipes", methods=["GET", "POST"])
 def search_recipes():
     query = request.form.get("query")
-    recipes = mongo.db.recipes.find({"$text": {"$search": query}})
+    recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
+    recipes_paginated = paginated(recipes)
+    pagination = pagination_args(recipes)
     return render_template(
-        "all_recipes.html", recipes=recipes, title="Search Results")
+        "all_recipes.html", recipes=recipes_paginated,
+        pagination=pagination, title="Search Results")
 
 
 # Register

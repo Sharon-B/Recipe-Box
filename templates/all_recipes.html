@@ -30,7 +30,7 @@
                 </div>
             </div>
             
-            {% if recipes.count() > 0 %}
+            {% if recipes|length > 0 %}
             <div class="row recipe-card recipes">
                 {% for recipe in recipes %}
                 <div class="col-12 col-md-4">
@@ -64,6 +64,11 @@
             {% endif %}
 
         </div>
+
+        <!-- Pagination links -->
+        {{ pagination.links }}
+                
+
     </section>
 
 {% endblock %}

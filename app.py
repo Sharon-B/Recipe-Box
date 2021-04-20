@@ -4,6 +4,7 @@ from flask import (
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from flask_paginate import Pagination, get_page_args
 # from forms import RegisterForm
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
@@ -22,30 +23,60 @@ app.secret_key = os.environ.get("SECRET_KEY")
 # Create an instance of PyMongo
 mongo = PyMongo(app)
 
+# Pagination  recipes per page
+PER_PAGE = 6
+
+
+# Pagination
+def paginated(recipes):
+    page, per_page, offset = get_page_args(
+        page_parameter='page', per_page_parameter='per_page')
+    offset = page * PER_PAGE - PER_PAGE
+
+    return recipes[offset: offset + PER_PAGE]
+
+
+def pagination_args(recipes):
+    page, per_page, offset = get_page_args(
+        page_parameter='page', per_page_parameter='per_page')
+    total = len(recipes)
+
+    return Pagination(page=page, per_page=PER_PAGE,
+                      css_framework='bootstrap4', total=total)
+
 
 # Index
 @app.route("/")
 @app.route("/index")
 def index():
-    recipes = mongo.db.recipes.find()
-    return render_template("index.html", recipes=recipes, title="Home")
+    recipes = list(mongo.db.recipes.find())
+    recipes_paginated = paginated(recipes)
+    pagination = pagination_args(recipes)
+    return render_template("index.html", recipes=recipes_paginated,
+                           pagination=pagination, title="Home")
 
 
 # Recipes
 @app.route("/all_recipes")
 def all_recipes():
-    recipes = mongo.db.recipes.find()
+    recipes = list(mongo.db.recipes.find())
+    recipes_paginated = paginated(recipes)
+    pagination = pagination_args(recipes)
     return render_template(
-        "all_recipes.html", recipes=recipes, title="All Recipes")
+        "all_recipes.html", recipes=recipes_paginated,
+        pagination=pagination, title="All Recipes")
 
 
 # Search Recipes
 @app.route("/search_recipes", methods=["GET", "POST"])
 def search_recipes():
     query = request.form.get("query")
-    recipes = mongo.db.recipes.find({"$text": {"$search": query}})
+    recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
+    recipes_paginated = paginated(recipes)
+    pagination = pagination_args(recipes)
     return render_template(
-        "all_recipes.html", recipes=recipes, title="Search Results")
+        "all_recipes.html", recipes=recipes_paginated,
+        pagination=pagination, title="Search Results")
 
 
 # Register

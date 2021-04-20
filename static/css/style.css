@@ -301,7 +301,6 @@ i.fas.fa-caret-down {
 }
 
 .form-input {
-    width: 60%;
     line-height: 1.6rem;
     font-size: 1.6rem;
 }
@@ -317,7 +316,7 @@ input#email:focus {
 }
 
 .form-section {
-    margin: 3rem 1rem;
+    margin: 1rem 1rem;
 }
 
 .sub {
@@ -501,10 +500,36 @@ form p {
     .recipe-card .card {
         width: 23rem;
     }
+
+    .image-overlay {
+        top: 15%;
+        bottom: 20%;
+    }
+
+    .form-section {
+        margin: 3rem 1rem;
+    }
+
+    .form-label {
+        font-size: 2rem;
+    }
+
+    .form-input {
+        line-height: 2rem;
+        font-size: 2rem;
+    }
+
+    .sub {
+        margin-top: 4rem;
+    }
+
+    .input-field {
+        width: 100%;
+    }
 }
 
 /*-- Large Screen--*/
-@media only screen and (min-width: 1030px) {
+@media only screen and (min-width: 992px) {
 
     #logo {
         font-size: 5rem;
@@ -526,6 +551,11 @@ form p {
 
     .recipe-card .card {
         width: 28rem;
+    }
+
+    .image-overlay {
+        top: 5%;
+        bottom: 5%;
     }
 
 }

@@ -12,19 +12,19 @@
                         <form id="login-form" method="POST" action="{{ url_for('login') }}">
                             <!-- username -->
                             <div class="row form-section">
-                                <div class="col">
+                                <div class="col-12">
                                     <label for="username" class="form-label">Username:</label>
                                 </div>
-                                <div class="col form-username form-input">
+                                <div class="col-12 form-username form-input">
                                     <input id="username" name="username" type="text" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="input-field validate" placeholder="Enter username" required>
                                 </div>
                             </div>
                             <!-- password -->
                             <div class="row form-section">
-                                <div class="col">
+                                <div class="col-12">
                                     <label for="username" class="form-label">Password:</label>
                                 </div>
-                                <div class="col form-password form-input">
+                                <div class="col-12 form-password form-input">
                                     <input id="password" name="password" type="password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="input-field validate" placeholder="Enter password" required>
                                 </div>
                             </div>

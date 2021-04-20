@@ -206,7 +206,7 @@ i.fas.fa-caret-down {
 /*------ Hero Banner -------*/
 
 #hero-image {
-    height: 18vh;
+    max-height: 55rem;
 }
 
 .hero-image-overlay {
@@ -472,10 +472,6 @@ form p {
         padding: 1rem;
     }
 
-    #hero-image {
-        height: 22vh;
-    }
-
     #recipes-section {
         margin-top: 3rem;
     }
@@ -490,10 +486,6 @@ form p {
 
     #logo {
         font-size: 5rem;
-    }
-
-    #hero-image {
-        height: 35vh;
     }
 
     .hero-image-overlay {
@@ -523,7 +515,4 @@ form p {
         margin-right: 2rem;
     }
     
-    #hero-image {
-        height: 45vh;
-    } 
 }

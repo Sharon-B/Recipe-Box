@@ -6,29 +6,36 @@
         <div class="row">
             <div class="col">
                 <div class="card">
-                    <img src="{{ url_for('static', filename='images/login-image.png') }}" id="form-bg-image"
+                    <img src="{{ url_for('static', filename='images/login-image.jpg') }}" id="form-bg-image"
                         class="card-img" alt="...">
                     <div class="card-img-overlay image-overlay">
                         <form id="login-form" method="POST" action="{{ url_for('login') }}">
                             <!-- username -->
-                            <div class="row">
+                            <div class="row form-section">
+                                <div class="col">
+                                    <label for="username" class="form-label">Username:</label>
+                                </div>
                                 <div class="col form-username form-input">
-                                    <input id="username" name="username" type="text" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" placeholder="Username" required>
+                                    <input id="username" name="username" type="text" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="input-field validate" placeholder="Enter username" required>
                                 </div>
                             </div>
                             <!-- password -->
-                            <div class="row">
+                            <div class="row form-section">
+                                <div class="col">
+                                    <label for="username" class="form-label">Password:</label>
+                                </div>
                                 <div class="col form-password form-input">
-                                    <input id="password" name="password" type="password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$"
-                                        class="validate" placeholder="Password" required>
+                                    <input id="password" name="password" type="password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="input-field validate" placeholder="Enter password" required>
                                 </div>
                             </div>
                             
                         
-                            <input class="submit-button" type="submit" value="Log In">
-                            
-                            <p>Not Registered Yet? <a href="{{ url_for('register') }}">Register</a>
-                            </p>
+                            <div class="sub">
+                                <input class="submit-button" type="submit" value="Log In">
+                                
+                                <p>Not Registered Yet? <a href="{{ url_for('register') }}">Register</a>
+                                </p>
+                            </div>
 
                         </form>
                     </div>

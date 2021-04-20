@@ -285,23 +285,25 @@ i.fas.fa-caret-down {
 
 .image-overlay {
     background-color: rgba(196, 196, 196, .7);
-    top: 15%;
-    right: 20%;
-    bottom: 15%;
-    left: 20%;
+    top: 5%;
+    right: 12%;
+    bottom: 5%;
+    left: 12%;
     border-radius: 1rem;
     align-items: center;
     display: flex;
     flex-direction: column;
-    text-align: center;
+}
+
+.form-label {
+    font-size: 1.6rem;
+    text-align: left;
 }
 
 .form-input {
     width: 60%;
     line-height: 1.6rem;
     font-size: 1.6rem;
-    padding: 1rem;
-    margin: 1rem;
 }
 
 input#username:focus,
@@ -310,7 +312,27 @@ input#email:focus {
     outline-color: #71B7C2;
 }
 
+.input-field {
+    padding: .5rem;
+}
+
+.form-section {
+    margin: 3rem 1rem;
+}
+
+.sub {
+    text-align: center;
+}
+
+.sub p a {
+    color: #2e7f8c;
+    font-size: 1.4rem;
+    font-weight: 600
+}
+
+
 form p {
+    font-size: 1.4rem;
     margin: 1.5rem auto;
 }
 

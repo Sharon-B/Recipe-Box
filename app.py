@@ -210,7 +210,7 @@ def edit_recipe(recipe_id):
 
     elif session["user"] != recipe["added_by"] and session["user"] != "admin":
         flash("You do not have permission to do that")
-        return redirect(url_for('profile'))
+        return redirect(url_for('all_recipes'))
 
     elif request.method == "POST":
         submit_recipe = {
@@ -236,9 +236,15 @@ def edit_recipe(recipe_id):
 # Delete Recipe
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+
     if "user" not in session:
         flash("Please Log In")
         return redirect(url_for("login"))
+
+    elif session["user"] != recipe["added_by"] and session["user"] != "admin":
+        flash("You do not have permission to do that")
+        return redirect(url_for('all_recipes'))
 
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe deleted")

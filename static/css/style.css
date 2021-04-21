@@ -217,6 +217,10 @@ li.nav-item.active {
     background-color: #2e7f8c;
 }
 
+.nav-link:hover {
+    text-decoration: underline;
+}
+
 
 /*------ Hero Banner -------*/
 

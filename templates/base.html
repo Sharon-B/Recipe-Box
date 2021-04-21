@@ -33,29 +33,29 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <!-- Navbar Menu -->
                 <ul class="navbar-nav" id="nav-menu">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{{ url_for('index') }}">Home <span class="sr-only">(current)</span></a>
+                    <li class="nav-item {% block nav_home %}{% endblock %}">
+                        <a class="nav-link" href="{{ url_for('index') }}">Home</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item {% block nav_recipes %}{% endblock %}">
                         <a class="nav-link" href="{{ url_for('all_recipes') }}">Recipes</a>
                     </li>
                     {% if session.user %}
-                        <li class="nav-item">
+                        <li class="nav-item {% block nav_profile %}{% endblock %}">
                             <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}">Profile</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item {% block nav_add_recipe %}{% endblock %}">
                             <a class="nav-link" href="{{ url_for('add_recipe') }}">Add Recipe</a>
                         </li>
                         {% if session.user == "admin"|lower %}
-                            <li class="nav-item">
+                            <li class="nav-item {% block nav_admin_menu %}{% endblock %}">
                                 <div class="dropdown">
                                     <span class="nav-link" id="admin-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Admin Menu <i class="fas fa-caret-down"></i>
                                     </span>
                                     <div class="dropdown-menu dd-menu" aria-labelledby="dropdownMenuButton">
-                                      <a class="dropdown-item dd-item" href="{{ url_for('manage_recipes') }}">Manage Recipes</a>
-                                      <a class="dropdown-item dd-item" href="{{ url_for('manage_categories') }}">Manage Categories</a>
-                                      <a class="dropdown-item dd-item" href="{{ url_for('manage_users') }}">Manage Users</a>
+                                      <a class="dropdown-item dd-item {% block nav_manage_recipes %}{% endblock %}" href="{{ url_for('manage_recipes') }}">Manage Recipes</a>
+                                      <a class="dropdown-item dd-item {% block nav_manage_cats %}{% endblock %}" href="{{ url_for('manage_categories') }}">Manage Categories</a>
+                                      <a class="dropdown-item dd-item {% block nav_manage_users %}{% endblock %}" href="{{ url_for('manage_users') }}">Manage Users</a>
                                     </div>
                                   </div>
                             </li>
@@ -64,13 +64,13 @@
                             <a class="nav-link" href="{{ url_for('logout') }}">Log Out</a>
                         </li>
                     {% else %}
-                        <li class="nav-item">
+                        <li class="nav-item {% block nav_login %}{% endblock %}">
                             <a class="nav-link" href="{{ url_for('login') }}">Log In</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item {% block nav_register %}{% endblock %}">
                             <a class="nav-link" href="{{ url_for('register') }}">Register</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item {% block nav_contact %}{% endblock %}">
                             <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
                         </li>
                     {% endif %}

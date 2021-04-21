@@ -15,7 +15,7 @@
                 </div>
                 <div class="col-12 form-recipe-name form-input">
                     <input id="recipe_name" name="recipe_name" type="text" minlength="5" maxlength="45"
-                        value="{{ recipe.recipe_name }}" class="add-recipe validate" pattern="^[a-zA-Z0-9_][a-zA-Z0-9_ ]*[a-zA-Z0-9_]{5,45}$" required>
+                        value="{{ recipe.recipe_name }}" class="add-recipe input-field validate" pattern="^[a-zA-Z0-9_][a-zA-Z0-9_ ]*[a-zA-Z0-9_]{5,45}$" required>
                 </div>
             </div>
             <!-- Recipe Description -->
@@ -24,7 +24,7 @@
                     <label for="recipe_description" class="form-label">Recipe Description:</label>
                 </div>
                 <div class="col-12 form-recipe-name form-input">
-                    <textarea name="recipe_description" id="recipe_description" class="add-recipe validate"
+                    <textarea name="recipe_description" id="recipe_description" class="add-recipe input-field validate"
                         placeholder="Recipe description" minlength="5" maxlength="150" required>
                         {{- recipe.recipe_description }}
                     </textarea>
@@ -36,7 +36,7 @@
                     <label for="category_name" class="form-label">Select Category:</label>
                 </div>
                 <div class="col-sm-12 col-md-3 category-select form-input">
-                    <select id="category_name" class="add-recipe validate" name="category_name" form="add-recipe-form" required>
+                    <select id="category_name" class="add-recipe input-field validate" name="category_name" form="add-recipe-form" required>
                         <option value="" class="disabled">Select Category:</option>
                         {% for category in categories %}
                             {% if category.category_name == recipe.category_name %}
@@ -55,7 +55,7 @@
                 </div>
                 <div class="col-sm-6 col-md-3 form-prep form-input">
                     <input id="prep_time" name="prep_time" type="text" minlength="3" maxlength="10"
-                        pattern="^[a-zA-Z0-9_][a-zA-Z0-9_ ]*[a-zA-Z0-9_]{3,10}$" class="add-recipe validate" value="{{ recipe.prep_time }}" required>
+                        pattern="^[a-zA-Z0-9_][a-zA-Z0-9_ ]*[a-zA-Z0-9_]{3,10}$" class="add-recipe input-field validate" value="{{ recipe.prep_time }}" required>
                 </div>
                 <!-- Cook Time -->
                 <div class="col-sm-6 col-md-3">
@@ -63,7 +63,7 @@
                 </div>
                 <div class="col-sm-6 col-md-3 form-prep form-input">
                     <input id="cook_time" name="cook_time" type="text" minlength="3" maxlength="10"
-                        pattern="^[a-zA-Z0-9_][a-zA-Z0-9_ ]*[a-zA-Z0-9_]{3,10}$" class="add-recipe validate" value="{{ recipe.cook_time }}" required>
+                        pattern="^[a-zA-Z0-9_][a-zA-Z0-9_ ]*[a-zA-Z0-9_]{3,10}$" class="add-recipe input-field validate" value="{{ recipe.cook_time }}" required>
                 </div>
             </div>
             <!-- Ingredients -->
@@ -72,10 +72,8 @@
                     <label for="ingredients" class="form-label">Ingredients (one per line):</label>
                 </div>
                 <div class="col-12 form-ingredients form-input">
-                    <textarea name="ingredients" id="ingredients" class="add-recipe ws-pw validate" rows="8" required>
-                        {% for ingredient in recipe.ingredients %}
-                            &#13;&#10; {{- ingredient -}} &#13;&#10;
-                        {% endfor %}
+                    <textarea name="ingredients" id="ingredients" class="add-recipe input-field ws-pw validate" rows="8" required>
+                        {%- for ingredient in recipe.ingredients -%}{{ ingredient }}{%- endfor -%}
                     </textarea>
                 </div>
             </div>
@@ -86,10 +84,8 @@
                     <label for="method" class="form-label">Method:</label>
                 </div>
                 <div class="col-12 form-method form-input">
-                    <textarea name="method" id="method" class="add-recipe ws-pw validate" rows="12" required>
-                        {% for meth in recipe.method %}
-                            &#13;&#10; {{- meth -}} &#13;&#10;
-                        {% endfor %}
+                    <textarea name="method" id="method" class="add-recipe input-field ws-pw validate" rows="12" required>
+                        {%- for meth in recipe.method -%}{{ meth }}{%- endfor -%}
                     </textarea>
                 </div>
             </div>
@@ -99,7 +95,7 @@
                     <label for="recipe_url" class="form-label">Image URL:</label>
                 </div>
                 <div class="col-12 form-image-url form-input">
-                    <input id="recipe_url" name="recipe_url" type="text" class="add-recipe validate"
+                    <input id="recipe_url" name="recipe_url" type="text" class="add-recipe input-field validate"
                         value="{{ recipe.recipe_url }}" required>
                 </div>
             </div>

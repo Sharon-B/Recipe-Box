@@ -123,7 +123,7 @@ body {
 .buttons {
     display: flex;
     justify-content: center;
-    margin-bottom: 1.5rem;
+    margin-bottom:  .5rem;
 }
 
 .delete-button {
@@ -257,6 +257,11 @@ i.fas.fa-caret-down {
     max-height: 20rem;
 }
 
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+
 .timings {
     margin: .8rem auto;
 }
@@ -266,7 +271,8 @@ i.fas.fa-caret-down {
     text-align: right;
     color: #596264;
     font-style: italic;
-    margin: .5rem 0;
+    margin-bottom: .5rem;
+    margin-top: auto;
 }
 
 /*------ Register Page-------*/

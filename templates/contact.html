@@ -14,25 +14,34 @@
                         <form id="contact-form" onsubmit="return sendMail(this);">
                             <!-- Name -->
                             <div class="row">
+                                <div class="col-12">
+                                    <label for="name" class="form-label">Name:</label>
+                                </div>
                                 <div class="col form-input">
-                                    <input id="name" name="name" type="text" class="validate" placeholder="Name" required>
+                                    <input id="name" name="name" type="text" class="validate input-field" placeholder="Name" required>
                                 </div>
                             </div>
                             <!-- Email -->
                             <div class="row">
+                                <div class="col-12">
+                                    <label for="emailaddress" class="form-label">Email:</label>
+                                </div>
                                 <div class="col form-input">
-                                    <input id="emailaddress" name="emailaddress" type="email" class="validate" placeholder="Email" required>
+                                    <input id="emailaddress" name="emailaddress" type="email" class="validate input-field" placeholder="Email" required>
                                 </div>
                             </div>
                             <!-- Message -->
                             <div class="row">
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Message:</label>
+                                </div>
                                 <div class="col form-input">
-                                    <textarea name="message" id="message" rows="10" placeholder="Message..." required></textarea>
+                                    <textarea name="message" id="message" rows="6" class="input-field" placeholder="Message..." required></textarea>
                                 </div>
                             </div>
                             
                             <div class="row">
-                                <div class="col">
+                                <div class="col sub">
                                     <input class="submit-button" type="submit" value="Send">
                                 </div>
                             </div>

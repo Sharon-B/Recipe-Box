@@ -173,7 +173,11 @@ def recipe(recipe_id):
 # Add Recipe
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
-    if request.method == "POST":
+    if "user" not in session:
+        flash("Please Log In")
+        return redirect(url_for("login"))
+
+    elif request.method == "POST":
         recipe = {
             "recipe_name": request.form.get("recipe_name"),
             "recipe_description": request.form.get("recipe_description"),
@@ -197,7 +201,18 @@ def add_recipe():
 # Edit Recipe
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
-    if request.method == "POST":
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    categories = mongo.db.categories.find().sort("category_name", 1)
+
+    if "user" not in session:
+        flash("Please Log In")
+        return redirect(url_for("login"))
+
+    elif session["user"] != recipe["added_by"] and session["user"] != "admin":
+        flash("You do not have permission to do that")
+        return redirect(url_for('profile'))
+
+    elif request.method == "POST":
         submit_recipe = {
             "recipe_name": request.form.get("recipe_name"),
             "recipe_description": request.form.get("recipe_description"),
@@ -213,9 +228,6 @@ def edit_recipe(recipe_id):
         flash("Recipe Successfully Updated")
         return redirect(url_for("profile", username=session["user"]))
 
-    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-
-    categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template(
         "edit_recipe.html", recipe=recipe,
         categories=categories, title="Edit Recipe")
@@ -224,6 +236,10 @@ def edit_recipe(recipe_id):
 # Delete Recipe
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
+    if "user" not in session:
+        flash("Please Log In")
+        return redirect(url_for("login"))
+
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe deleted")
     return redirect(url_for("profile", username=session["user"]))

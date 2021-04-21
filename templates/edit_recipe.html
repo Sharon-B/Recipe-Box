@@ -14,8 +14,8 @@
                     <label for="recipe_name" class="form-label">Recipe Name:</label>
                 </div>
                 <div class="col-12 form-recipe-name form-input">
-                    <input id="recipe_name" name="recipe_name" type="text" minlength="5" maxlength="45"
-                        value="{{ recipe.recipe_name }}" class="add-recipe input-field validate" pattern="^[a-zA-Z0-9_][a-zA-Z0-9_ ]*[a-zA-Z0-9_]{5,45}$" required>
+                    <input id="recipe_name" name="recipe_name" type="text" minlength="1" maxlength="45"
+                        value="{{ recipe.recipe_name }}" class="add-recipe input-field validate" pattern="^[a-zA-Z0-9_][a-zA-Z0-9_ &]*[a-zA-Z0-9_]{1,45}$" required>
                 </div>
             </div>
             <!-- Recipe Description -->

@@ -10,10 +10,10 @@
                 </div>
             </div>
        
-            <div class="row recipe-card recipes">
+            <div class="row row-cols-1 row-cols-md-3">
                 {% for recipe in recipes %}
-                    <div class="col-12 col-md-4">
-                        <div class="card">  
+                    <div class="col-12 col-md-4 recipes">
+                        <div class="card recipe-card h-100">  
                             <img src="{{ recipe.recipe_url }}" class="card-img-top" alt="{{ recipe.recipe_name }}">
                             <div class="card-body">                 
                                 <h3><a href="{{ url_for('recipe', recipe_id=recipe._id) }}" class="recipe-title capitalize">{{ recipe.recipe_name }}</a></h3>

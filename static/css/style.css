@@ -203,6 +203,21 @@ i.fas.fa-caret-down {
     font-size: 1.6rem;
 }
 
+.dropdown {
+    cursor: pointer;
+}
+
+.dropdown-item.active,
+li.nav-item.active {
+    text-decoration: underline;
+    color: #fffcf3;
+}
+
+.dropdown-item.active {
+    background-color: #2e7f8c;
+}
+
+
 /*------ Hero Banner -------*/
 
 #hero-image {

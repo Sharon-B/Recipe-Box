@@ -1,17 +1,18 @@
 // Emailjs:
-console.log("Hello");
+window.onload = function() {
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        emailjs.sendForm('contact_service', 'contact_form', this)
+            .then(function() {
+                $('#email-confirm-msg').html("Thank you for your email, we will be in touch.");
+                console.log('SUCCESS!');
+            }, function(error) {
+                $('#email-confirm-msg').html("There was an error on our side, please try again later.");
+                console.log('FAILED...', error);
+            });
 
-function sendMail(contactForm) {
-    emailjs.send("service_neix638", "recipe_box", {
-        "from_name": contactForm.name.value,
-        "from_email": contactForm.emailaddress.value,
-        "message": contactForm.message.value
-    })
-    .then(
-        function(response) {
-            console.log("Success", response.status, response.text);
-        },
-        function(error) {
-            console.log("Failed", error);
-        });
+            // Reset Form data
+            document.getElementById("contact-form").reset();
+            return false;
+    });
 }

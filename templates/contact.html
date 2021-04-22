@@ -3,6 +3,9 @@
 {% block nav_contact %}active{% endblock %}
 
 {% block content %}
+    <!-- Email confirm message -->
+    <div id="email-confirm-msg" class="flash flash-msg">
+    </div>
 
     <h2 class="page-heading">Contact Us!</h2>
 
@@ -12,24 +15,24 @@
                 <div class="card">
                     <img src="{{ url_for('static', filename='images/contact-image.png') }}" id="form-bg-image"
                         class="card-img" alt="...">
-                    <div class="card-img-overlay image-overlay contact-ol">
-                        <form id="contact-form" onsubmit="return sendMail(this);">
+                    <div id="contact-ol" class="card-img-overlay image-overlay">
+                        <form id="contact-form">
                             <!-- Name -->
                             <div class="row">
                                 <div class="col-12">
-                                    <label for="name" class="form-label">Name:</label>
+                                    <label for="user_name" class="form-label">Name:</label>
                                 </div>
                                 <div class="col form-input">
-                                    <input id="name" name="name" type="text" class="validate input-field" placeholder="Name" required>
+                                    <input id="user_name" name="user_name" type="text" class="validate input-field" placeholder="Name" required>
                                 </div>
                             </div>
                             <!-- Email -->
                             <div class="row">
                                 <div class="col-12">
-                                    <label for="emailaddress" class="form-label">Email:</label>
+                                    <label for="user_email" class="form-label">Email:</label>
                                 </div>
                                 <div class="col form-input">
-                                    <input id="emailaddress" name="emailaddress" type="email" class="validate input-field" placeholder="Email" required>
+                                    <input id="user_email" name="user_email" type="email" class="validate input-field" placeholder="Email" required>
                                 </div>
                             </div>
                             <!-- Message -->

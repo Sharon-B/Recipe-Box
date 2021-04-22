@@ -117,6 +117,10 @@ body {
     color: #2b5d65;
 }
 
+#email-confirm-msg {
+    padding: 0;
+}
+
 
 /*------ Buttons -------*/
 
@@ -453,7 +457,7 @@ form p {
     margin: 4rem auto;
 }
 
-.contact-ol {
+#contact-ol {
     top: 1%;
     bottom: 1%;
 }
@@ -533,6 +537,11 @@ form p {
     .image-overlay {
         top: 15%;
         bottom: 20%;
+    }
+
+    #contact-ol {
+        top: 10%;
+        bottom: 5%
     }
 
     .form-section {

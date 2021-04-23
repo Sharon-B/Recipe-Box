@@ -177,7 +177,7 @@ def add_recipe():
         flash("Please Log In")
         return redirect(url_for("login"))
 
-    elif request.method == "POST":
+    if request.method == "POST":
         recipe = {
             "recipe_name": request.form.get("recipe_name"),
             "recipe_description": request.form.get("recipe_description"),
@@ -208,29 +208,31 @@ def edit_recipe(recipe_id):
         flash("Please Log In")
         return redirect(url_for("login"))
 
-    elif session["user"] != recipe["added_by"] and session["user"] != "admin":
-        flash("You do not have permission to do that")
-        return redirect(url_for('all_recipes'))
+    if session["user"] == recipe["added_by"] or session["user"] == "admin":
 
-    elif request.method == "POST":
-        submit_recipe = {
-            "recipe_name": request.form.get("recipe_name"),
-            "recipe_description": request.form.get("recipe_description"),
-            "category_name": request.form.get("category_name"),
-            "prep_time": request.form.get("prep_time"),
-            "cook_time": request.form.get("cook_time"),
-            "ingredients": request.form.getlist("ingredients"),
-            "method": request.form.getlist("method"),
-            "recipe_url": request.form.get("recipe_url"),
-            "added_by": session["user"]
-        }
-        mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit_recipe)
-        flash("Recipe Successfully Updated")
-        return redirect(url_for("profile", username=session["user"]))
+        if request.method == "POST":
+            submit_recipe = {
+                "recipe_name": request.form.get("recipe_name"),
+                "recipe_description": request.form.get("recipe_description"),
+                "category_name": request.form.get("category_name"),
+                "prep_time": request.form.get("prep_time"),
+                "cook_time": request.form.get("cook_time"),
+                "ingredients": request.form.getlist("ingredients"),
+                "method": request.form.getlist("method"),
+                "recipe_url": request.form.get("recipe_url"),
+                "added_by": session["user"]
+            }
+            mongo.db.recipes.update(
+                {"_id": ObjectId(recipe_id)}, submit_recipe)
+            flash("Recipe Successfully Updated")
+            return redirect(url_for("profile", username=session["user"]))
 
-    return render_template(
-        "edit_recipe.html", recipe=recipe,
-        categories=categories, title="Edit Recipe")
+        return render_template(
+            "edit_recipe.html", recipe=recipe,
+            categories=categories, title="Edit Recipe")
+
+    flash("You do not have permission to do that")
+    return redirect(url_for('all_recipes'))
 
 
 # Delete Recipe

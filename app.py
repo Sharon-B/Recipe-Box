@@ -244,13 +244,13 @@ def delete_recipe(recipe_id):
         flash("Please Log In")
         return redirect(url_for("login"))
 
-    elif session["user"] != recipe["added_by"] and session["user"] != "admin":
-        flash("You do not have permission to do that")
-        return redirect(url_for('all_recipes'))
+    if session["user"] == recipe["added_by"] or session["user"] == "admin":
+        mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
+        flash("Recipe deleted")
+        return redirect(url_for("profile", username=session["user"]))
 
-    mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
-    flash("Recipe deleted")
-    return redirect(url_for("profile", username=session["user"]))
+    flash("You do not have permission to do that")
+    return redirect(url_for('all_recipes'))
 
 
 # Manage Recipes

@@ -158,7 +158,7 @@ body {
     font-size: 1.6rem;
     border: .1rem solid #7f8487;
     border-radius: .3rem;
-    padding: 1rem 1.4rem;
+    padding: 1.6rem 2rem;
 }
 
 /*------ Navigation -------*/
@@ -425,20 +425,19 @@ form p {
 
 /*------ Manage Categories -------*/
 
+.manage-categories {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
 .cat-display {
     font-size: 2rem;
 }
 
 /*------ Add Category -------*/
 
-#add-cat-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .add_cat {
-    width: 30rem;
+    width: 100%;
     padding: .5rem;
     font-size: 1.6rem;
 }

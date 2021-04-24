@@ -254,20 +254,36 @@ def delete_recipe(recipe_id):
 
 
 # Manage Recipes
-@app.route("/manage_recipes")
+@app.route("/manage_recipes", methods=["GET", "POST"])
 def manage_recipes():
     recipes = list(mongo.db.recipes.find().sort("recipe_name", 1))
-    return render_template(
-        "manage_recipes.html", recipes=recipes, title="Manage Recipes")
+    if "user" not in session:
+        flash("Please Log In")
+        return redirect(url_for("login"))
+
+    if session["user"] == "admin":
+        return render_template(
+            "manage_recipes.html", recipes=recipes, title="Manage Recipes")
+
+    flash("You do not have permission to do that")
+    return redirect(url_for('all_recipes'))
 
 
 # Manage Categories
 @app.route("/manage_categories")
 def manage_categories():
     categories = list(mongo.db.categories.find().sort("category_name", 1))
-    return render_template(
-        "manage_categories.html", categories=categories,
-        title="Manage Categories")
+    if "user" not in session:
+        flash("Please Log In")
+        return redirect(url_for("login"))
+
+    if session["user"] == "admin":
+        return render_template(
+            "manage_categories.html", categories=categories,
+            title="Manage Categories")
+
+    flash("You do not have permission to do that")
+    return redirect(url_for('all_recipes'))
 
 
 # Search Categories
@@ -283,48 +299,83 @@ def search_categories():
 # Add Category
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
-    if request.method == "POST":
-        category = {
-            "category_name": request.form.get("category_name")
-        }
-        mongo.db.categories.insert_one(category)
-        flash("New Category Added")
-        return redirect(url_for("manage_categories"))
 
-    return render_template("add_category.html", title="Add Category")
+    if "user" not in session:
+        flash("Please Log In")
+        return redirect(url_for("login"))
+
+    if session["user"] == "admin":
+        if request.method == "POST":
+            category = {
+                "category_name": request.form.get("category_name")
+            }
+            mongo.db.categories.insert_one(category)
+            flash("New Category Added")
+            return redirect(url_for("manage_categories"))
+
+        return render_template("add_category.html", title="Add Category")
+
+    flash("You do not have permission to do that")
+    return redirect(url_for('all_recipes'))
 
 
-# Edit Catgory
+# Edit Category
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
-    if request.method == "POST":
-        update_category = {
-            "category_name": request.form.get("category_name")
-        }
-        mongo.db.categories.update(
-            {"_id": ObjectId(category_id)}, update_category)
-        flash("Category Updated")
-        return redirect(url_for("manage_categories"))
+    if "user" not in session:
+        flash("Please Log In")
+        return redirect(url_for("login"))
 
-    category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
-    return render_template(
-        "edit_category.html", category=category, title="Edit Category")
+    if session["user"] == "admin":
+        if request.method == "POST":
+            update_category = {
+                "category_name": request.form.get("category_name")
+            }
+            mongo.db.categories.update(
+                {"_id": ObjectId(category_id)}, update_category)
+            flash("Category Updated")
+            return redirect(url_for("manage_categories"))
+
+        category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
+        return render_template(
+            "edit_category.html", category=category, title="Edit Category")
+
+    flash("You do not have permission to do that")
+    return redirect(url_for('all_recipes'))
 
 
 # Delete Category
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
-    mongo.db.categories.remove({"_id": ObjectId(category_id)})
-    flash("Category Deleted")
-    return redirect(url_for("manage_categories"))
+
+    if "user" not in session:
+        flash("Please Log In")
+        return redirect(url_for("login"))
+
+    if session["user"] == "admin":
+        mongo.db.categories.remove({"_id": ObjectId(category_id)})
+        flash("Category Deleted")
+        return redirect(url_for("manage_categories"))
+
+    flash("You do not have permission to do that")
+    return redirect(url_for('all_recipes'))
 
 
 # Manage Users
 @app.route("/manage_users")
 def manage_users():
-    users = list(mongo.db.users.find().sort("username", 1))
-    return render_template(
-        "manage_users.html", users=users, title="Manage Users")
+
+    if "user" not in session:
+        flash("Please Log In")
+        return redirect(url_for("login"))
+
+    if session["user"] == "admin":
+        users = list(mongo.db.users.find().sort("username", 1))
+        return render_template(
+            "manage_users.html", users=users, title="Manage Users")
+
+    flash("You do not have permission to do that")
+    return redirect(url_for('all_recipes'))
 
 
 # Search Users
@@ -339,28 +390,44 @@ def search_users():
 # Edit User
 @app.route("/edit_user/<user_id>", methods=["GET", "POST"])
 def edit_user(user_id):
-    if request.method == "POST":
-        update_user = {"$set":
-                       {
-                        "username": request.form.get("username"),
-                        "email": request.form.get("email")
-                       }
-                       }
-        mongo.db.users.update(
-            {"_id": ObjectId(user_id)}, update_user)
-        flash("User Updated")
-        return redirect(url_for("manage_users"))
+    if "user" not in session:
+        flash("Please Log In")
+        return redirect(url_for("login"))
 
-    user = mongo.db.users.find_one({"_id": ObjectId(user_id)})
-    return render_template("edit_user.html", user=user, title="Edit User")
+    if session["user"] == "admin":
+        if request.method == "POST":
+            update_user = {"$set":
+                           {
+                                "username": request.form.get("username"),
+                                "email": request.form.get("email")
+                           }
+                           }
+            mongo.db.users.update(
+                {"_id": ObjectId(user_id)}, update_user)
+            flash("User Updated")
+            return redirect(url_for("manage_users"))
+
+        user = mongo.db.users.find_one({"_id": ObjectId(user_id)})
+        return render_template("edit_user.html", user=user, title="Edit User")
+
+    flash("You do not have permission to do that")
+    return redirect(url_for('all_recipes'))
 
 
 # Delete User
 @app.route("/delete_user/<user_id>")
 def delete_user(user_id):
-    mongo.db.users.remove({"_id": ObjectId(user_id)})
-    flash("User Deleted")
-    return redirect(url_for("manage_users"))
+    if "user" not in session:
+        flash("Please Log In")
+        return redirect(url_for("login"))
+
+    if session["user"] == "admin":
+        mongo.db.users.remove({"_id": ObjectId(user_id)})
+        flash("User Deleted")
+        return redirect(url_for("manage_users"))
+
+    flash("You do not have permission to do that")
+    return redirect(url_for('all_recipes'))
 
 
 # Contact

@@ -7,28 +7,29 @@
 
     <h2 class="page-heading">Manage Users</h2>
     
-    <div class="container">
-
-        <div class="row">
-            <div class="col">
-                <form action="{{ url_for('search_users') }}" method="POST">
-                    <div class="row">
-                        <div class="col-1">
-                            <label for="query" class="cat-display"><i class="fas fa-search"></i></label>
-                        </div>
-                        <div class="col-10">
-                            <input id="query" name="query" type="text" minlength="3" class="search-input validate" placeholder="Search Users..." required>
-                        </div>
-                        <div class="col buttons">
-                            <a href="{{ url_for('manage_users') }}" class="btn delete-button">Reset</a>
-                            <button type="submit" class="submit-button">Search
-                            </button>
-                        </div>
-                    </div>
-                </form>
+    <div class="container manage-categories">
+        <form action="{{ url_for('search_users') }}" method="POST">
+            <div class="row center-it">
+                <div class="col col-md-8 col-lg-6">
+                    <label for="query" class="form-label"><i class="fas fa-search"></i> Search Users</label>
+                </div>
             </div>
-        </div>
-                    
+            <div class="row center-it">
+                <div class="col col-md-8 col-lg-6">
+                    <input id="query" name="query" type="text" minlength="3" class="search-input validate" placeholder="Search Users..." required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col buttons">
+                    <a href="{{ url_for('manage_users') }}" class="btn delete-button">Reset</a>
+                    <button type="submit" class="submit-button">Search
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <div class="container">          
         <h2 class="heading">All Users</h2>
         {% if users|length > 0 %}
             {% for user in users %}

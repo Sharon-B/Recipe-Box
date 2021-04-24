@@ -436,6 +436,12 @@ def contact():
     return render_template("contact.html", title="Contact")
 
 
+# 404 Error
+@app.errorhandler(404)
+def not_found_error(error):
+    return render_template('404.html', error=error, title="404 Error"), 404
+
+
 # Set how & where to run the app
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

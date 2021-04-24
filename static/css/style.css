@@ -379,6 +379,12 @@ form p {
     padding: .4rem 1rem;
 }
 
+.vertical-center {
+    min-height: 80vh; 
+    display: flex;
+    align-items: center;
+}
+
 /*------ Add Recipe -------*/
 
 /* #add-recipe-form {
@@ -502,6 +508,33 @@ form p {
     font-size: 2rem;
     padding: 1rem;
     color:  #d4d2cd;
+}
+
+/*------ Error Page 404 -------*/
+
+#error-text {
+    font-size: 4rem;
+    color: #305D64;;
+}
+
+.error-msg {
+    text-align: center;
+}
+
+.error-msg p {
+    font-size: 2rem;
+    color: #305D64;;
+}
+
+.home-button {
+    background-color: #71B7C2;
+    font-size: 3rem;
+    color: #FEFFFC;
+    margin-top: 1rem;
+    margin: 1rem auto;
+    border: .1rem solid #7f8487;
+    border-radius: .3rem;
+    padding: 2rem 4rem;
 }
 
 /*------------- Media Queries -------------*/

@@ -68,9 +68,9 @@ def all_recipes():
 
 
 # Search Recipes
-@app.route("/search_recipes", methods=["GET", "POST"])
+@app.route("/search_recipes")
 def search_recipes():
-    query = request.form.get("query")
+    query = request.args.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     recipes_paginated = paginated(recipes)
     pagination = pagination_args(recipes)

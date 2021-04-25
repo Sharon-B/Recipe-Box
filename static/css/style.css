@@ -85,6 +85,10 @@ body {
     justify-content: center;
 }
 
+.help-text {
+    font-size: 1.2rem;
+}
+
 /*------ White-space pre-wrap -------*/
 
 .ws-pw {

@@ -28,7 +28,7 @@
                 </div>
                 <div class="col-12 form-recipe-name form-input">
                     <textarea name="recipe_description" id="recipe_description" class="add-recipe input-field validate"
-                        placeholder="Recipe description" minlength="5" maxlength="150" required></textarea>
+                    pattern="^[a-zA-Z0-9_][a-zA-Z0-9_ &]*[a-zA-Z0-9_]{1,45}$" placeholder="Recipe description" minlength="5" maxlength="150" required></textarea>
                 </div>
             </div>
             <!-- Category Select -->
@@ -48,25 +48,35 @@
                 <!-- Prep Time -->
             <div class="row form-section">
                 <div class="col-sm-6 col-md-3">
-                    <label for="prep_time" class="form-label">Prep Time in mins:</label>
+                    <label for="prep_time" class="form-label">Prep Time:</label>
+                    <div id="prep-time-help" class="form-text help-text">Enter time & mins eg: 30 mins
+                    </div>
                 </div>
                 <div class="col-sm-6 col-md-3 form-prep form-input">
                     <input id="prep_time" name="prep_time" type="text" minlength="3" maxlength="10"
-                        pattern="^[a-zA-Z0-9_][a-zA-Z0-9_ ]*[a-zA-Z0-9_]{3,10}$" class="add-recipe input-field validate" placeholder="Eg: 20 mins" required>
+                        pattern="^[a-zA-Z0-9_][a-zA-Z0-9_ ]*[a-zA-Z0-9_]{3,10}$" class="add-recipe input-field validate" required>
+                        
                 </div>
                 <!-- Cook Time -->
                 <div class="col-sm-6 col-md-3">
-                    <label for="cook_time" class="form-label">Cook Time in mins:</label>
+                    <label for="cook_time" class="form-label">Cook Time:</label>
+                    <div id="cook-time-help" class="form-text help-text">Enter time & mins eg: 30 mins
+                    </div>
                 </div>
                 <div class="col-sm-6 col-md-3 form-prep form-input">
                     <input id="cook_time" name="cook_time" type="text" minlength="3" maxlength="10"
-                        pattern="^[a-zA-Z0-9_][a-zA-Z0-9_ ]*[a-zA-Z0-9_]{3,10}$" class="add-recipe input-field validate" placeholder="Eg: 20 mins" required>
+                        pattern="^[a-zA-Z0-9_][a-zA-Z0-9_ ]*[a-zA-Z0-9_]{3,10}$" class="add-recipe input-field validate" required>
+                        
                 </div>
             </div>
             <!-- Ingredients -->
             <div class="row form-section">
                 <div class="col-12">
-                    <label for="ingredients" class="form-label">Ingredients (one per line):</label>
+                    <label for="ingredients" class="form-label">Ingredients:</label>
+                </div>
+                <div class="col-12">
+                    <div id="ing-help" class="form-text help-text">One Ingredient per line
+                    </div>
                 </div>
                 <div class="col-12 form-ingredients form-input">
                     <textarea name="ingredients" id="ingredients" class="add-recipe input-field validate" rows="8" placeholder="Ingredients"
@@ -77,6 +87,10 @@
             <div class="row form-section">
                 <div class="col-12">
                     <label for="method" class="form-label">Method:</label>
+                </div>
+                <div class="col-12">
+                    <div id="method-help" class="form-text help-text">Separate each step with a blank line
+                    </div>
                 </div>
                 <div class="col-12 form-method form-input">
                     <textarea name="method" id="method" class="add-recipe input-field validate" rows="12" placeholder="Method" required></textarea>

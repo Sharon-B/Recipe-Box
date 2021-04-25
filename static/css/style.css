@@ -253,20 +253,20 @@ li.nav-item.active {
 
 /*------ Hero Banner -------*/
 
-#hero-image {
+/* #hero-image {
     max-height: 55rem;
-}
+} */
 
 .hero-image-overlay {
     background-color: rgba(68, 64, 64, .7);
     top: 15%;
     right: 10%;
-    bottom: 20%;
+    bottom: 40%;
     left: 5%;
     border-radius: 1rem;
     align-items: center;
     display: flex;
-    
+    max-width: 28rem;
 }
 
 #welcome-message {
@@ -538,10 +538,11 @@ form p {
 @media only screen and (min-width: 768px) {
     
     .hero-image-overlay {
-        top: 15%;
+        top: 20%;
         right: 30%;
-        bottom: 35%;
+        bottom: 50%;
         left: 5%;
+        max-width: 35rem;
     }
 
     #welcome-message {
@@ -596,9 +597,13 @@ form p {
         font-size: 5rem;
     }
 
+    #hero-image {
+        max-height: 75vh;
+    }
+
     .hero-image-overlay {
-        top: 25%;
-        bottom: 45%;
+        bottom: 55%;
+        max-width: 50rem;
     }
 
     #welcome-message {

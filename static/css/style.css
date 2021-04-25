@@ -40,11 +40,15 @@ body {
     text-transform: capitalize;
 }
 
-.recipe-title {
+.heading {
     font-family: "Playfair Display";
+    color: #2e7f8c;
+    font-weight: 500;
+}
+
+.recipe-title {
     font-size: 2.4rem;
     font-style: italic;
-    color: #2e7f8c;
     text-align: center;
 }
 
@@ -58,26 +62,19 @@ body {
 }
 
 .page-heading {
-    color: #2e7f8c;
-    font-family: "Playfair Display";
-    font-weight: 500;
     font-size: 3.6rem;
     margin: 1.5rem auto; 
     text-align: center;
+    margin-bottom: 3rem;
+    margin-top: 1.5rem;
 }
 
-.heading {
-    color: #2e7f8c;
-    font-family: "Playfair Display";
-    font-weight: 500;
+.sub-heading {
     font-size: 2.8rem;
     margin: 1.5rem 0;
 }
 
-.sub-heading {
-    color: #2e7f8c;
-    font-family: "Playfair Display";
-    font-weight: 500;
+.recipe-sub-heading {
     font-size: 2rem;
 }
 
@@ -562,6 +559,10 @@ form p {
     #recipes-section {
         margin-top: 3rem;
     }
+
+    .page-heading {
+        font-size: 4.4rem;
+    }
     
     .recipe-card {
         width: 23rem;
@@ -626,6 +627,14 @@ form p {
 
     #recipes-section {
         margin-top: 3rem;
+    }
+
+    .page-heading {
+        font-size: 5.2rem;
+    }
+
+    .recipe-sub-heading {
+        font-size: 2.6rem;
     }
 
     .recipe-card {

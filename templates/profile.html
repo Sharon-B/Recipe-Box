@@ -4,10 +4,10 @@
 
 {% block content %}
 
-    <h2 class="page-heading capitalize">{{ username }}'s Profile</h2>
+    <h2 class="page-heading heading capitalize">{{ username }}'s Profile</h2>
     
     <div class="container">
-        <div class="heading capitalize">{{ username }}'s Recipes</div>
+        <div class="sub-heading heading capitalize">{{ username }}'s Recipes</div>
         <!-- Recipe Card -->
         <div class="row row-cols-1 row-cols-md-3">
             {% for recipe in recipes %}
@@ -16,7 +16,7 @@
                         <div class="card  recipe-card h-100">
                             <img src="{{ recipe.recipe_url }}" class="card-img-top" alt="{{ recipe.recipe_name }}">
                             <div class="card-body">
-                                <h3><a href="{{ url_for('recipe', recipe_id=recipe._id) }}" class="recipe-title capitalize">{{
+                                <h3><a href="{{ url_for('recipe', recipe_id=recipe._id) }}" class="recipe-title   heading capitalize">{{
                                         recipe.recipe_name }}</a></h3>
                                 <div class="timings">
                                     <i class="fas fa-stopwatch"></i> <strong>Prep time:</strong> {{ recipe.prep_time }} <strong>Cook time:</strong> {{recipe.cook_time }}

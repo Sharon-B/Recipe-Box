@@ -5,7 +5,7 @@
 
 {% block content %}
 
-    <h2 class="page-heading">Manage Categories</h2>
+    <h2 class="page-heading heading">Manage Categories</h2>
 
     <div class="container manage-categories">
         <form action="{{ url_for('search_categories') }}" method="POST">
@@ -37,7 +37,7 @@
             </div>
         </div>
     
-        <div class="heading capitalize">All Categories</div>
+        <div class="sub-heading heading capitalize">All Categories</div>
             {% if categories|length > 0 %}
                 {% for category in categories %}
                     <div class="row">

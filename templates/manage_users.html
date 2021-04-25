@@ -5,7 +5,7 @@
 
 {% block content %}
 
-    <h2 class="page-heading">Manage Users</h2>
+    <h2 class="page-heading heading">Manage Users</h2>
     
     <div class="container manage-categories">
         <form action="{{ url_for('search_users') }}" method="POST">
@@ -30,7 +30,7 @@
     </div>
     
     <div class="container">          
-        <h2 class="heading">All Users</h2>
+        <h2 class="sub-heading  heading">All Users</h2>
         {% if users|length > 0 %}
             {% for user in users %}
                 <div class="row">

@@ -262,8 +262,11 @@ def manage_recipes():
         return redirect(url_for("login"))
 
     if session["user"] == "admin":
+        recipes_paginated = paginated(recipes)
+        pagination = pagination_args(recipes)
         return render_template(
-            "manage_recipes.html", recipes=recipes, title="Manage Recipes")
+            "manage_recipes.html", recipes=recipes_paginated,
+            pagination=pagination, title="Manage Recipes")
 
     flash("You do not have permission to do that")
     return redirect(url_for('all_recipes'))

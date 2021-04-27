@@ -342,11 +342,40 @@ recipes:
 
 # Deployment
 
-This website was created in the Gitpod development environment. After installing the Gitpod extension for Chrome web browser and creating a new repository in GitHub using the Code Institute template, the green Gitpod button was used to initialise the repository in Gitpod. Throughout the process the git commands `git add` and `git commit` were used to store the work in the local Gitpod environment, `git push` would then be used to push the commits to the GitHub repository. From here the website could then deployed via Heroku.
+This website was created in the Gitpod development environment. After creating a new repository in GitHub using the Code Institute template, the green Gitpod button was used to initialise the repository in Gitpod. Throughout the process the git commands `git add` and `git commit` were used to store the work in the local Gitpod environment, `git push` would then be used to push the commits to the GitHub repository. From here the website could then deployed via Heroku.
 
 ## Heroku Deployment:
 
+Before creating the application in Heroku, 
 
+1. Create a requirements.txt file in your work environment by running the following command in the command line interface:
+	`pip3 freeze —local > requirements.txt`
+This will save all the dependencies currently used by the app to the requirements.txt file.
+
+2. Create a Procfile, which tells Heroku which file runs the app and how to run it. To do this run the following command in the CLI:
+	`echo web: python app.py > Procfile`
+
+3. `Git add`, `git commit` and `git push` these files to GitHub so they are available to Heroku which will use them to build the app.
+
+## In Heroku:
+
+1. Login and click New -> Create New App
+	- Add a name
+	- Select region
+	- Click Create App
+
+2. Select Connect to GitHub, when the Github profile is displayed add the name of your repo and click search, once it finds & displays the correct repo click connect.
+
+3. Set up the config vars required to run the app. In the Settings Tab click Revel Config Vars
+- Create the following variables and assign their values:
+            IP, PORT, SECRET_KEY, MONGO_URI, MONGO_DBNAME
+- Click Hide Config Vars
+
+4. In the Deploy Tab
+	- Click Enable Automatic Deploys
+	- Select the branch the repo is using
+	- Click Deploy Branch
+ => Your app was successfully deployed will be displayed with the option to view the app.
 
 ## Creating A Local Clone:
 You can clone the repository to create a local copy on your computer.

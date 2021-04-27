@@ -316,6 +316,30 @@ Bugs found and not fixed:
 
 * 
 
+# Database Collections
+
+ users:
+  _id: Object_id
+  username: string
+  email: string
+  password: string
+
+categories:
+  _id: Object_id
+  category_name: string
+
+recipes:
+  _id: Object_id
+  img_url: url
+  recipe_name: string
+  recipe_description: string
+  category_name: string
+  prep_time: string
+  cook_time: string
+  ingredients: array
+  method: array
+  added_by: string
+
 # Deployment
 
 This website was created in the Gitpod development environment. After installing the Gitpod extension for Chrome web browser and creating a new repository in GitHub using the Code Institute template, the green Gitpod button was used to initialise the repository in Gitpod. Throughout the process the git commands `git add` and `git commit` were used to store the work in the local Gitpod environment, `git push` would then be used to push the commits to the GitHub repository. From here the website could then deployed via Heroku.

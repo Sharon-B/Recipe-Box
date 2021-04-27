@@ -139,14 +139,42 @@ Wireframes:
 
 #### Typography:
 
+PlayFair Display is used for the logo and headings throughout the site. It is well suited for titling. 
 
-
+Roboto is used for all other text content. It’s forms are largely geometric but also features friendly and open curves, which makes for a more natural reading rhythm.
 
 #### Colour scheme: 
 
+![color-palette](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/color-palette/color-palette.png)
 
+1. ![color-palette](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/color-palette/pri-color.png) Primary colour:
 
+Header & footer background. 
+Text Headings.
+Highlighting text links.
+Add Category/User buttons
 
+2. ![color-palette](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/color-palette/sec-color.png) Secondary colour:
+
+Body background.
+Text in the header.
+
+3. ![color-palette](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/color-palette/text-color.png) Text colour:
+
+Recipe description
+Timings
+Ingredients items
+Method steps
+Paragraph text
+
+4. ![color-palette](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/color-palette/accent-color.png) Accent colour:
+
+Flash Messages background. 
+Edit, add recipe & submit buttons
+
+5. ![color-palette](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/color-palette/warning-color.png) Warning colour:
+
+Delete button 
 
 
 # Features 

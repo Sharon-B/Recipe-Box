@@ -22,57 +22,86 @@ Recipe Box was developed as a place where users can find, add, share and keep th
 
 ## Developer Objectives
 
-This website aims to demonstrate my skills of Python, MongoDb, HTML & CSS as learned from the Code Institute Full Stack Software Development course. The project will further the developers knowledge of Python and utilising databases.
-
-To grow my skills as a developer and create a  simple easy to use and enjoyable website. Develop the project from its initial concept to the final finished product. To utilise and expand my skills in Python, MongoDB, Jinja2, HTML & CSS.
+To grow my skills as a developer and create a simple easy to use site. Develop the project from its initial concept to the final finished product. To demonstrate my skills of Python and MongoDb, using CRUD functionality so users can create, read, update and delete information from a database. In order to do so I will create a site that allows users to add, share, keep  & update their favourite recipes online. The project will further my knowledge of Python, the Flask framework, Jinja templating language, HTML, CSS, Javascript, MongoDB and their implementation.
 
 ### Target Audience:
 
-* 
-* 
-* 
-
+* Home cooks
+* People looking for inspiration and meal ideas
+* General public
 
 ## User Stories
 
 ### New Users
-1.	As a user I want to ..... so that......
 
+1.	As a user I want to be able to view recipes on my tablet device so that I can use it while cooking in the kitchen.
+2. As a user I want to have my own profile where I can keep track of my own recipes
+3. As a user I want a visually appealing site so that I will enjoy browsing recipes for longer.
+4. As a user I want be able to check recipes on my mobile so that I can see what ingredients I may need while I’m out.
+5. As a user I want to be able to contact the site owner so that I can ask any questions or offer recommendations that I may have.
+6. As a user I want to be able to view the site owners social media pages so that I can see what else they are doing.
+7. As a user I want to be able to browse other peoples recipes so that I can find inspiration for mealtimes.
+8. As a user I want to be able to search for recipes so that I can find recipes for things I enjoy.
 
 ### Registered Users
-1. As a registered user I want to........
-
+9. As a registered user I want to be able to add my own recipes for safe keeping so that I can easily find them.
+10. As a registered user I want to be able to update my own recipes so that I can change them as I want.
+11. As a registered user I want to be able to remove my own recipes so that I can maintain what recipes I have in my profile.
 
 ### Admin User
-1. As an admin user I want to.......
+12. As a admin user I want to be able to edit/remove any recipe so that I can maintain a well curated site.
+13. As an admin user I want to be able to edit/add/remove categories so that I can adapt to the changing needs of our users.
+14. As an admin user I want to be able to edit/remove users so that I can keep them up to date.
+
 
 ## Site Owner Stories
 
-1.	As a site owner I want to present my work in a professional, creative and visually appealing way.
-2.	As a site owner I want to provide a good user experience for my users, so that they want to come back.
-
- 
-	
+15.	As a site owner I want to provide a good user experience for my users, so that they want to come back.
 
 # Scope
 This will be a Minimal Viable Product containing the most important core content required.
 
 #### Functional Specifications: 
 
-*	Navigation
-*	Contact Form
-*   Register
-*   Log In
-*   Log Out
-*   User Profile Page
-*   Admin Profile
+* Home
+* All recipes
+* Search functionality
+* Full Recipe
+* Contact
+* Registration
+* Log In
+* User Profile
+    - Add Recipe
+    - Edit Recipe
+    - Delete Recipe
+* Log out functionality
+* Admin functionality:
+    - Manage Recipes - Edit & delete all recipes
+    - Manage Categories - Add, edit & delete categories
+    - Manage Users - Edit & delete users
+
 
 #### Content Requirements:
 
-*	Logo.
-*	
-
-#### Strategy/Scope Trade Off
+* Logo.
+* Navigation
+* Home page
+* Hero Image on home page with welcome text overlay
+* Recipe Cards with images and brief recipe description
+* All recipes page
+* Full recipe page
+* Register page with registration form & link to Log In page
+* Log In page with login form & link to Registration page
+* Contact form page
+* User profile page
+* Edit/Delete buttons for users recipes
+* Add recipe page with form for adding recipe details
+* Edit recipe page with form for editing recipe details
+* Admin pages navigation - dropdown menu in main navbar.
+* Admin manage recipes page - edit/delete any recipe
+* Admin manage categories page - add/edit/delete categories
+* Admin manage users page - edit/delete users
+* Footer with Social media links
 
 # Structure
 

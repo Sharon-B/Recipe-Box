@@ -18,8 +18,6 @@ Recipe Box was developed as a place where users can find, add, share and keep th
 
 # Strategy
 
-## Site Owner Objectives
-
 ## Developer Objectives
 
 To grow my skills as a developer and create a simple easy to use site. Develop the project from its initial concept to the final finished product. To demonstrate my skills of Python and MongoDb, using CRUD functionality so users can create, read, update and delete information from a database. In order to do so I will create a site that allows users to add, share, keep  & update their favourite recipes online. The project will further my knowledge of Python, the Flask framework, Jinja templating language, HTML, CSS, Javascript, MongoDB and their implementation.

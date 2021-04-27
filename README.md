@@ -107,15 +107,13 @@ This will be a Minimal Viable Product containing the most important core content
 
 ### Interaction Design: 
 
-User interactions will be intuitive and allow for easy game play. 
-
-
+User interactions will be intuitive and consistent throughout the site to ensure it is easy to use and quick to learn for the user. Clickable links and buttons will have a hover effect applied so they are easily identifiable when a user hovers over them.
 
 ### Information Design: 
 
-Will allow for the prioritisation of the information to be displayed in a clear and concise manner to make it as easy as possible for the user to read and to quickly find the information that is most relevant to their needs.
+Will allow for the prioritisation of the information to be displayed in a clear and concise manner to make it as easy as possible for the user to read and quickly find the information that is most relevant to their needs.
 
-
+[Initial Site Map]()
 
 # Skeleton
 

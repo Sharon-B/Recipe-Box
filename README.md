@@ -295,15 +295,12 @@ UPDATE>>>>>>
 
 # Implementation 
 
-Once the initial concept for the project was decided upon I first developed the wireframes. 
+Once the initial concept for the project was decided upon I first developed the wireframes and site map. From these wireframes I then developed the basic database structure required. I created 3 collections for the database, a users collection, a recipes collection & a categories collection. The database schema can be seen [here]((https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/initial-db-schema.png)).
 
+I then set up the Flask app, created the environment variables needed to run the app, created requirements.txt for all dependencies used and set up a Procfile. I connected the app to MongoDB and tested it by rendering a a basic test recipe document from the recipes collection in html. The project was deployed to Heroku which I set to automatic deployment so that anytime I push code to GitHub it is able to automatically get the latest code and build the app.
 
+Now that the infrastructure of the app was set up I could start to build the app, first I set up a base.html from which all my html templates would be extended from. As I added a route & view function in app.py I created the associated html template, also utilising Jinja templating language to insert the data into the html pages.
 
-Initially I set up the MongoDB database, Flask and Heroku deployment.......Once these were all connected and working...
-
-base.html layout and utilised the Jinja templating language to generate html templates for each page, from which I could start coding the python code required to render the templates first and then add on more functionality to each route/view as needed. 
-
-Throughout the project I used python interpreter to monitor what was happening in the code by using print statements in the interpreter. 
 
 
 

@@ -8,7 +8,7 @@
 
 # Project Summary
 
- 
+Recipe Box was developed as a place where users can find, add, share and keep their favourite recipes online. This provides users with an easily accessible resource to store their favourite recipes and also a place to come and discover recipes added by other users.
 
 # Contents
 -

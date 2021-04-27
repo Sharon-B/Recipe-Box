@@ -79,7 +79,7 @@
         </nav>
     </header>
 
-    <section id="flash-message">
+    <div id="flash-message">
         <!-- flash messages -->
         {% with messages = get_flashed_messages() %}
             {% if messages %}
@@ -92,7 +92,7 @@
                 {% endfor %}
             {% endif %}
         {% endwith %}
-    </section>
+            </div>
     
     <main>
     {% block content %}

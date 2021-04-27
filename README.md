@@ -113,7 +113,7 @@ User interactions will be intuitive and consistent throughout the site to ensure
 
 Will allow for the prioritisation of the information to be displayed in a clear and concise manner to make it as easy as possible for the user to read and quickly find the information that is most relevant to their needs.
 
-[Initial Site Map]()
+[Initial Site Map](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/site-map.pdf)
 
 # Skeleton
 

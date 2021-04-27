@@ -10,7 +10,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: Roboto;
-    color: #1b2425;;
+    color: #0C1A1D;
 }
 
 /*------ Colors -------*/
@@ -21,7 +21,7 @@ body {
 }
 
 #bg-body-color {
-    background-color: #FAFBF6;
+    background-color: #FFFBF0;
 }
 
 /*------ Logo -------*/
@@ -29,7 +29,7 @@ body {
     font-family: "Playfair Display", sans-serif;
     font-weight: 600;
     font-size: 4.8rem;
-    color: #fffcf3;
+    color: #FFFBF0;
     padding: 0;
     margin-left: .5rem;
 }
@@ -154,7 +154,7 @@ body {
 
 .add-button {
     background-color: #2e7f8c;
-    color: #fffcf3;
+    color: #FFFBF0;
     margin: 1rem;
     width: 18rem;
     font-size: 1.6rem;
@@ -164,9 +164,9 @@ body {
 }
 
 .home-button {
-    background-color: #71B7C2;
+    background-color: #2e7f8c;
     font-size: 3rem;
-    color: #FEFFFC;
+    color: #FFFBF0;
     margin-top: 1rem;
     margin: 1rem auto;
     border: .1rem solid #7f8487;
@@ -193,7 +193,7 @@ body {
 
 #nav-menu .nav-link {
     font-size: 1.8rem;
-    color: #fffcf3;
+    color: #FFFBF0;
 }
 
 .nav-item {
@@ -202,7 +202,7 @@ body {
 
 .navbar-toggler {
     margin-right: 1rem;
-    color: #fffcf3;
+    color: #FFFBF0;
     border-color: rgba(255,252,243,.2);
 }
 
@@ -216,7 +216,7 @@ body {
 }
 
 i.fas.fa-caret-down {
-    color: #fffcf3;
+    color: #FFFBF0;
     font-size: 1.8rem;
 }
 
@@ -226,7 +226,7 @@ i.fas.fa-caret-down {
 }
 
 .dd-item {
-    color: #fffcf3;
+    color: #FFFBF0;
     font-size: 1.6rem;
 }
 
@@ -237,7 +237,7 @@ i.fas.fa-caret-down {
 .dropdown-item.active,
 li.nav-item.active {
     text-decoration: underline;
-    color: #fffcf3;
+    color: #FFFBF0;
 }
 
 .dropdown-item.active {
@@ -268,7 +268,7 @@ li.nav-item.active {
 }
 
 #welcome-message {
-    color: #FEFFFC;
+    color: #FFFBF0;
     font-size: 1.4rem;
     font-weight: 700;
     padding: 1rem;
@@ -380,7 +380,6 @@ input#email:focus {
 }
 
 .sub p a {
-    color: #2e7f8c;
     font-size: 1.8rem;
     font-weight: 600
 }
@@ -513,7 +512,7 @@ form p {
 
 #error-text {
     font-size: 4rem;
-    color: #305D64;;
+    color: #2e7f8c;
 }
 
 .error-msg {
@@ -522,7 +521,7 @@ form p {
 
 .error-msg p {
     font-size: 2rem;
-    color: #305D64;;
+    /* color: #305D64; */
 }
 
 /*------------- Media Queries -------------*/

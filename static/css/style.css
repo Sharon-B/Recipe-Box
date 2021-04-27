@@ -83,7 +83,7 @@ body {
 }
 
 .help-text {
-    font-size: 1.2rem;
+    font-size: .8rem;
 }
 
 /*------ White-space pre-wrap -------*/
@@ -331,6 +331,10 @@ li.nav-item.active {
     max-height: 70vh;
 }
 
+#register-wrapper {
+    max-height: 80%;
+}
+
 #form-bg-image {
     max-height: 70vh;
     margin: 0 auto;
@@ -348,6 +352,13 @@ li.nav-item.active {
     flex-direction: column;
 }
 
+#reg-ol {
+    top: 1%;
+    bottom: 1%;
+    left: 5%;
+    right: 5%;
+}
+
 .form-label {
     font-size: 1.6rem;
     font-weight: 600;
@@ -355,8 +366,8 @@ li.nav-item.active {
 }
 
 .form-input {
-    line-height: 1.6rem;
-    font-size: 1.6rem;
+    line-height: 1.4rem;
+    font-size: 1.4rem;
 }
 
 input#username:focus,
@@ -372,7 +383,7 @@ input#email:focus {
 }
 
 .form-section {
-    margin: 1rem 1rem;
+    margin: .8rem 1rem;
 }
 
 .sub {
@@ -382,9 +393,9 @@ input#email:focus {
 
 .sub p a {
     font-size: 1.8rem;
-    font-weight: 600
+    font-weight: 600;
+    color: #305D64;
 }
-
 
 form p {
     font-size: 1.4rem;
@@ -569,8 +580,17 @@ form p {
     }
 
     .image-overlay {
-        top: 15%;
-        bottom: 20%;
+        top: 10%;
+        bottom: 10%;
+    }
+
+    #reg-ol {
+        top: 1%;
+        bottom: 1%;
+    }
+
+    .help-text {
+        font-size: 1.2rem;
     }
 
     #contact-ol {

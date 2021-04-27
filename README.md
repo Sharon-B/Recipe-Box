@@ -153,17 +153,31 @@ Wireframes:
 
 # Features 
 
-*	Responsive.
-
-*	
-
+* Responsive
+* Logo
+* Navigation in header which collapses for mobile use
+* Recipe Cards with recipe image and a brief recipe description to display each recipe for browsing.
+* Recipe name on card is a clickable link to the full recipe view
+* Home page features the 6 latest recipes added
+* Hero image on main page with welcome text overlay
+* Pagination on all recipes, profile and manage recipes pages
+* Forms for adding and editing a recipe
+* Single recipe view page to see the full recipe
+* Contact page with background image
+* Registration page with background image
+* Log in page with background image
+* Log out functionality
+* Form validation
+* Highlight buttons on hover
+* Highlight links on hover, nav links, text links
+* Footer with social media links
 
 ## Future Features
 
-* 
-* 
-* 
-
+* Confirm delete
+* Favourites functionality so users can like or favourite a recipe and it would be added to their profile page for easy access.
+* Add Comments - enable registered users to comment on other recipes.
+* Build out user profile with option for profile image/avatar, allow user to delete their own profile.
 
 # Technologies Used
 

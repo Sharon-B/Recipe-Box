@@ -347,26 +347,42 @@ Bugs found and not fixed:
 
 # Database Collections
 
- users:
+ ## users:
+
   _id: Object_id
+
   username: string
+
   email: string
+
   password: string
 
-categories:
+## categories:
+
   _id: Object_id
+
   category_name: string
 
-recipes:
+## recipes:
+
   _id: Object_id
+
   img_url: url
+
   recipe_name: string
+
   recipe_description: string
+
   category_name: string
+
   prep_time: string
+
   cook_time: string
+
   ingredients: array
+
   method: array
+
   added_by: string
 
 # Deployment
@@ -378,10 +394,13 @@ This website was created in the Gitpod development environment. After creating a
 Before creating the application in Heroku, 
 
 1. Create a requirements.txt file in your work environment by running the following command in the command line interface:
+
 	`pip3 freeze —local > requirements.txt`
+
 This will save all the dependencies currently used by the app to the requirements.txt file.
 
 2. Create a Procfile, which tells Heroku which file runs the app and how to run it. To do this run the following command in the CLI:
+
 	`echo web: python app.py > Procfile`
 
 3. `Git add`, `git commit` and `git push` these files to GitHub so they are available to Heroku which will use them to build the app.

@@ -149,32 +149,33 @@ Roboto is used for all other text content. It’s forms are largely geometric bu
 
 1. ![color-palette](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/color-palette/pri-color.png) Primary colour:
 
-Header & footer background. 
-Text Headings.
-Highlighting text links.
-Add Category/User buttons
+* Header & footer background
+* Text Headings
+* Highlighting text links
+* Add Category/User buttons
 
 2. ![color-palette](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/color-palette/sec-color.png) Secondary colour:
 
-Body background.
-Text in the header.
+* Body background
+* Logo
+* Text in the header
 
 3. ![color-palette](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/color-palette/text-color.png) Text colour:
 
-Recipe description
-Timings
-Ingredients items
-Method steps
-Paragraph text
+* Recipe description
+* Timings
+* Ingredients list
+* Method steps
+* Paragraph text
 
 4. ![color-palette](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/color-palette/accent-color.png) Accent colour:
 
-Flash Messages background. 
-Edit, add recipe & submit buttons
+* Flash Messages background 
+* Edit, add recipe & submit buttons
 
 5. ![color-palette](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/color-palette/warning-color.png) Warning colour:
 
-Delete button 
+* Delete button 
 
 
 # Features 

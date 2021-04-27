@@ -1,8 +1,6 @@
 # Recipe Box
 
-
 ![Responsive Image]( "Am I Responsive")
-
 
 [Link to Live Project](https://recipe-box-sb.herokuapp.com/)
 
@@ -30,7 +28,7 @@ To grow my skills as a developer and create a simple easy to use site. Develop t
 
 ## User Stories
 
-### New Users
+### New User Stories
 
 1.	As a user I want to be able to view recipes on my tablet device so that I can use it while cooking in the kitchen.
 2. As a user I want to have my own profile where I can keep track of my own recipes
@@ -41,12 +39,12 @@ To grow my skills as a developer and create a simple easy to use site. Develop t
 7. As a user I want to be able to browse other peoples recipes so that I can find inspiration for mealtimes.
 8. As a user I want to be able to search for recipes so that I can find recipes for things I enjoy.
 
-### Registered Users
+### Registered User Stories
 9. As a registered user I want to be able to add my own recipes for safe keeping so that I can easily find them.
 10. As a registered user I want to be able to update my own recipes so that I can change them as I want.
 11. As a registered user I want to be able to remove my own recipes so that I can maintain what recipes I have in my profile.
 
-### Admin User
+### Admin User Stories
 12. As a admin user I want to be able to edit/remove any recipe so that I can maintain a well curated site.
 13. As an admin user I want to be able to edit/add/remove categories so that I can adapt to the changing needs of our users.
 14. As an admin user I want to be able to edit/remove users so that I can keep them up to date.
@@ -77,7 +75,6 @@ This will be a Minimal Viable Product containing the most important core content
     - Manage Recipes - Edit & delete all recipes
     - Manage Categories - Add, edit & delete categories
     - Manage Users - Edit & delete users
-
 
 #### Content Requirements:
 
@@ -123,17 +120,12 @@ Wireframes:
  
 [Desktop]()
 
-
-
 ## Difference between final design and original wireframes:
 
 ### 
 
 
 ###
-
-
-
 
 # Surface
 
@@ -176,7 +168,6 @@ Roboto is used for all other text content. It’s forms are largely geometric bu
 5. ![color-palette](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/color-palette/warning-color.png) Warning colour:
 
 * Delete button 
-
 
 # Features 
 
@@ -254,74 +245,6 @@ UPDATE>>>>>>
 
 [GitHub Wiki TOC generator](https://ecotrust-canada.github.io/markdown-toc/) - Used for creating a table of contents in README.md
 
-# Testing
-
-## Code Validators & Auto Prefixer:
-#### CSS code was passed through Auto Prefixer to add vendor prefixes:
-* 
-
-#### CSS code was passed through the W3C CSS Validator: 
-
-
-#### HTML code was passed through the W3C Markup Validator. 
-
-
-#### Javascript code was passed through jshint. 
-
-
-## Lighthouse from Chrome Dev Tools Testing:
-### Desktop report:
-
-
-### Mobile Report:
-
-
-
-
-
-
-## Responsiveness Testing:
-
-
-## Device testing:
-
-
-
-## Browser Testing:
-
-
-
-
-## Friends & Family User Testing: 
-
-
-
-## Testing User Stories
-
-1.	As a user I want to....
-
-    * 
-
-
-
-## Testing Site Owner Stories
-
-1.	As a site owner I want to present my work in a professional, creative and visually appealing way.
-
-    * Professional look and a friendly feel to the website.
-
-    * Visually appealing throughout.
-
-    * Intuitive and easy to navigate around the site and game play.
-
-2.	As a site owner I want to provide a good user experience for my users, so that they want to come back.
-
-    * Provide simple easy to navigate site.
-
-    * Future releases to add more features to keep users interested and offer something new to returning users.
-
-
-
 # Implementation 
 
 Once the initial concept for the project was decided upon I first developed the wireframes and site map. From these wireframes I then developed the basic database structure required. I created 3 collections for the database, a users collection, a recipes collection & a categories collection. The database schema can be seen [here]((https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/initial-db-schema.png)).
@@ -329,9 +252,6 @@ Once the initial concept for the project was decided upon I first developed the 
 I then set up the Flask app, created the environment variables needed to run the app, created requirements.txt for all dependencies used and set up a Procfile. I connected the app to MongoDB and tested it by rendering a a basic test recipe document from the recipes collection in html. The project was deployed to Heroku which I set to automatic deployment so that anytime I push code to GitHub it is able to automatically get the latest code and build the app.
 
 Now that the infrastructure of the app was set up I could start to build the app, first I set up a base.html from which all my html templates would be extended from. As I added a route & view function in app.py I created the associated html template, also utilising Jinja templating language to insert the data into the html pages.
-
-
-
 
 ## Issues/Solutions
 		
@@ -437,15 +357,11 @@ Open terminal:
 - Type `git clone` and paste the copied url after it
 - Press enter and the clone will be created
 
-
 # Credits
 
 ## Code
 
 Code Snippet 1: []() - 
-
-
-
 
 ## Resources
 
@@ -467,11 +383,9 @@ Text content of the website is written by myself.
 
 All recipes are from .....
 
-
 ## Media
+
 Images...unsplash
-
-
 
 ## Acknowledgements
 

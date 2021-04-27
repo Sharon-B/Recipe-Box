@@ -184,6 +184,10 @@ body {
     transform: scale(1.2);
   }
 
+.home-button:hover {
+    color: #FFFBF0;
+}
+
 /*------ Navigation -------*/
 #nav-menu {
     text-align: right;

@@ -109,6 +109,7 @@
             <!-- Submit Button -->
             <div class="row">
                 <div class="col sub">
+                    <a href="{{ url_for('profile', username=session['user']) }}" class="btn cancel-button button">Cancel</a>
                     <input class="submit-button button" type="submit" value="Add Recipe">
                 </div>
             </div>

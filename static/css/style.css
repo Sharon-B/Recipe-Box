@@ -184,6 +184,7 @@ body {
     transform: scale(1.2);
   }
 
+.add-button:hover,
 .home-button:hover {
     color: #FFFBF0;
 }

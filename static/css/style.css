@@ -383,16 +383,16 @@ li.nav-item.active {
     font-size: 1.4rem;
 }
 
-input#username:focus,
-input#password:focus,
-input#email:focus {
+.search-input:focus,
+.input-field:focus {
     outline-color: #71B7C2;
 }
 
 .input-field {
     padding: .5rem;
-    width: 100%;
     margin: .5rem 0;
+    font-size: 1.6rem;
+    width: 100%;
 }
 
 .form-section {
@@ -630,10 +630,6 @@ form p {
 
     .sub {
         margin: 2rem 0;
-    }
-
-    .input-field {
-        width: 100%;
     }
 }
 

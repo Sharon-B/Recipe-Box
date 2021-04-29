@@ -268,6 +268,9 @@ I then set up the Flask app, created the environment variables needed to run the
 
 Now that the infrastructure of the app was set up I could start to build the app, first I set up a base.html from which all my html templates would be extended from. As I added a route & view function in app.py I created the associated html template, also utilising Jinja templating language to insert the data into the html pages.
 
+Note: Initially I was going to use WTForms, however after talking to Tutor Support I decided against it. I had initially installed WTForms & Flask-WTF, created a forms.py file and a RegisterForm which I had imported into app.py. Towards the end of the project I uninstalled WTForms & Flask-WTF, and updated the requirements.txt file to reflect this. I also removed forms.py from the file directory and the form import in app.py.
+
+
 ## Issues/Solutions
 		
 White space

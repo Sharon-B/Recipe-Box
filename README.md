@@ -201,13 +201,25 @@ Roboto is used for all other text content. It’s forms are largely geometric bu
 
 # Technologies Used
 
-UPDATE>>>>>>
+[Python](https://www.python.org/) - Main language used for programming the app.
+
+[MongoDB](https://www.mongodb.com/) - Document based database used.
+
+[Flask](https://flask.palletsprojects.com/en/1.1.x/) - Framework used.
+
+[Pymongo](https://pymongo.readthedocs.io/en/stable/index.html) - Used for interacting with the MongoDB Database
+
+[Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/) - Used to provide security features - generate password hash to salt the password and check password.
+
+[Jinja](https://jinja.palletsprojects.com/en/2.11.x/) - Templating language used in conjunction with flask to render data in the html templates.
 
 [Html](https://www.w3schools.com/html/html_intro.asp) - Hyper Text Markup Language, used for creating the website.
 
 [Css](https://www.w3schools.com/css/) - Cascading Style Sheet, used for styling the website.
 
-[Javascript](https://www.javascript.com) – Used for providing functionality to the game play and it’s interactive features
+[Javascript](https://www.javascript.com) – Used for providing functionality for the contact form.
+
+[Emailjs API](https://www.emailjs.com/) - Used for the contact form.
 
 [Bootstrap](https://getbootstrap.com) - Bootstrap grid system.
 
@@ -221,7 +233,7 @@ UPDATE>>>>>>
 
 [Gitpod IDE](https://www.gitpod.io/) - Development environment where the site was built.
 
-[GitHub Pages](https://pages.github.com/) - Where the live site is deployed/hosted.
+[Heroku](https://signup.heroku.com/) - Where the live site is deployed.
 
 [Gimp 2.1](https://www.gimp.org/) - Used for editing, scaling images and creating a favicon.
 

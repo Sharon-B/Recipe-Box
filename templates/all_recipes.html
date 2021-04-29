@@ -3,79 +3,80 @@
 {% block nav_recipes %}active{% endblock %}
 
 {% block content %}
-
-    <section id="all-recipes-section">
-        <div class="container">
-
-            <div class="row">
-                <div class="col">
-                    <h2 class="page-heading heading">Recipes</h2>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col">
-                    <form action="{{ url_for('search_recipes') }}" method="GET">
-                        <div class="row center-it">
-                            <div class="col col-md-8 col-lg-6">
-                                <label for="query" class="form-label"><i class="fas fa-search"></i> Search Recipes</label>
-                            </div>
-                        </div>
-                        <div class="row center-it">
-                            <div class="col col-md-8 col-lg-6">
-                                <input id="query" name="query" type="text" minlength="3" class="search-input validate" placeholder="Search Recipes..." required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col buttons">
-                                <a href="{{ url_for('all_recipes') }}" class="btn delete-button button">Reset</a>
-                                <button type="submit" class="submit-button button">Search
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+    <div class="container">
+        <section id="all-recipes-section">
             
-            {% if recipes|length > 0 %}
-            <div class="row row-cols-1 row-cols-md-3">
-                {% for recipe in recipes %}
-                <div class="col-12 col-md-4 recipes">
-                    
-                    <div class="card  recipe-card h-100">  
-                        <img src="{{ recipe.recipe_url }}" class="card-img-top" alt="{{ recipe.recipe_name }}">
-                        <div class="card-body">                 
-                            <h3><a href="{{ url_for('recipe', recipe_id=recipe._id) }}" class="heading recipe-title capitalize">{{ recipe.recipe_name }}</a></h3>
-                            <div class="timings">
-                                <i class="fas fa-stopwatch"></i> <strong>Prep time:</strong> {{ recipe.prep_time }} <strong>Cook time:</strong> {{recipe.cook_time }}
-                            </div>
-                            <p class="card-text">{{ recipe.recipe_description }}
-                            </p>
-                            <p class="recipe-added-by">Added by: {{ recipe.added_by }}
-                            </p> 
-                            <!-- Edit/Delete buttons -->
-                            {% if session.user|lower == recipe.added_by|lower %}
-                            <div class="buttons">
-                                <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn delete-button button">Delete</a>
-                                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn edit-button button">Edit</a>  
-                            </div>
-                            {% endif %}
-                        </div> 
+
+                <div class="row">
+                    <div class="col">
+                        <h2 class="page-heading heading">Recipes</h2>
                     </div>
-                    
-                </div> 
-                {% endfor %}
-            </div>
-            {% else %}
-                <h3>No results found</h3>
-            {% endif %}
+                </div>
 
-        </div>
-
-        <!-- Pagination links -->
-        {{ pagination.links }}
+                <div class="row">
+                    <div class="col">
+                        <form action="{{ url_for('search_recipes') }}" method="GET">
+                            <div class="row center-it">
+                                <div class="col col-md-8 col-lg-6">
+                                    <label for="query" class="form-label"><i class="fas fa-search"></i> Search Recipes</label>
+                                </div>
+                            </div>
+                            <div class="row center-it">
+                                <div class="col col-md-8 col-lg-6">
+                                    <input id="query" name="query" type="text" minlength="3" class="search-input validate" placeholder="Search Recipes..." required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col buttons">
+                                    <a href="{{ url_for('all_recipes') }}" class="btn delete-button button">Reset</a>
+                                    <button type="submit" class="submit-button button">Search
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
                 
+                {% if recipes|length > 0 %}
+                <div class="row row-cols-1 row-cols-md-3">
+                    {% for recipe in recipes %}
+                    <div class="col-12 col-md-4 recipes">
+                        
+                        <div class="card  recipe-card h-100">  
+                            <img src="{{ recipe.recipe_url }}" class="card-img-top" alt="{{ recipe.recipe_name }}">
+                            <div class="card-body">                 
+                                <h3><a href="{{ url_for('recipe', recipe_id=recipe._id) }}" class="heading recipe-title capitalize">{{ recipe.recipe_name }}</a></h3>
+                                <div class="timings">
+                                    <i class="fas fa-stopwatch"></i> <strong>Prep time:</strong> {{ recipe.prep_time }} <strong>Cook time:</strong> {{recipe.cook_time }}
+                                </div>
+                                <p class="card-text">{{ recipe.recipe_description }}
+                                </p>
+                                <p class="recipe-added-by">Added by: {{ recipe.added_by }}
+                                </p> 
+                                <!-- Edit/Delete buttons -->
+                                {% if session.user|lower == recipe.added_by|lower %}
+                                <div class="buttons">
+                                    <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn delete-button button">Delete</a>
+                                    <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn edit-button button">Edit</a>  
+                                </div>
+                                {% endif %}
+                            </div> 
+                        </div>
+                        
+                    </div> 
+                    {% endfor %}
+                </div>
+                {% else %}
+                    <h3>No results found</h3>
+                {% endif %}
 
-    </section>
+           
+
+            <!-- Pagination links -->
+            {{ pagination.links }}
+                    
+
+        </section>
+    </div>
 
 {% endblock %}

@@ -533,6 +533,10 @@ form p {
     color:  #d4d2cd;
 }
 
+#social-icon-links .fab:hover {
+    opacity: .5;
+}
+
 /*------ Error Page 404 -------*/
 
 #error-text {

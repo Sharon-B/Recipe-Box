@@ -659,6 +659,10 @@ form p {
         font-size: 2rem;
     }
 
+    .navbar-expand-lg {
+        flex-flow: row wrap;
+    }
+
     #hero-image {
         max-height: 75vh;
     }

@@ -167,7 +167,9 @@ Roboto is used for all other text content. It’s forms are largely geometric bu
 
 5. ![color-palette](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/color-palette/warning-color.png) Warning colour:
 
-* Delete button 
+* Delete button
+* Cancel button
+* Reset button
 
 # Features 
 

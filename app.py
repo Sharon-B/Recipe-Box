@@ -23,7 +23,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 # Pagination  recipes per page
-PER_PAGE = 6
+PER_PAGE = 9
 
 
 # Pagination

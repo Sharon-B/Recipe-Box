@@ -32,6 +32,7 @@ body {
     color: #FFFBF0;
     padding: 0;
     margin-left: .5rem;
+    text-shadow: 0.5rem 1rem 2rem #0c1a1d;
 }
 
 /*------ Headings/Fonts -------*/

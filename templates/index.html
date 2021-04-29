@@ -21,12 +21,12 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h2 class="page-heading heading">Recipes</h2>
+                    <h2 class="page-heading heading">Latest Recipes</h2>
                 </div>
             </div>
             <!-- Recipe Card -->
             <div class="row row-cols-1 row-cols-md-3">
-                {% for recipe in recipes %}
+                {% for recipe in latest_recipes %}
                 <div class="col-12 col-md-4 recipes">
                     <div class="card recipe-card h-100">
                         <img src="{{ recipe.recipe_url }}" class="card-img-top" alt="{{ recipe.recipe_name }}">
@@ -53,9 +53,6 @@
                 {% endfor %}
             </div>    
         </div> 
-        
-        <!-- Pagination links -->
-        {{ pagination.links }}
         
     </section>
 

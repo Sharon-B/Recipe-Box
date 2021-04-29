@@ -2,7 +2,7 @@ import os
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
-from flask_pymongo import PyMongo
+from flask_pymongo import PyMongo, DESCENDING
 from bson.objectid import ObjectId
 from flask_paginate import Pagination, get_page_args
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -48,11 +48,9 @@ def pagination_args(recipes):
 @app.route("/")
 @app.route("/index")
 def index():
-    recipes = list(mongo.db.recipes.find())
-    recipes_paginated = paginated(recipes)
-    pagination = pagination_args(recipes)
-    return render_template("index.html", recipes=recipes_paginated,
-                           pagination=pagination, title="Home")
+    latest_recipes = mongo.db.recipes.find().sort('_id', DESCENDING).limit(6)
+    return render_template(
+        "index.html", latest_recipes=latest_recipes, title="Home")
 
 
 # Recipes

@@ -195,8 +195,9 @@ Roboto is used for all other text content. It’s forms are largely geometric bu
 ## Future Features
 
 * Confirm delete
-* Favourites functionality so users can like or favourite a recipe and it would be added to their profile page for easy access.
+* Add Favourites functionality so users can like or favourite a recipe and it would be added to their profile page for easy access.
 * Add Comments - enable registered users to comment on other recipes.
+* Add superuser functionality for admins.
 * Build out user profile with option for profile image/avatar, allow user to delete their own profile.
 
 # Technologies Used

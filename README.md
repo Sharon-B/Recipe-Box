@@ -293,7 +293,7 @@ Bugs found and not fixed:
 
 * The following warnings regarding pagination appear in Gitpod for app.py:
 
-![gitpod-warnings](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/gitpod.pagination-warnings.png)
+![gitpod-warnings](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/gitpod-pagination-warnings.png)
 
 As pagination is currently working it was decided to leave these warnings for now.
 

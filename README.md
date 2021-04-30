@@ -445,6 +445,21 @@ Code Snippet 1: []() -
 
 [CSS Tricks](https://css-tricks.com/) - General resource.
 
+[Flask docs](https://flask.palletsprojects.com/en/1.1.x/) - General resource.
+
+[Emailjs docs](https://www.emailjs.com/docs/) - General resource.
+
+[Regex101](https://regex101.com/) - General resource.
+
+[Jinja docs](https://jinja.palletsprojects.com/en/2.11.x/) - General resource.
+
+[Werzeug docs](https://werkzeug.palletsprojects.com/en/1.0.x/) - General resource.
+
+[PyMongo Docs](https://pymongo.readthedocs.io/en/stable/) - General resource.
+
+
+
+
 Anna Greaves How to Approach Writing Your README File webinar.
 
 ## Content
@@ -455,7 +470,16 @@ All recipes are from .....
 
 ## Media
 
-Images...unsplash
+Images from [Unsplash](https://unsplash.com/):
+
+Hero Image credit: Photo by [Lily Banse](https://unsplash.com/photos/-YHSwy6uqvk) on [Unsplash](https://unsplash.com/)
+
+Register page image credit: Photo by [Brooke Lark](https://unsplash.com/photos/oaz0raysASk) on [Unsplash](https://unsplash.com/)
+
+Log in page image credit: Photo by [Edgar Castrejon](https://unsplash.com/photos/1SPu0KT-Ejg) on [Unsplash](https://unsplash.com/)
+
+Contact page image credit: Photo by [Joseph Gonzalez](https://unsplash.com/photos/zcUgjyqEwe8) on [Unsplash](https://unsplash.com/)
+  
 
 ## Acknowledgements
 

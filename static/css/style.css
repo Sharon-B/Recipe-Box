@@ -663,10 +663,6 @@ form p {
         flex-flow: row wrap;
     }
 
-    #hero-image {
-        max-height: 75vh;
-    }
-
     .hero-image-overlay {
         bottom: 55%;
         max-width: 50rem;
@@ -707,4 +703,16 @@ form p {
         margin-right: 2rem;
     }
     
+    #hero-image {
+        max-height: 85vh;
+    }
+
+    .recipe-card {
+        width: 30rem;
+        margin: 2rem;
+    }
+
+    .recipes {
+        margin-bottom: 5rem;
+    }
 }

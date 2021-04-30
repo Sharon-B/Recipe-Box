@@ -270,12 +270,22 @@ Now that the infrastructure of the app was set up I could start to build the app
 
 Note: Initially I was going to use WTForms, however after talking to Tutor Support I decided against it. I had initially installed WTForms & Flask-WTF, created a forms.py file and a RegisterForm which I had imported into app.py. Towards the end of the project I uninstalled WTForms & Flask-WTF, and updated the requirements.txt file to reflect this. I also removed forms.py from the file directory and the form import in app.py.
 
-
 ## Issues/Solutions
-		
-White space
 
-edit_user() add $set to update specific fields only as initially was overwriting the whole document in the database.
+I was getting an error in the console as my scripts.js file with my emailjs code for the contact form was loading on every page. I have the function setup to window.onload so it was giving an error when loading the other pages ie not the contact page. To resolve this I moved the emailjs code into it's own emailjs.js file and set up a script at the bottom of the contact.html page so that this only loads now when the contact.html page is opened.
+
+The edit_user() function was overwriting the whole document eventhough only the username and/or email and not the password field were being updated. To resolve this I added $set to the edit_user() function so that it would update specific fields only.
+
+Search was not functioning properly since adding in the pagination only the first page would be returned. Initially I was going to just remove the pagination from this page but after researching this on Slack I found a solution thanks to [Edb83](https://github.com/Edb83/self-isolution). In order to get the search query to also work with pagination it was necessary to set query = request.args.get("query") in the search function and set method="GET" in the search form and in the search route. 
+
+Chrome Dev Tools showed a warning in the console for autocomplete on the username and password fields of the registration and log in forms. To remove this I added the autocomplete attribute for username & password inputs On the login form I set autocomplete="username" for the username & autocomplete="current-password" for the password input field.
+On the register form I set autocomplete="username" for the username & autocomplete="new-password" for the password input field. This ensures that the browser does not try to autocomplete a username or password where it could possibly autocomplete with somebody else's password/username.
+
+I was getting the following warning in the console in Chrome Dev Tools:
+
+    DevTools failed to load SourceMap: Could not load content for http://recipe-box-sb.herokuapp.com/bootstrap.min.css.map: HTTP error: status code 404, net::ERR_HTTP_RESPONSE_CODE_FAILURE
+
+After some research on [Stackoverflow](https://stackoverflow.com/questions/61339968/devtools-failed-to-load-sourcemap-could-not-load-content-for-chrome-extension), I discovered that this is something within Chrome Dev Tools and I could remove the warning by going to Settings in Chrome Dev Tools and in Sources I could disable the options: "Enable javascript source maps" & "Enable CSS source maps"
 
 ## Known Bugs
 

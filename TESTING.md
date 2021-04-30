@@ -250,3 +250,427 @@ Each page was tested and passed under the criteria set out below.
 * Edit button redirects the user to the Edit Recipe page.
 
 * Delete button immediately deletes the recipe from the database and displays a ‘Recipe Deleted’ message to the user.
+
+## Recipes Page:
+
+* Displays for all users.
+
+* Displays recipe cards for all recipes from the database.
+	
+### Recipe Cards:
+
+* Provide an overview of each recipe with recipe image, recipe name, timings, recipe description and added by details.
+
+* Each recipe name on the recipe card is a clickable link.
+
+* Recipe name highlights on hover.
+
+* Clicking on the recipe name brings the user to the full page of the recipe clicked.
+
+### Delete/ Edit Buttons:
+
+* Only display at the bottom of each card if the recipe was added by the logged in user.
+
+* Buttons highlight on hover.
+
+* Edit button redirects the user to the Edit Recipe page.
+
+* Delete button immediately deletes the recipe from the database and displays a ‘Recipe Deleted’ message to the user.
+
+### Search:
+
+* Search bar is displayed.
+
+* Text search is carried out on the recipes collection.
+
+* Reset and search buttons are displayed for the search.
+
+* Buttons highlight on hover.
+
+* Search button submits the search query and returns the associated results.
+
+* Search results are paginated if greater than 9 results found
+
+* If no search results found a message of ‘no results found’ is displayed
+
+* Reset button reloads the recipes page.
+
+### Pagination:
+
+* Uses pagination, if there are more than 9 recipes.
+
+* Displays the pagination links at the bottom of the page.
+
+* Pagination links are working.
+
+* Pagination links highlight the current page.
+
+## Full Recipe Page:
+
+* Displays for all users.
+
+* Displays the full recipe on the page.
+
+* Displays the recipe name, recipe image, timings, category, recipe description Ingredients heading and the list of ingredients, Method heading and the steps of the method.
+
+### Delete/ Edit Buttons:
+
+* Only display if the recipe was added by the logged in user.
+
+* Buttons highlight on hover.
+
+* Edit button redirects the user to the Edit Recipe page.
+
+* Delete button immediately deletes the recipe from the database and displays a ‘Recipe Deleted’ message to the user.
+
+## Profile Page:
+
+* Only available when a user is logged in.
+
+* Displays the users name in the heading eg User’s Profile.
+
+* Displays the users recipes as Recipe Cards so the user can easily see what recipes they have added.
+
+* Recipe Name on recipe cards is clickable, highlights on hover and opens the recipe in full page.
+
+### Recipe Cards:
+
+* Provide an overview of each recipe with recipe image, recipe name, timings, recipe description and added by details.
+
+* Each recipe name on the recipe card is a clickable link.
+
+* Recipe name highlights on hover.
+
+* Clicking on the recipe name brings the user to the full page of the recipe clicked.
+
+### Delete/ Edit Buttons:
+
+* Display at the bottom of each recipe card.
+
+* Buttons highlight on hover.
+
+* Edit button redirects the user to the Edit Recipe page for that recipe.
+
+* Delete button immediately deletes that recipe from the database and displays a ‘recipe deleted’ message to the user.
+
+## Add Recipe Page:
+
+* Only available when a user is logged in.
+
+* Displays a form for the user to fill in with their recipe details.
+
+* Form does not submit if any fields are empty.
+
+* Placeholder text is provided to help guide the user in filling out the form.
+
+* Help text is also provided where the user must comply to specific input criteria eg Cook Time should be in the format of: 90 mins
+
+* If user submits the form with an empty field a message will be displayed on that field, indicating that it must be filled in.
+
+* If the Select Category dropdown field is not filled in a message will appear asking the user to select an item from the list.
+
+### Add Recipe/Cancel buttons:
+
+* Highlight on hover.
+
+* Add Recipe button only submits the form if all fields are filled out correctly, otherwise the user is asked to fill out the required fields.
+
+* Add Recipe button submits the recipe and the user is redirected to their profile page and a ‘Recipe Successfully Added’ message is displayed.
+
+* Cancel button redirects the user back to their profile page.
+
+## Edit Recipe Page:
+
+* Only available when a user is logged in for recipe that they have added.
+
+* Displays a form pre-populated with the details of the recipe to be edited for the user to make changes to.
+
+* All fields are required for the form to submit.
+
+* Placeholder text is provided to help guide the user in filling out the form.
+
+* Help text is also provided where the user must comply to specific input criteria eg Cook Time should be in the format of: 90 mins
+
+* If user submits the form with an empty field a message will be displayed on that field, indicating that it must be filled in.
+
+### Edit Recipe/ Cancel Buttons:
+
+* Highlight on hover.
+
+* Edit Recipe button only submits the form if all fields are filled out correctly, otherwise the user is asked to fill out the required fields.
+
+* Edit recipe button submits the recipe and the user is redirected to their profile page and a ‘Recipe Successfully Updated’ message is displayed.
+
+* Cancel button redirects the user back to their profile page.
+
+## Register Page:
+
+* Displays for all users.
+
+* Displays a registration form.
+
+* User must enter a username of between 5 -15 characters.
+
+* If username already exists when the form is submitted a ‘Username Already Exists, Please Choose Another’ message is displayed and the page is reloaded.
+
+* User must enter an email in the valid format.
+
+* User must enter a password of between 5 - 15 characters
+
+### Register Button:
+
+* Highlights on hover.
+
+* Form does not submit if fields are not filled in correctly.
+
+* No field can be empty.
+
+* Submits form and redirects the user to their profile page with a ‘Registration Successful’ message.
+
+### Log In link:
+
+* Highlights on hover.
+
+* For users already registered there is a link that redirects them to the 
+log in page.
+
+## Log In Page:
+
+* Displays for all users.
+
+* Displays a log in form.
+
+* User must enter their username of between 5 -15 characters.
+
+* User must enter their password of between 5 - 15 characters
+
+### Log In Button:
+
+* Highlights on hover.
+
+* Form does not submit if fields are not filled in correctly.
+
+* No field can be empty.
+
+* Submits form and redirects the user to their profile page with a ‘Log In Successful’ message.
+
+### Register link:
+
+* Highlights on hover.
+
+* For users not already registered there is a link that redirects them to the Register page.
+
+## Contact Page:
+
+* Displays for all users.
+
+* Displays a contact form.
+
+* Users must enter their name.
+
+* Users must enter their email.
+
+* Users must enter a message in the text area.
+
+### Send Button:
+
+* Highlights on hover.
+
+* Form does not submit if fields are left empty.
+
+* Submits the form and displays a ‘Thank you for your email, we will be in touch’ message.
+
+## Manage Recipes Page:
+
+* Only accessible to an admin user.
+
+* If user is not logged in and tries to access the page, they are redirected to the login page and a ‘Please Log In Message is displayed’
+
+* If a user is logged in but not an admin and tries to access the page they are redirected to the recipes page and a ‘You do not have permission for that’ message is displayed.
+
+* Displays recipe cards for all recipes from the database.
+
+### Recipe Cards:
+
+* Provide an overview of each recipe with recipe image, recipe name, timings, recipe description and added by details.
+
+* Each recipe name on the recipe card is a clickable link.
+
+* Recipe name highlights on hover.
+
+* Clicking on the recipe name brings the user to the full page of the recipe clicked.
+
+### Delete/ Edit Buttons:
+
+* Display at the bottom of each recipe card.
+
+* Buttons highlight on hover.
+
+* Edit button redirects the user to the Edit Recipe page for that recipe.
+
+* Delete button immediately deletes that recipe from the database and displays a ‘Recipe deleted’ message to the user.
+
+### Pagination:
+
+* Uses pagination, if there are more than 9 recipes.
+
+* Displays the pagination links at the bottom of the page.
+
+* Pagination links are working.
+
+* Pagination links highlight the current page.
+
+## Manage Categories Page:
+
+* Only accessible to an admin user.
+
+* If user is not logged in and tries to access the page, they are redirected to the login page and a ‘Please Log In Message is displayed’
+
+* If a user is logged in but not an admin and tries to access the page they are redirected to the recipes page and a ‘You do not have permission for that’ message is displayed.
+
+* Displays a search bar, add category button and all the categories with edit & delete buttons for each.
+
+
+### Search:
+
+* Search bar is displayed.
+
+* Text search is carried out on the categories collection.
+
+* Reset and search buttons are displayed for the search functionality.
+
+* Buttons highlight on hover.
+
+* Search button submits the search query and returns the associated results.
+
+* If no search results found a message of ‘no results found’ is displayed
+
+* Reset button reloads the manage categories page.
+
+### Add Category Button:
+
+* Highlights on hover.
+
+* Redirects the user to the add category page.
+
+### Categories:
+
+* A list of available categories is displayed, with delete/edit buttons for each
+
+### Delete/ Edit Buttons:
+
+* Display for each category listed
+
+* Buttons highlight on hover.
+
+* Edit button redirects the user to the Edit Category page for that category.
+
+* Delete button immediately deletes that category from the database and displays a ‘Category deleted’ message to the user.
+
+## Edit Categories Page:
+
+* Only accessible to an admin user.
+
+* If user is not logged in and tries to access the page, they are redirected to the login page and a ‘Please Log In Message is displayed’.
+
+* If a user is logged in but not an admin and tries to access the page they are redirected to the recipes page and a ‘You do not have permission for that’ message is displayed.
+
+* A pre-populated form is displayed to allow the user to update the selected category.
+
+### Cancel/ Edit Buttons:
+
+* Buttons highlight on hover.
+
+* Edit button submits the form, returns the user to the manage categories page with a ‘Category updated” message
+
+* Cancel button returns the user to the manage categories page.
+
+## Add Category Page:
+
+* Only accessible to an admin user.
+
+* If user is not logged in and tries to access the page, they are redirected to the login page and a ‘Please Log In Message is displayed’.
+
+* If a user is logged in but not an admin and tries to access the page they are redirected to the recipes page and a ‘You do not have permission for that’ message is displayed.
+
+* Displays a form where the user can enter a new category name.
+
+### Cancel/ Add Buttons:
+
+* Buttons highlight on hover.
+
+* Add button submits the form, returns the user to the manage categories page with a ‘New category added” message.
+
+* Cancel button returns the user to the manage categories page.
+
+## Manage Users Page:
+
+* Only accessible to an admin user.
+
+* If user is not logged in and tries to access the page, they are redirected to the login page and a ‘Please Log In Message is displayed’.
+
+* If a user is logged in but not an admin and tries to access the page they are redirected to the recipes page and a ‘You do not have permission for that’ message is displayed.
+
+* Displays a search bar and all the users with edit & delete buttons for each.
+
+### Search:
+
+* Search bar is displayed.
+
+* Text search is carried out on the users collection.
+
+* Reset and search buttons are displayed for the search functionality.
+
+* Buttons highlight on hover.
+
+* Search button submits the search query and returns the associated results.
+
+* If no search results found a message of ‘no results found’ is displayed.
+
+* Reset button reloads the manage users page.
+
+### Categories:
+
+* A list of available users is displayed, with delete/edit buttons for each
+
+### Delete/ Edit Buttons:
+
+* Display for each user listed
+
+* Buttons highlight on hover.
+
+* Edit button redirects the user to the Edit User page for that user.
+
+* Delete button immediately deletes that user and displays a ‘User deleted’ message to the user.
+
+## Edit Users Page:
+
+* Only accessible to an admin user.
+
+* If user is not logged in and tries to access the page, they are redirected to the login page and a ‘Please Log In Message is displayed’.
+
+* If a user is logged in but not an admin and tries to access the page they are redirected to the recipes page and a ‘You do not have permission for that’ message is displayed.
+
+* A pre-populated form is displayed to allow the user to update the selected user.
+
+### Cancel/ Edit Buttons:
+
+* Buttons highlight on hover.
+
+* Edit button submits the form, returns the user to the manage categories page with a ‘User updated” message
+
+* Cancel button returns the user to the manage categories page.
+
+## 404 Error Page:
+
+* Displays when a 404 - page not found error is encountered.
+
+* Tells the user that the page could not be found.
+
+* Provides a return home button.
+
+### Return Home Button:
+
+* Highlights on hover.
+
+* Returns the user to the home page.

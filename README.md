@@ -464,9 +464,29 @@ Anna Greaves How to Approach Writing Your README File webinar.
 
 ## Content
 
-Text content of the website is written by myself.
+Welcome message is written by myself.
 
-All recipes are from .....
+All Recipes are from BBC Good Food website:
+
+[Super Green Smoothie](https://www.bbcgoodfood.com/recipes/clean-green-smoothie)
+
+[Piri Piri Chicken With Sweet Potatoes](https://www.bbcgoodfood.com/recipes/piri-piri-chicken-smashed-sweet-potatoes-broccoli)
+
+[Breakfast egg wraps](https://www.bbcgoodfood.com/recipes/breakfast-egg-wraps)
+
+[Breakfast Muffins](https://www.bbcgoodfood.com/recipes/breakfast-muffins)
+
+[Smoked Salmon And Quinoa Lunch Bowl](https://www.bbcgoodfood.com/recipes/smoked-salmon-quinoa-dill-lunch-pot)
+
+[Coconut & Squash Dhansak](https://www.bbcgoodfood.com/recipes/coconut-squash-dhansak)
+
+[Lemon Drizzle Sponge Pudding](https://www.bbcgoodfood.com/recipes/lemon-drizzle-sponge-pudding)
+
+[Avocado & Cannellini Bean Dip](https://www.bbcgoodfood.com/recipes/avocado-cannellini-bean-dip)
+
+[Thai Prawn & Ginger Noodles](https://www.bbcgoodfood.com/recipes/thai-prawn-ginger-noodles)
+
+[The Classic Negroni](https://www.bbcgoodfood.com/recipes/classic-negroni)
 
 ## Media
 

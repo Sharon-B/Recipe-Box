@@ -158,3 +158,95 @@
     * Intuitive and easy to navigate around the site.
 
     * Future releases to add more features to keep users interested and offer something new to returning users.
+
+# Manual Testing:
+
+Each page was tested and passed under the criteria set out below.
+
+## All Pages: 
+
+### Header:
+
+* Displays on all pages.
+
+    #### Logo:
+
+* The logo is displayed in the header.
+
+* Displays on all pages.
+
+* The logo is a clickable link which returns the user to the home page.
+
+	#### Navigation:
+
+* Displays on all pages except the 404.html error page.
+
+* On mobile devices a collapsed menu is provided, on clicking the burger icon the navigation menu is revealed.
+
+* On larger devices, from screen sizes 992px and up the navigation menu items appear in the header.
+
+* Each navigation menu item: 
+
+    * Highlights on hover
+
+    * Is clickable
+
+    * Is links to the associated page
+
+* The current active page is highlighted.
+
+* For non-registered users the navigation menu items are:
+
+	    Home, Recipes, Log In, Register & Contact
+
+* For Registered & Logged in users the navigation menu items are:
+
+	    Home, Recipes, Profile, Add Recipe, Log Out & Contact
+
+* For an Admin User the navigation items are:
+
+	    Home, Recipes, Profile, Add Recipe, Admin Menu, Log Out & Contact
+
+* The admin navigation menu has an additional dropdown menu called Admin Menu with 3 further navigation items:
+
+	    Manage Recipes, Manage Categories, Manage Users
+
+### Footer:
+
+* Displays on all pages.
+
+* Contains icons with links to social media pages.
+
+* Icons highlight on hover.
+
+* Social Media icons display on all pages except the 404.html error page.
+
+## Home Page:
+
+* Displays for all users.
+
+### Hero Image:
+
+* Displays a responsive hero image with a welcome message.
+
+* Displays recipe cards for the last 6 recipes added to the database.
+
+### Recipe Cards:
+
+* Provide an overview of each recipe with recipe image, recipe name, timings, recipe description and added by details.
+
+* The recipe name on each recipe card is a clickable link.
+
+* Recipe name highlights on hover.
+
+* Clicking on the recipe name brings the user to the full page of the recipe clicked.
+
+### Delete/ Edit Buttons:
+
+* Only display at the bottom of each card if the recipe was added by the logged in user.
+
+* Buttons highlight on hover.
+
+* Edit button redirects the user to the Edit Recipe page.
+
+* Delete button immediately deletes the recipe from the database and displays a ‘Recipe Deleted’ message to the user.

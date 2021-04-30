@@ -240,6 +240,8 @@ Roboto is used for all other text content. It’s forms are largely geometric bu
 
 [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) - Templating language used in conjunction with flask to render data in the html templates.
 
+[Flask-Paginate](https://pythonhosted.org/Flask-paginate/) - used to implement pagination.
+
 [Html](https://www.w3schools.com/html/html_intro.asp) - Hyper Text Markup Language, used for creating the website.
 
 [Css](https://www.w3schools.com/css/) - Cascading Style Sheet, used for styling the website.

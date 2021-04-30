@@ -112,13 +112,39 @@ Will allow for the prioritisation of the information to be displayed in a clear 
 
 # Skeleton
 
-Wireframes:
+## Wireframes:
 
-[Mobile]()
- 
-[Tablet]() 
- 
-[Desktop]()
+[Home Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/home.png)
+
+[Recipes Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/recipes.png)
+
+[Full Recipe Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/full-recipe.png)
+
+[Profile Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/profile.png)
+
+[Add Recipe Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/add-recipe.png)
+
+[Edit Recipe Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/edit-recipe.png)
+
+[Register Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/register.png)
+
+[Log In Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/log-in.png)
+
+[Contact Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/contact.png)
+
+[Manage Recipes Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/manage-recipes.png)
+
+[Manage Categories Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/manage-categories.png)
+
+[Edit Categories Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/edit-category.png)
+
+[Add Category Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/add-category.png)
+
+[Manage Users Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/manage-users.png)
+
+[Edit Users Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/edit-user.png)
+
+[404 Error Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/404.png)
 
 ## Difference between final design and original wireframes:
 

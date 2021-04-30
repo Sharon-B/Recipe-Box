@@ -313,6 +313,15 @@ I was getting the following warning in the console in Chrome Dev Tools:
 
 After some research on [Stackoverflow](https://stackoverflow.com/questions/61339968/devtools-failed-to-load-sourcemap-could-not-load-content-for-chrome-extension), I discovered that this is something within Chrome Dev Tools and I could remove the warning by going to Settings in Chrome Dev Tools and in Sources I could disable the options: "Enable javascript source maps" & "Enable CSS source maps"
 
+Commit history - merge conflict. I had a merge conflict in gitpod when trying to commit. It occurred after doing a ‘git —amend’ to fix a typo in the last commit which I did and then worked on and did another commit after which when I tried to ‘git push’ I got the following:
+        On branch master
+        Your branch and 'origin/master' have diverged,
+        and have 1 and 2 different commits each, respectively.
+          		(use "git pull" to merge the remote branch into yours)
+I did a ‘git pull’ and then pushed with a Fix merge conflict, merge TESTING.md commit. When I then looked at my commit history, the commit I had amended is still there with the typo and the amended commit without the typo. See affected commits below.
+
+![merge-conflict](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/merge-conflict.png)
+
 ## Known Bugs
 
 Bugs found and not fixed:

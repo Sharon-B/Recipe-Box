@@ -114,37 +114,37 @@ Will allow for the prioritisation of the information to be displayed in a clear 
 
 ## Wireframes:
 
-[Home Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/home.png)
+[Home Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/home.pdf)
 
-[Recipes Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/recipes.png)
+[Recipes Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/recipes.pdf)
 
-[Full Recipe Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/full-recipe.png)
+[Full Recipe Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/full-recipe.pdf)
 
-[Profile Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/profile.png)
+[Profile Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/profile.pdf)
 
-[Add Recipe Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/add-recipe.png)
+[Add Recipe Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/add-recipe.pdf)
 
-[Edit Recipe Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/edit-recipe.png)
+[Edit Recipe Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/edit-recipe.pdf)
 
-[Register Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/register.png)
+[Register Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/register.pdf)
 
-[Log In Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/log-in.png)
+[Log In Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/login.pdf)
 
-[Contact Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/contact.png)
+[Contact Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/contact.pdf)
 
-[Manage Recipes Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/manage-recipes.png)
+[Manage Recipes Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/manage-recipes.pdf)
 
-[Manage Categories Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/manage-categories.png)
+[Manage Categories Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/manage-category.pdf)
 
-[Edit Categories Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/edit-category.png)
+[Edit Categories Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/edit-category.pdf)
 
-[Add Category Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/add-category.png)
+[Add Category Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/add-category.pdf)
 
-[Manage Users Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/manage-users.png)
+[Manage Users Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/manage-users.pdf)
 
-[Edit Users Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/edit-user.png)
+[Edit Users Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/edit-user.pdf)
 
-[404 Error Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/404.png)
+[404 Error Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/404.pdf)
 
 ## Difference between final design and original wireframes:
 

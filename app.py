@@ -22,6 +22,8 @@ app.secret_key = os.environ.get("SECRET_KEY")
 # Create an instance of PyMongo
 mongo = PyMongo(app)
 
+# Code Snippet 1: Edb83 - Pagination
+# https://github.com/Edb83/self-isolution/blob/master/app.py
 # Pagination  recipes per page
 PER_PAGE = 9
 
@@ -42,12 +44,16 @@ def pagination_args(recipes):
 
     return Pagination(page=page, per_page=PER_PAGE,
                       css_framework='bootstrap4', total=total)
+# /End code snippet
 
 
 # Index
 @app.route("/")
 @app.route("/index")
 def index():
+    """
+    Home page displays the last 6 recipes added
+    """
     latest_recipes = mongo.db.recipes.find().sort('_id', DESCENDING).limit(6)
     return render_template(
         "index.html", latest_recipes=latest_recipes, title="Home")
@@ -56,6 +62,9 @@ def index():
 # Recipes
 @app.route("/all_recipes")
 def all_recipes():
+    """
+    Displays all recipes, paginated to 9 per page
+    """
     recipes = list(mongo.db.recipes.find())
     recipes_paginated = paginated(recipes)
     pagination = pagination_args(recipes)
@@ -67,6 +76,10 @@ def all_recipes():
 # Search Recipes
 @app.route("/search_recipes")
 def search_recipes():
+    """
+    Search the recipes collection and return results
+    Paginated 9 per page
+    """
     query = request.args.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     recipes_paginated = paginated(recipes)
@@ -79,6 +92,9 @@ def search_recipes():
 # Register
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    """
+    Register a new user and add them to the database
+    """
     if request.method == "POST":
 
         # check if username already exists in db
@@ -108,6 +124,9 @@ def register():
 # Log In
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    """
+    Check if username & password match existing user & Login user
+    """
     if request.method == "POST":
         # check if username exists in db
         existing_user = mongo.db.users.find_one(
@@ -139,6 +158,9 @@ def login():
 # Profile
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
+    """
+    Display recipes added by the current logged in user
+    """
     # Get the session user's username from the database
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
@@ -155,6 +177,9 @@ def profile(username):
 # Log Out
 @app.route("/logout")
 def logout():
+    """
+    Clears the session & redirects to login page
+    """
     session.pop("user")
     flash("You are now logged out")
     return redirect(url_for("login"))
@@ -163,6 +188,9 @@ def logout():
 # One recipe
 @app.route("/recipe/<recipe_id>")
 def recipe(recipe_id):
+    """
+    Displays the full recipe
+    """
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template("recipe.html", recipe=recipe, title="Recipe")
 
@@ -170,6 +198,9 @@ def recipe(recipe_id):
 # Add Recipe
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
+    """
+    Allows a logged in user to add a recipe
+    """
     if "user" not in session:
         flash("Please Log In")
         return redirect(url_for("login"))
@@ -198,6 +229,9 @@ def add_recipe():
 # Edit Recipe
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
+    """
+    Allows a logged in user to edit a recipe they have added
+    """
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
 
@@ -235,6 +269,9 @@ def edit_recipe(recipe_id):
 # Delete Recipe
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
+    """
+    Allows a logged in user to delete a recipe they have added
+    """
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
 
     if "user" not in session:
@@ -253,6 +290,10 @@ def delete_recipe(recipe_id):
 # Manage Recipes
 @app.route("/manage_recipes", methods=["GET", "POST"])
 def manage_recipes():
+    """
+    Displays all recipes for an admin user
+    Paginated to 9 per page
+    """
     recipes = list(mongo.db.recipes.find().sort("recipe_name", 1))
     if "user" not in session:
         flash("Please Log In")
@@ -272,6 +313,9 @@ def manage_recipes():
 # Manage Categories
 @app.route("/manage_categories")
 def manage_categories():
+    """
+    Displays all categories for an admin user
+    """
     categories = list(mongo.db.categories.find().sort("category_name", 1))
     if "user" not in session:
         flash("Please Log In")
@@ -289,6 +333,9 @@ def manage_categories():
 # Search Categories
 @app.route("/search_categories", methods=["GET", "POST"])
 def search_categories():
+    """
+    Search the categories collection and return results
+    """
     query = request.form.get("query")
     categories = list(mongo.db.categories.find({"$text": {"$search": query}}))
     return render_template(
@@ -299,6 +346,9 @@ def search_categories():
 # Add Category
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
+    """
+    Allows an admin user to add a category
+    """
 
     if "user" not in session:
         flash("Please Log In")
@@ -322,6 +372,9 @@ def add_category():
 # Edit Category
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
+    """
+    Allows an admin user to edit a category
+    """
     if "user" not in session:
         flash("Please Log In")
         return redirect(url_for("login"))
@@ -347,6 +400,9 @@ def edit_category(category_id):
 # Delete Category
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
+    """
+    Allows an admin user to delete a category
+    """
 
     if "user" not in session:
         flash("Please Log In")
@@ -364,6 +420,9 @@ def delete_category(category_id):
 # Manage Users
 @app.route("/manage_users")
 def manage_users():
+    """
+    Displays all users for an admin user
+    """
 
     if "user" not in session:
         flash("Please Log In")
@@ -381,6 +440,9 @@ def manage_users():
 # Search Users
 @app.route("/search_users", methods=["GET", "POST"])
 def search_users():
+    """
+    Search users collection and return the result
+    """
     query = request.form.get("query")
     users = list(mongo.db.users.find({"$text": {"$search": query}}))
     return render_template(
@@ -390,6 +452,9 @@ def search_users():
 # Edit User
 @app.route("/edit_user/<user_id>", methods=["GET", "POST"])
 def edit_user(user_id):
+    """
+    Allows an adminuser to edit a user
+    """
     if "user" not in session:
         flash("Please Log In")
         return redirect(url_for("login"))
@@ -417,6 +482,9 @@ def edit_user(user_id):
 # Delete User
 @app.route("/delete_user/<user_id>")
 def delete_user(user_id):
+    """
+    Allows an admin user to delete a user
+    """
     if "user" not in session:
         flash("Please Log In")
         return redirect(url_for("login"))
@@ -433,12 +501,18 @@ def delete_user(user_id):
 # Contact
 @app.route("/contact")
 def contact():
+    """
+    Displays the contact form
+    """
     return render_template("contact.html", title="Contact")
 
 
 # 404 Error
 @app.errorhandler(404)
 def not_found_error(error):
+    """
+    Handles a 404 error
+    """
     return render_template('404.html', error=error, title="404 Error"), 404
 
 

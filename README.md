@@ -431,7 +431,7 @@ Open terminal:
 
 ## Code
 
-Code Snippet 1: []() - 
+Code Snippet 1: [Edb83](https://github.com/Edb83/self-isolution/blob/master/app.py) - Using pagination & updating the search query to work with pagination.
 
 ## Resources
 
@@ -457,8 +457,7 @@ Code Snippet 1: []() -
 
 [PyMongo Docs](https://pymongo.readthedocs.io/en/stable/) - General resource.
 
-
-
+[Falsk-Paginate Demo](https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9)
 
 Anna Greaves How to Approach Writing Your README File webinar.
 

@@ -49,10 +49,11 @@
                         {% if session.user == "admin"|lower %}
                             <li class="nav-item {% block nav_admin_menu %}{% endblock %}">
                                 <div class="dropdown">
-                                    <span class="nav-link" id="admin-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="nav-link" id="admin-menu" role="button" 
+                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Admin Menu <i class="fas fa-caret-down"></i>
                                     </span>
-                                    <div class="dropdown-menu dd-menu" aria-labelledby="dropdownMenuButton">
+                                    <div class="dropdown-menu dd-menu" aria-labelledby="admin-menu">
                                         <a class="dropdown-item dd-item {% block nav_manage_recipes %}{% endblock %}"
                                             href="{{ url_for('manage_recipes') }}">Manage Recipes</a>
                                         <a class="dropdown-item dd-item {% block nav_manage_cats %}{% endblock %}"

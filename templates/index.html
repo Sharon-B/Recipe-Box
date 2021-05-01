@@ -5,17 +5,16 @@
 {% block content %}
 
     <!-- Hero Banner -->
-    <section>
-        <!-- Bootstrap Image Card, with modifications -->
-        <div class="card">
-            <img src="{{ url_for('static', filename='images/hero-image.jpg') }}" id="hero-image" class="card-img" alt="Three plates of steak and salad laid out on a table">
-            <div class="card-img-overlay hero-image-overlay">
-                <p id="welcome-message">
-                    Welcome to Recipe Box a place to keep, find & share your favourite recipes
-                </p>
-            </div>
+    <!-- Bootstrap Card, with modifications -->
+    <div class="card">
+        <img src="{{ url_for('static', filename='images/hero-image.jpg') }}" id="hero-image" class="card-img" alt="Three plates of steak and salad laid out on a table">
+        <div class="card-img-overlay hero-image-overlay">
+            <p id="welcome-message">
+                Welcome to Recipe Box a place to keep, find & share your favourite recipes
+            </p>
         </div>
-    </section>
+    </div>
+
     <!-- Recipes -->
     <section id="recipes-section">
         <div class="container">

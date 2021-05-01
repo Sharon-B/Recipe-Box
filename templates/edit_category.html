@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 
+    <!-- Page Heading -->
     <h3 class="page-heading heading">Edit Category</h3>
-    
+    <!-- Edit Category Form -->
     <div class="container manage-categories">
         <form id="add-cat-form" method="POST" action="{{ url_for('edit_category', category_id=category._id) }}">
             <div class="row center-it">
@@ -10,6 +11,7 @@
                     <label for="query" class="form-label">Edit Category:</label>
                 </div>
             </div>
+            <!-- Category Name -->
             <div class="row center-it">
                 <div class="col col-md-8 col-lg-6">
                     <input id="category_name" name="category_name" type="text" minlength="3" maxlength="12"
@@ -17,6 +19,7 @@
                 </div>
             </div>
             <div class="row">
+                <!-- Cancel/Edit Buttons -->
                 <div class="col buttons">
                     <a href="{{ url_for('manage_categories') }}" class="btn cancel-button button">Cancel</a>
                     <button type="submit" class="submit-button button">Edit</button>
@@ -24,6 +27,5 @@
             </div>
         </form>
     </div>
-    
 
 {% endblock %}

@@ -6,12 +6,13 @@
     <!-- Email confirm message -->
     <div id="email-confirm-msg" class="flash flash-msg">
     </div>
-
+    <!-- Page Heading -->
     <h2 class="page-heading heading">Contact Us!</h2>
 
     <div id="form-wrapper" class="container">
         <div class="row">
             <div class="col">
+                <!-- Bootstrap Card with modifications -->
                 <div class="card">
                     <img src="{{ url_for('static', filename='images/contact-image.png') }}" id="form-bg-image"
                         class="card-img" alt="Stack of french toast layered with blueberries, bananas and maple syrup">
@@ -44,7 +45,7 @@
                                     <textarea name="message" id="message" rows="6" class="input-field" placeholder="Message..." required></textarea>
                                 </div>
                             </div>
-                            
+                            <!-- Submit Button -->
                             <div class="row">
                                 <div class="col sub">
                                     <input class="submit-button button" type="submit" value="Send">
@@ -60,15 +61,16 @@
 {% endblock %}
 
 {% block scripts %}
-<script
-        src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
-</script>
-<script> 
-        (function(){
-            emailjs.init("user_K634cTmyvbT1ZBLjKZdzA");
-        })();
- </script>
- <script src="{{ url_for('static', filename='js/emailjs.js') }}"></script>
+    <!-- Emailjs scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    </script>
+    <script> 
+            (function(){
+                emailjs.init("user_K634cTmyvbT1ZBLjKZdzA");
+            })();
+    </script>
+    <script src="{{ url_for('static', filename='js/emailjs.js') }}">
+    </script>
 {% endblock %}
 
 

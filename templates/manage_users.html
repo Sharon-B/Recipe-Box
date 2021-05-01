@@ -4,10 +4,11 @@
 {% block nav_manage_users %}active{% endblock %}
 
 {% block content %}
-
+     <!-- Page Heading -->
     <h2 class="page-heading heading">Manage Users</h2>
     
     <div class="container manage-categories">
+         <!-- Search Users -->
         <form action="{{ url_for('search_users') }}" method="POST">
             <div class="row center-it">
                 <div class="col col-md-8 col-lg-6">
@@ -19,6 +20,7 @@
                     <input id="query" name="query" type="text" minlength="3" class="search-input validate" placeholder="Search Users..." required>
                 </div>
             </div>
+             <!-- Reset/Search Buttons -->
             <div class="row">
                 <div class="col buttons">
                     <a href="{{ url_for('manage_users') }}" class="btn cancel-button button">Reset</a>
@@ -29,17 +31,21 @@
         </form>
     </div>
     
-    <div class="container">          
+    <div class="container"> 
+         <!-- All Users -->         
         <h2 class="sub-heading  heading">All Users</h2>
         {% if users|length > 0 %}
             {% for user in users %}
                 <div class="row">
+                     <!-- User Name -->
                     <div class="col-sm-12 col-md-4">
                         <span class="cat-display">{{ user.username }}</span>
                     </div>
+                     <!-- User Email -->
                     <div class="col-sm-12 col-md-4">
                         <span class="cat-display">{{ user.email }}</span>
                     </div>
+                     <!-- Edit/Delete Buttons -->
                     <div class="col-sm-12 col-md-4 buttons">   
                         <a href="{{ url_for('edit_user', user_id=user._id) }}" class="btn edit-button button">Edit</a>
                         <a href="{{ url_for('delete_user', user_id=user._id) }}" class="btn delete-button button">Delete</a> 
@@ -49,6 +55,5 @@
         {% else %}
             <h3>No results found</h3>
         {% endif %}
-    
     </div>
 {% endblock %}

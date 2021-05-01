@@ -8,7 +8,7 @@
     
     <div class="container">
         <div class="sub-heading heading capitalize">{{ username }}'s Recipes</div>
-        <!-- Recipe Card -->
+        <!-- Bootstrap Card with modifications - Recipe Card -->
         <div class="row row-cols-1 row-cols-md-3">
             {% for recipe in recipes %}
                 {% if session.user|lower == recipe.added_by|lower %}

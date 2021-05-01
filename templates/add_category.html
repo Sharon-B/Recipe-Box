@@ -1,15 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
 
+    <!-- Page Heading -->
     <h3 class="page-heading heading">Add Category</h3>
     
     <div class="container manage-categories">
+        <!-- Add Category Form -->
         <form method="POST" action="{{ url_for('add_category') }}">
             <div class="row center-it">
                 <div class="col col-md-8 col-lg-6">
                     <label for="query" class="form-label">Add Category:</label>
                 </div>
             </div>
+            <!-- Category Name -->
             <div class="row center-it">
                 <div class="col col-md-8 col-lg-6">
                     <input id="category_name" name="category_name" type="text" minlength="3" maxlength="12"
@@ -17,6 +20,7 @@
                 </div>
             </div>
             <div class="row">
+                <!-- Cancel/Add Buttons -->
                 <div class="col buttons">
                     <a href="{{ url_for('manage_categories') }}" class="btn cancel-button button">Cancel</a>
                     <button type="submit" class="submit-button button">Add</button>

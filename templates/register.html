@@ -3,11 +3,12 @@
 {% block nav_register %}active{% endblock %}
 
 {% block content %}
-
+    <!-- Page Heading -->
     <h2 class="page-heading heading">Register</h2>
     <div id="form-wrapper" class="container">
         <div class="row">
             <div class="col">
+                <!-- Bootstrap Card with modifications -->
                 <div class="card">
                     <img src="{{ url_for('static', filename='images/register-image.png') }}" id="form-bg-image"
                         class="card-img" alt="Bowl of salad with avocado dressing">
@@ -49,14 +50,13 @@
                                         class="input-field validate" autocomplete="new-password" placeholder="Enter password" required>
                                 </div>
                             </div>
-                            
+                            <!-- Register Button -->
                             <div class="sub">
                                 <input class="submit-button button" type="submit" value="Register">
-                                
+                                <!-- Redirect to Login Page -->
                                 <p>Already Registered? <a href="{{ url_for('login') }}">Log In</a>
                                 </p>
                             </div>
-
                         </form>
                     </div>
                 </div>

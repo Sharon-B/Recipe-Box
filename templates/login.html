@@ -3,15 +3,18 @@
 {% block nav_login %}active{% endblock %}
 
 {% block content %}
-
+    <!-- Page Heading -->
     <h2 class="page-heading heading">Login</h2>
     <div id="form-wrapper" class="container">
         <div class="row">
             <div class="col">
+                <!-- Bootstrap Card with modifications -->
                 <div class="card">
+                    <!-- Card Image -->
                     <img src="{{ url_for('static', filename='images/login-image.jpg') }}" id="form-bg-image"
                         class="card-img" alt="Salad bowl with flatbread and a yogurt dressing with a small side dish of spiced chickpeas">
                     <div class="card-img-overlay image-overlay">
+                        <!-- Login Form -->
                         <form id="login-form" method="POST" action="{{ url_for('login') }}">
                             <!-- username -->
                             <div class="row form-section">
@@ -31,15 +34,13 @@
                                     <input id="password" name="password" type="password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="input-field validate" autocomplete="current-password" placeholder="Enter password" required>
                                 </div>
                             </div>
-                            
-                        
+                            <!-- Submit Button -->
                             <div class="sub">
                                 <input class="submit-button button" type="submit" value="Log In">
-                                
+                                <!-- Redirect to Register Page -->
                                 <p>Not Registered Yet? <a href="{{ url_for('register') }}">Register</a>
                                 </p>
                             </div>
-
                         </form>
                     </div>
                 </div>

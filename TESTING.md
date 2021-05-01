@@ -439,7 +439,9 @@ log in page.
 
 * User must enter their username of between 5 -15 characters.
 
-* User must enter their password of between 5 - 15 characters
+* User must enter their password of between 5 - 15 characters.
+
+* If user enters an invalid username or an incorrect username/password combination a 'Incorrect Username/Password' message displays.
 
 ### Log In Button:
 

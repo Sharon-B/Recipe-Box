@@ -148,10 +148,46 @@ Will allow for the prioritisation of the information to be displayed in a clear 
 
 ## Difference between final design and original wireframes:
 
-### 
+### Home Page:
 
+* Change heading to ‘Latest Recipes’.
 
-###
+### Recipes Page:
+
+* Add label to search.
+* Pagination added.
+* 9 recipes now displayed per page rather than 6.
+
+### Full Recipe Page:
+
+* Timings, category and description are now left aligned and not centred.
+
+### Add Recipe Page & Edit Recipe Page
+
+* Add labels to form inputs.
+* Helper text added.
+* Cancel button added.
+
+### Register Page
+
+* Add labels to form inputs.
+* Helper text added.
+
+### Log In Page & Contact Page
+
+* Add labels to form inputs.
+
+### Manage Recipes Page
+
+* Pagination added, 9 recipes per page.
+
+### Manage Categories Page & Manage Users Page
+
+* Add label to search.
+
+### Edit Categories , Add Category Page, Edit Users Page
+
+* Add label to form input.
 
 # Surface
 

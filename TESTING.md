@@ -2,18 +2,41 @@
 
 ## Code Validators & Auto Prefixer:
 #### CSS code was passed through Auto Prefixer to add vendor prefixes:
-* 
+
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
 
 #### CSS code was passed through the W3C CSS Validator: 
 
+No errors found and 44 warnings all relating to vendor prefixes.
 
 #### HTML code was passed through the W3C Markup Validator. 
 
+Errors found and resolved:
+
+* In base.html dropdown component af admin menu: span had no role attribute and aria-labelledby
+should point to an element in the document. Added role="button" to the span element and set
+aria-labelledby="admin-menu", the id of the component.
+* In index.html - section element has no heading. Removed section element.
+* In edit & add categories pages the label for attribute did not match the input id, 
+Updated these so that they matched
+* In edit & add recipe pages: pattern attribute is not allowed in textarea element, removed the 
+pattern attribute from these elements.
+
+Once the above errors were addressed all pages passed through the validator with no errors.
 
 #### Javascript code was passed through jshint. 
 
+2 undefined variables were found:
+emailjs and $
+
+emailjs refers to the emailjs api being used and $ is jquery syntax.
+
 #### Python code was passed through PEP8 online. 
 
+app.py passed through and returned All Right
 
 ## Lighthouse from Chrome Dev Tools Testing:
 ### Desktop report:

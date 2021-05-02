@@ -527,4 +527,4 @@ def not_found_error(error):
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)     # change to debug=False when in production mode
+            debug=False)

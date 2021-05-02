@@ -39,9 +39,25 @@ emailjs refers to the emailjs api being used and $ is jquery syntax.
 app.py passed through and returned All Right
 
 ## Lighthouse from Chrome Dev Tools Testing:
-### Desktop report:
 
-### Mobile Report:
+|                         | DESKTOP     |               |               |     | MOBILE      |               |               |     |
+|-------------------------|-------------|---------------|---------------|-----|-------------|---------------|---------------|-----|
+|                         | Performance | Accessibility | Best Practice | SEO | Performance | Accessibility | Best Practice | SEO |
+| Home Page:              | 93          | 100           | 93            | 100 | 75          | 100           | 100           | 100 |
+| Recipes Page:           | 99          | 100           | 100           | 90  | 94          | 100           | 100           | 90  |
+| Full Recipe Page:       | 99          | 100           | 87            | 100 | 96          | 100           | 93            | 100 |
+| Profile Page:           | 98          | 100           | 93            | 100 | 87          | 100           | 93            | 100 |
+| Add Recipe Page:        | 100         | 100           | 93            | 100 | 98          | 100           | 93            | 91  |
+| Edit Recipe Page:       | 100         | 100           | 93            | 100 | 99          | 100           | 93            | 91  |
+| Register Page:          | 99          | 100           | 80            | 100 | 84          | 100           | 87            | 92  |
+| Log In Page:            | 100         | 100           | 80            | 100 | 92          | 100           | 87            | 100 |
+| Contact Page:           | 99          | 100           | 80            | 100 | 90          | 100           | 87            | 100 |
+| Manage Recipes Page:    | 98          | 100           | 93            | 100 | 91          | 100           | 93            | 90  |
+| Manage Categories Page: | 99          | 100           | 93            | 100 | 98          | 100           | 93            | 100 |
+| Edit Categories Page:   | 100         | 100           | 93            | 100 | 98          | 100           | 93            | 100 |
+| Add Category Page:      | 100         | 100           | 93            | 100 | 98          | 100           | 93            | 100 |
+| Manage Users Page:      | 99          | 100           | 93            | 100 | 99          | 100           | 93            | 100 |
+| Edit Users Page:        | 100         | 100           | 93            | 100 | 97          | 100           | 93            | 100 |
 
 ## Responsiveness Testing:
 

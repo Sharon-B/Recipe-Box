@@ -9,8 +9,48 @@
 Recipe Box was developed as a place where users can find, add, share and keep their favourite recipes online. This provides users with an easily accessible resource to store their favourite recipes and also a place to come and discover recipes added by other users.
 
 # Contents
--
 
+- [User Experience (UX)](#user-experience--ux-)
+- [Strategy](#strategy)
+  * [Developer Objectives](#developer-objectives)
+    + [Target Audience](#target-audience-)
+  * [User Stories](#user-stories)
+    + [New User Stories](#new-user-stories)
+    + [Registered User Stories](#registered-user-stories)
+    + [Admin User Stories](#admin-user-stories)
+    + [Site Owner Stories](#site-owner-stories)
+- [Scope](#scope)
+  * [Functional Specifications](#functional-specifications-)
+  * [Content Requirements](#content-requirements-)
+- [Structure](#structure)
+  * [Interaction Design](#interaction-design-)
+  * [Information Design](#information-design-)
+- [Skeleton](#skeleton)
+  * [Wireframes](#wireframes-)
+  * [Difference between final design and original wireframes](#difference-between-final-design-and-original-wireframes-)
+- [Surface](#surface)
+  * [Typography](#typography-)
+  * [Colour scheme](#colour-scheme-)
+- [Features](#features)
+  * [Future Features](#future-features)
+- [Technologies Used](#technologies-used)
+- [Implementation](#implementation)
+  * [Issues/Solutions](#issues-solutions)
+  * [Known Bugs](#known-bugs)
+- [Database Collections](#database-collections)
+  * [users](#users-)
+  * [categories](#categories-)
+  * [recipes](#recipes-)
+- [Deployment](#deployment)
+  * [Heroku Deployment](#heroku-deployment-)
+  * [Creating A Local Clone](#creating-a-local-clone-)
+- [Credits](#credits)
+  * [Code](#code)
+  * [Resources](#resources)
+  * [Content](#content)
+  * [Media](#media)
+  * [Acknowledgements](#acknowledgements)
+  * [Disclaimer](#disclaimer)
 
 # User Experience (UX) 
 
@@ -30,7 +70,7 @@ To grow my skills as a developer and create a simple easy to use site. Develop t
 
 ### New User Stories
 
-1.	As a user I want to be able to view recipes on my tablet device so that I can use it while cooking in the kitchen.
+1. As a user I want to be able to view recipes on my tablet device so that I can use it while cooking in the kitchen.
 2. As a user I want to have my own profile where I can keep track of my own recipes
 3. As a user I want a visually appealing site so that I will enjoy browsing recipes for longer.
 4. As a user I want be able to check recipes on my mobile so that I can see what ingredients I may need while I’m out.
@@ -40,24 +80,26 @@ To grow my skills as a developer and create a simple easy to use site. Develop t
 8. As a user I want to be able to search for recipes so that I can find recipes for things I enjoy.
 
 ### Registered User Stories
+
 9. As a registered user I want to be able to add my own recipes for safe keeping so that I can easily find them.
 10. As a registered user I want to be able to update my own recipes so that I can change them as I want.
 11. As a registered user I want to be able to remove my own recipes so that I can maintain what recipes I have in my profile.
 
 ### Admin User Stories
+
 12. As a admin user I want to be able to edit/remove any recipe so that I can maintain a well curated site.
 13. As an admin user I want to be able to edit/add/remove categories so that I can adapt to the changing needs of our users.
 14. As an admin user I want to be able to edit/remove users so that I can keep them up to date.
 
 
-## Site Owner Stories
+### Site Owner Stories
 
 15.	As a site owner I want to provide a good user experience for my users, so that they want to come back.
 
 # Scope
 This will be a Minimal Viable Product containing the most important core content required.
 
-#### Functional Specifications: 
+## Functional Specifications: 
 
 * Home
 * All recipes
@@ -76,7 +118,7 @@ This will be a Minimal Viable Product containing the most important core content
     - Manage Categories - Add, edit & delete categories
     - Manage Users - Edit & delete users
 
-#### Content Requirements:
+## Content Requirements:
 
 * Logo.
 * Navigation
@@ -100,11 +142,11 @@ This will be a Minimal Viable Product containing the most important core content
 
 # Structure
 
-### Interaction Design: 
+## Interaction Design: 
 
 User interactions will be intuitive and consistent throughout the site to ensure it is easy to use and quick to learn for the user. Clickable links and buttons will have a hover effect applied so they are easily identifiable when a user hovers over them.
 
-### Information Design: 
+## Information Design: 
 
 Will allow for the prioritisation of the information to be displayed in a clear and concise manner to make it as easy as possible for the user to read and quickly find the information that is most relevant to their needs.
 
@@ -191,13 +233,13 @@ Will allow for the prioritisation of the information to be displayed in a clear 
 
 # Surface
 
-#### Typography:
+## Typography:
 
 PlayFair Display is used for the logo and headings throughout the site. It is well suited for titling. 
 
 Roboto is used for all other text content. It’s forms are largely geometric but also features friendly and open curves, which makes for a more natural reading rhythm.
 
-#### Colour scheme: 
+## Colour scheme: 
 
 ![color-palette](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/color-palette/color-palette.png)
 
@@ -431,7 +473,7 @@ This will save all the dependencies currently used by the app to the requirement
 
 3. `Git add`, `git commit` and `git push` these files to GitHub so they are available to Heroku which will use them to build the app.
 
-## In Heroku:
+### In Heroku:
 
 1. Login and click New -> Create New App
 	- Add a name
@@ -452,6 +494,7 @@ This will save all the dependencies currently used by the app to the requirement
  => Your app was successfully deployed will be displayed with the option to view the app.
 
 ## Creating A Local Clone:
+
 You can clone the repository to create a local copy on your computer.
 
 From the Git Hub repository:

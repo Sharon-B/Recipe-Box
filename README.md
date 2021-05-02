@@ -1,6 +1,6 @@
 # Recipe Box
 
-![Responsive Image]( "Am I Responsive")
+![Responsive Image](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/am-i-responsive.png "Am I Responsive")
 
 [Link to Live Project](https://recipe-box-sb.herokuapp.com/)
 

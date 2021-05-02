@@ -242,17 +242,21 @@ def edit_recipe(recipe_id):
     if session["user"] == recipe["added_by"] or session["user"] == "admin":
 
         if request.method == "POST":
-            submit_recipe = {
-                "recipe_name": request.form.get("recipe_name"),
-                "recipe_description": request.form.get("recipe_description"),
-                "category_name": request.form.get("category_name"),
-                "prep_time": request.form.get("prep_time"),
-                "cook_time": request.form.get("cook_time"),
-                "ingredients": request.form.getlist("ingredients"),
-                "method": request.form.getlist("method"),
-                "recipe_url": request.form.get("recipe_url"),
-                "added_by": session["user"]
-            }
+            submit_recipe = {"$set":
+                             {
+                                "recipe_name": request.form.get("recipe_name"),
+                                "recipe_description": request.form.get(
+                                    "recipe_description"),
+                                "category_name": request.form.get(
+                                    "category_name"),
+                                "prep_time": request.form.get("prep_time"),
+                                "cook_time": request.form.get("cook_time"),
+                                "ingredients": request.form.getlist(
+                                    "ingredients"),
+                                "method": request.form.getlist("method"),
+                                "recipe_url": request.form.get("recipe_url")
+                             }
+                             }
             mongo.db.recipes.update(
                 {"_id": ObjectId(recipe_id)}, submit_recipe)
             flash("Recipe Successfully Updated")

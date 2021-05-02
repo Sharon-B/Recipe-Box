@@ -38,6 +38,7 @@ Recipe Box was developed as a place where users can find, share and keep their f
   * [Issues/Solutions](#issues-solutions)
   * [Known Bugs](#known-bugs)
 - [Defensive Design](#defensive-design)
+- [Testing](#testing)
 - [Database Collections](#database-collections)
 - [Deployment](#deployment)
   * [Heroku Deployment](#heroku-deployment)
@@ -419,6 +420,10 @@ As pagination is currently working it was decided to leave these warnings for no
 * Logged in users can only edit/delete their own recipes.
 * Only admin user can access the admin pages.
 * 404 error page has being included.
+
+# Testing
+
+Testing documentation can be found [here](https://github.com/Sharon-B/Recipe-Box/blob/master/TESTING.md)
 
 # Database Collections
 

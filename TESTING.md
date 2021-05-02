@@ -2,18 +2,18 @@
 
 # Contents
 
-- [Code Validators & Auto Prefixer:](#code-validators---auto-prefixer-)
-- [Lighthouse from Chrome Dev Tools Testing:](#lighthouse-from-chrome-dev-tools-testing-)
-- [Responsiveness Testing:](#responsiveness-testing-)
-- [Device Testing:](#device-testing-)
-- [Browser Testing:](#browser-testing-)
-- [Friends & Family User Testing:](#friends---family-user-testing-)
+- [Code Validators & Auto Prefixer](#code-validators---auto-prefixer-)
+- [Lighthouse from Chrome Dev Tools Testing](#lighthouse-from-chrome-dev-tools-testing-)
+- [Responsiveness Testing](#responsiveness-testing-)
+- [Device Testing](#device-testing-)
+- [Browser Testing](#browser-testing-)
+- [Friends & Family User Testing](#friends---family-user-testing-)
 - [Testing User Stories](#testing-user-stories)
   * [Testing New User Stories](#testing-new-user-stories)
   * [Testing Registered Users Stories](#testing-registered-users-stories)
   * [Testing Admin User Stories](#testing-admin-user-stories)
   * [Testing Site Owner Stories](#testing-site-owner-stories)
-- [Manual Testing:](#manual-testing-)
+- [Manual Testing](#manual-testing-)
   * [All Pages](#all-pages-)
   * [Home Page](#home-page-)
   * [Recipes Page](#recipes-page-)
@@ -32,16 +32,16 @@
   * [Edit Users Page](#edit-users-page-)
   * [404 Error Page](#404-error-page-)
 
-# Code Validators & Auto Prefixer:
+# Code Validators & Auto Prefixer
 
-## CSS code was passed through Auto Prefixer to add vendor prefixes:
+## CSS code was passed through Auto Prefixer to add vendor prefixes
 
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v7.0.29,
 * Autoprefixer: v9.7.6
 * Browsers: last 4 version
 
-## CSS code was passed through the W3C CSS Validator: 
+## CSS code was passed through the W3C CSS Validator 
 
 No errors found and 44 warnings all relating to vendor prefixes.
 
@@ -71,7 +71,7 @@ emailjs refers to the emailjs api being used and $ is jquery syntax.
 
 app.py passed through and returned All Right
 
-# Lighthouse from Chrome Dev Tools Testing:
+# Lighthouse from Chrome Dev Tools Testing
 
 |                         | DESKTOP     |               |               |     | MOBILE      |               |               |     |
 |-------------------------|-------------|---------------|---------------|-----|-------------|---------------|---------------|-----|
@@ -92,21 +92,21 @@ app.py passed through and returned All Right
 | Manage Users Page:      | 99          | 100           | 93            | 100 | 99          | 100           | 93            | 100 |
 | Edit Users Page:        | 100         | 100           | 93            | 100 | 97          | 100           | 93            | 100 |
 
-# Responsiveness Testing:
+# Responsiveness Testing
 
 The responsiveness of the website was tested using Chrome Dev Tools and setting it to display on various mobile/tablet devices that are included. Responsiveness is optimised for screen sizes from 320px up and in portrait orientation for smaller devices.
 
-# Device Testing:
+# Device Testing
 
 All aspects of the website mentioned above were manually tested on the following 
 devices: iPad 2, iPhone 8, MacBook Pro.
 
-# Browser Testing:
+# Browser Testing
 
 All aspects of the website mentioned above were manually tested on the following 
 browsers: Chrome, Safari, Mozilla Firefox
 
-# Friends & Family User Testing: 
+# Friends & Family User Testing 
 
 The general feedback was that the site looks well and is easy to navigate. 
 Devices used: iPad Pro, iPhone 8 Plus, Laptop (windows running the Chrome browser).
@@ -227,11 +227,11 @@ Devices used: iPad Pro, iPhone 8 Plus, Laptop (windows running the Chrome browse
 
     * Future releases to add more features to keep users interested and offer something new to returning users.
 
-# Manual Testing:
+# Manual Testing
 
 Each page was tested and passed under the criteria set out below.
 
-## All Pages: 
+## All Pages 
 
 ### Header:
 
@@ -289,7 +289,7 @@ Each page was tested and passed under the criteria set out below.
 
 * Social Media icons display on all pages except the 404.html error page.
 
-## Home Page:
+## Home Page
 
 * Displays for all users.
 
@@ -319,7 +319,7 @@ Each page was tested and passed under the criteria set out below.
 
 * Delete button immediately deletes the recipe from the database and displays a ‘Recipe Deleted’ message to the user.
 
-## Recipes Page:
+## Recipes Page
 
 * Displays for all users.
 
@@ -373,7 +373,7 @@ Each page was tested and passed under the criteria set out below.
 
 * Pagination links highlight the current page.
 
-## Full Recipe Page:
+## Full Recipe Page
 
 * Displays for all users.
 
@@ -391,7 +391,7 @@ Each page was tested and passed under the criteria set out below.
 
 * Delete button immediately deletes the recipe from the database and displays a ‘Recipe Deleted’ message to the user.
 
-## Profile Page:
+## Profile Page
 
 * Only available when a user is logged in.
 
@@ -421,7 +421,7 @@ Each page was tested and passed under the criteria set out below.
 
 * Delete button immediately deletes that recipe from the database and displays a ‘recipe deleted’ message to the user.
 
-## Add Recipe Page:
+## Add Recipe Page
 
 * Only available when a user is logged in.
 
@@ -447,7 +447,7 @@ Each page was tested and passed under the criteria set out below.
 
 * Cancel button redirects the user back to their profile page.
 
-## Edit Recipe Page:
+## Edit Recipe Page
 
 * Only available when a user is logged in for recipe that they have added.
 
@@ -473,7 +473,7 @@ Each page was tested and passed under the criteria set out below.
 
 * Cancel button redirects the user back to their profile page.
 
-## Register Page:
+## Register Page
 
 * Displays for all users.
 
@@ -503,7 +503,7 @@ Each page was tested and passed under the criteria set out below.
 
 * For users already registered there is a link that redirects them to the log in page.
 
-## Log In Page:
+## Log In Page
 
 * Displays for all users.
 
@@ -533,7 +533,7 @@ Each page was tested and passed under the criteria set out below.
 
 * For users not already registered there is a link that redirects them to the Register page.
 
-## Contact Page:
+## Contact Page
 
 * Displays for all users.
 
@@ -556,7 +556,7 @@ Each page was tested and passed under the criteria set out below.
 * Checked error message "There was an error on our side, please try again later." message displays 
 by changing the name of the contact_service in emailjs.js to be invalid and sending the form.
 
-## Manage Recipes Page:
+## Manage Recipes Page
 
 * Only accessible to an admin user.
 
@@ -596,7 +596,7 @@ by changing the name of the contact_service in emailjs.js to be invalid and send
 
 * Pagination links highlight the current page.
 
-## Manage Categories Page:
+## Manage Categories Page
 
 * Only accessible to an admin user.
 
@@ -643,7 +643,7 @@ by changing the name of the contact_service in emailjs.js to be invalid and send
 
 * Delete button immediately deletes that category from the database and displays a ‘Category deleted’ message to the user.
 
-## Edit Categories Page:
+## Edit Categories Page
 
 * Only accessible to an admin user.
 
@@ -661,7 +661,7 @@ by changing the name of the contact_service in emailjs.js to be invalid and send
 
 * Cancel button returns the user to the manage categories page.
 
-## Add Category Page:
+## Add Category Page
 
 * Only accessible to an admin user.
 
@@ -679,7 +679,7 @@ by changing the name of the contact_service in emailjs.js to be invalid and send
 
 * Cancel button returns the user to the manage categories page.
 
-## Manage Users Page:
+## Manage Users Page
 
 * Only accessible to an admin user.
 
@@ -719,7 +719,7 @@ by changing the name of the contact_service in emailjs.js to be invalid and send
 
 * Delete button immediately deletes that user and displays a ‘User deleted’ message to the user.
 
-## Edit Users Page:
+## Edit Users Page
 
 * Only accessible to an admin user.
 
@@ -737,7 +737,7 @@ by changing the name of the contact_service in emailjs.js to be invalid and send
 
 * Cancel button returns the user to the manage categories page.
 
-## 404 Error Page:
+## 404 Error Page
 
 * Displays when a 404 - page not found error is encountered.
 

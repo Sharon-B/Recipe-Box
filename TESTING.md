@@ -413,6 +413,8 @@ Each page was tested and passed under the criteria set out below.
 
 * If user submits the form with an empty field a message will be displayed on that field, indicating that it must be filled in.
 
+* If admin edits a recipe added by another user the original added by user is maintained.
+
 ### Edit Recipe/ Cancel Buttons:
 
 * Highlight on hover.

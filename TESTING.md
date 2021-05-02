@@ -552,6 +552,9 @@ log in page.
 
 * Submits the form and displays a ‘Thank you for your email, we will be in touch’ message.
 
+* Checked error message "There was an error on our side, please try again later." message displays 
+by changing the name of the contact_service in emailjs.js to be invalid and sending the form.
+
 ## Manage Recipes Page:
 
 * Only accessible to an admin user.

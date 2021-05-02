@@ -199,7 +199,7 @@ Devices used: iPad Pro, iPhone 8 Plus, Laptop (windows running the Chrome browse
 
 12. As a admin user I want to be able to edit/remove any recipe so that I can maintain a well curated site.
 
-    * Once an admin user is logged in an ‘admin menu’ option is now available in the navigation menu, which gives the admin user the option to Manage Recipes
+    * Once an admin user is logged in an ‘admin menu’ option is now available in the navigation menu, which gives the admin user the option to Manage Recipes.
 
     * From the Manage Recipes page the admin can edit or delete any recipe on the site.
 
@@ -217,7 +217,7 @@ Devices used: iPad Pro, iPhone 8 Plus, Laptop (windows running the Chrome browse
 
 ## Testing Site Owner Stories
 
-1.	As a site owner I want to provide a good user experience for my users, so that they want to come back.
+15.	As a site owner I want to provide a good user experience for my users, so that they want to come back.
 
     * Professional look and a friendly feel to the website.
 
@@ -241,7 +241,7 @@ Each page was tested and passed under the criteria set out below.
 
 * The logo is displayed in the header.
 
-* Displays on all pages.
+* Logo displays on all pages.
 
 * The logo is a clickable link which returns the user to the home page.
 
@@ -357,9 +357,9 @@ Each page was tested and passed under the criteria set out below.
 
 * Search button submits the search query and returns the associated results.
 
-* Search results are paginated if greater than 9 results found
+* Search results are paginated if greater than 9 results found.
 
-* If no search results found a message of ‘no results found’ is displayed
+* If no search results found a message of ‘no results found’ is displayed.
 
 * Reset button reloads the recipes page.
 
@@ -431,7 +431,7 @@ Each page was tested and passed under the criteria set out below.
 
 * Placeholder text is provided to help guide the user in filling out the form.
 
-* Help text is also provided where the user must comply to specific input criteria eg Cook Time should be in the format of: 90 mins
+* Help text is also provided where the user must comply to specific input criteria eg Cook Time should be in the format of: 90 mins.
 
 * If user submits the form with an empty field a message will be displayed on that field, indicating that it must be filled in.
 
@@ -457,7 +457,7 @@ Each page was tested and passed under the criteria set out below.
 
 * Placeholder text is provided to help guide the user in filling out the form.
 
-* Help text is also provided where the user must comply to specific input criteria eg Cook Time should be in the format of: 90 mins
+* Help text is also provided where the user must comply to specific input criteria eg Cook Time should be in the format of: 90 mins.
 
 * If user submits the form with an empty field a message will be displayed on that field, indicating that it must be filled in.
 
@@ -485,7 +485,7 @@ Each page was tested and passed under the criteria set out below.
 
 * User must enter an email in the valid format.
 
-* User must enter a password of between 5 - 15 characters
+* User must enter a password of between 5 - 15 characters.
 
 ### Register Button:
 
@@ -501,8 +501,7 @@ Each page was tested and passed under the criteria set out below.
 
 * Highlights on hover.
 
-* For users already registered there is a link that redirects them to the 
-log in page.
+* For users already registered there is a link that redirects them to the log in page.
 
 ## Log In Page:
 
@@ -559,7 +558,7 @@ by changing the name of the contact_service in emailjs.js to be invalid and send
 
 * Only accessible to an admin user.
 
-* If user is not logged in and tries to access the page, they are redirected to the login page and a ‘Please Log In Message is displayed’
+* If user is not logged in and tries to access the page, they are redirected to the login page and a ‘Please Log In Message is displayed'.
 
 * If a user is logged in but not an admin and tries to access the page they are redirected to the recipes page and a ‘You do not have permission for that’ message is displayed.
 
@@ -599,7 +598,7 @@ by changing the name of the contact_service in emailjs.js to be invalid and send
 
 * Only accessible to an admin user.
 
-* If user is not logged in and tries to access the page, they are redirected to the login page and a ‘Please Log In Message is displayed’
+* If user is not logged in and tries to access the page, they are redirected to the login page and a ‘Please Log In Message is displayed’.
 
 * If a user is logged in but not an admin and tries to access the page they are redirected to the recipes page and a ‘You do not have permission for that’ message is displayed.
 
@@ -618,7 +617,7 @@ by changing the name of the contact_service in emailjs.js to be invalid and send
 
 * Search button submits the search query and returns the associated results.
 
-* If no search results found a message of ‘no results found’ is displayed
+* If no search results found a message of ‘no results found’ is displayed.
 
 * Reset button reloads the manage categories page.
 
@@ -630,11 +629,11 @@ by changing the name of the contact_service in emailjs.js to be invalid and send
 
 ### Categories:
 
-* A list of available categories is displayed, with delete/edit buttons for each
+* A list of available categories is displayed, with delete/edit buttons for each.
 
 ### Delete/ Edit Buttons:
 
-* Display for each category listed
+* Display for each category listed.
 
 * Buttons highlight on hover.
 
@@ -656,7 +655,7 @@ by changing the name of the contact_service in emailjs.js to be invalid and send
 
 * Buttons highlight on hover.
 
-* Edit button submits the form, returns the user to the manage categories page with a ‘Category updated” message
+* Edit button submits the form, returns the user to the manage categories page with a ‘Category updated” message.
 
 * Cancel button returns the user to the manage categories page.
 
@@ -706,11 +705,11 @@ by changing the name of the contact_service in emailjs.js to be invalid and send
 
 ### Categories:
 
-* A list of available users is displayed, with delete/edit buttons for each
+* A list of available users is displayed, with delete/edit buttons for each.
 
 ### Delete/ Edit Buttons:
 
-* Display for each user listed
+* Display for each user listed.
 
 * Buttons highlight on hover.
 
@@ -732,7 +731,7 @@ by changing the name of the contact_service in emailjs.js to be invalid and send
 
 * Buttons highlight on hover.
 
-* Edit button submits the form, returns the user to the manage categories page with a ‘User updated” message
+* Edit button submits the form, returns the user to the manage categories page with a ‘User updated” message.
 
 * Cancel button returns the user to the manage categories page.
 

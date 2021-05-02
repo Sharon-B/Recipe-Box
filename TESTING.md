@@ -513,6 +513,8 @@ Each page was tested and passed under the criteria set out below.
 
 * User must enter their password of between 5 - 15 characters.
 
+* Checks if username exists and that the password matches that in the database.
+
 * If user enters an invalid username or an incorrect username/password combination a 'Incorrect Username/Password' message displays.
 
 ### Log In Button:

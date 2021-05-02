@@ -6,7 +6,7 @@
 
 # Project Summary
 
-Recipe Box was developed as a place where users can find, add, share and keep their favourite recipes online. This provides users with an easily accessible resource to store their favourite recipes and also a place to come and discover recipes added by other users.
+Recipe Box was developed as a place where users can find, share and keep their favourite recipes online. This provides users with an easily accessible resource to store their favourite recipes and also a place to come and discover recipes added by other users.
 
 # Contents
 
@@ -72,7 +72,7 @@ To grow my skills as a developer and create a simple easy to use site. Develop t
 ### New User Stories
 
 1. As a user I want to be able to view recipes on my tablet device so that I can use it while cooking in the kitchen.
-2. As a user I want to have my own profile where I can keep track of my own recipes
+2. As a user I want to have my own profile where I can keep track of my own recipes.
 3. As a user I want a visually appealing site so that I will enjoy browsing recipes for longer.
 4. As a user I want be able to check recipes on my mobile so that I can see what ingredients I may need while I’m out.
 5. As a user I want to be able to contact the site owner so that I can ask any questions or offer recommendations that I may have.
@@ -98,7 +98,7 @@ To grow my skills as a developer and create a simple easy to use site. Develop t
 15.	As a site owner I want to provide a good user experience for my users, so that they want to come back.
 
 # Scope
-This will be a Minimal Viable Product containing the most important core content required.
+This will be a Minimal Viable Product containing the most essential core content required.
 
 ## Functional Specifications: 
 
@@ -109,7 +109,7 @@ This will be a Minimal Viable Product containing the most important core content
 * Contact
 * Registration
 * Log In
-* User Profile
+* User Profile functionality:
     - Add Recipe
     - Edit Recipe
     - Delete Recipe
@@ -121,7 +121,7 @@ This will be a Minimal Viable Product containing the most important core content
 
 ## Content Requirements:
 
-* Logo.
+* Logo
 * Navigation
 * Home page
 * Hero Image on home page with welcome text overlay
@@ -199,7 +199,7 @@ Will allow for the prioritisation of the information to be displayed in a clear 
 
 * Add label to search.
 * Pagination added.
-* 9 recipes now displayed per page rather than 6.
+* 9 recipes displayed per page rather than 6.
 
 ### Full Recipe Page:
 
@@ -281,7 +281,7 @@ Roboto is used for all other text content. It’s forms are largely geometric bu
 * Responsive
 * Logo
 * Navigation in header which collapses for mobile use
-* Recipe Cards with recipe image and a brief recipe description to display each recipe for browsing.
+* Recipe Cards with recipe image and a brief recipe description to display each recipe for browsing
 * Recipe name on card is a clickable link to the full recipe view
 * Home page features the 6 latest recipes added
 * Hero image on main page with welcome text overlay
@@ -300,10 +300,10 @@ Roboto is used for all other text content. It’s forms are largely geometric bu
 ## Future Features
 
 * Confirm delete
-* Add Favourites functionality so users can like or favourite a recipe and it would be added to their profile page for easy access.
-* Add Comments - enable registered users to comment on other recipes.
-* Add superuser functionality for admins.
-* Build out user profile with option for profile image/avatar, allow user to delete their own profile.
+* Add Favourites functionality so users can like or favourite a recipe and it would be added to their profile page for easy access
+* Add Comments - enable registered users to comment on other recipes
+* Add superuser functionality for admins
+* Build out user profile with option for profile image/avatar, allow user to delete their own profile
 
 # Technologies Used
 
@@ -371,7 +371,7 @@ Roboto is used for all other text content. It’s forms are largely geometric bu
 
 Once the initial concept for the project was decided upon I first developed the wireframes and site map. From these wireframes I then developed the basic database structure required. I created 3 collections for the database, a users collection, a recipes collection & a categories collection. The database schema can be seen [here]((https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/initial-db-schema.png)).
 
-I then set up the Flask app, created the environment variables needed to run the app, created requirements.txt for all dependencies used and set up a Procfile. I connected the app to MongoDB and tested it by rendering a a basic test recipe document from the recipes collection in html. The project was deployed to Heroku which I set to automatic deployment so that anytime I push code to GitHub it is able to automatically get the latest code and build the app.
+I then set up the Flask app, created the environment variables needed to run the app, created requirements.txt for all dependencies used and set up a Procfile. I connected the app to MongoDB and tested it by rendering a basic test recipe document from the recipes collection in html. The project was deployed to Heroku which I set to automatic deployment so that anytime I push code to GitHub it is able to automatically get the latest code and build the app.
 
 Now that the infrastructure of the app was set up I could start to build the app, first I set up a base.html from which all my html templates would be extended from. As I added a route & view function in app.py I created the associated html template, also utilising Jinja templating language to insert the data into the html pages.
 
@@ -379,14 +379,14 @@ Note: Initially I was going to use WTForms, however after talking to Tutor Suppo
 
 ## Issues/Solutions
 
-I was getting an error in the console as my scripts.js file with my emailjs code for the contact form was loading on every page. I have the function setup to window.onload so it was giving an error when loading the other pages ie not the contact page. To resolve this I moved the emailjs code into it's own emailjs.js file and set up a script at the bottom of the contact.html page so that this only loads now when the contact.html page is opened.
+I was getting an error in the console as my scripts.js file with my emailjs code for the contact form was loading on every page. I have the function setup to window.onload so it was giving an error when loading the other pages i.e. not the contact page. To resolve this I moved the emailjs code into it's own emailjs.js file and set up a script at the bottom of the contact.html page so that this only loads now when the contact.html page is opened.
 
-The edit_user() function was overwriting the whole document eventhough only the username and/or email and not the password field were being updated. To resolve this I added $set to the edit_user() function so that it would update specific fields only.
+The edit_user() function was overwriting the whole document eventhough only the username and/or email and not the password field were being updated. To resolve this I added $set to the edit_user() function so that it would update specific fields only. I subsequently added $set
+to the edit_recipe() & edit_category functions as well.
 
-Search was not functioning properly since adding in the pagination only the first page would be returned. Initially I was going to just remove the pagination from this page but after researching this on Slack I found a solution thanks to [Edb83](https://github.com/Edb83/self-isolution). In order to get the search query to also work with pagination it was necessary to set query = request.args.get("query") in the search function and set method="GET" in the search form and in the search route. 
+Search was not functioning properly since adding in the pagination only the first page would be returned. Initially I was going to just remove the pagination from this page but after researching this on Slack I found a solution thanks to [Edb83](https://github.com/Edb83/self-isolution/blob/master/app.py). In order to get the search query to also work with pagination it was necessary to set `query = request.args.get("query")` in the search function and set `method="GET"` in the search form and in the search route. 
 
-Chrome Dev Tools showed a warning in the console for autocomplete on the username and password fields of the registration and log in forms. To remove this I added the autocomplete attribute for username & password inputs On the login form I set autocomplete="username" for the username & autocomplete="current-password" for the password input field.
-On the register form I set autocomplete="username" for the username & autocomplete="new-password" for the password input field. This ensures that the browser does not try to autocomplete a username or password where it could possibly autocomplete with somebody else's password/username.
+Chrome Dev Tools showed a warning in the console for autocomplete on the username and password fields of the registration and log in forms. To remove this I added the autocomplete attribute for username & password inputs On the login form I set autocomplete="username" for the username & autocomplete="current-password" for the password input field. On the register form I set `autocomplete="username"` for the username & `autocomplete="new-password"` for the password input field. This ensures that the browser does not try to autocomplete a username or password where it could possibly autocomplete with somebody else's password/username.
 
 I was getting the following warning in the console in Chrome Dev Tools:
 
@@ -394,12 +394,14 @@ I was getting the following warning in the console in Chrome Dev Tools:
 
 After some research on [Stackoverflow](https://stackoverflow.com/questions/61339968/devtools-failed-to-load-sourcemap-could-not-load-content-for-chrome-extension), I discovered that this is something within Chrome Dev Tools and I could remove the warning by going to Settings in Chrome Dev Tools and in Sources I could disable the options: "Enable javascript source maps" & "Enable CSS source maps"
 
-Commit history - merge conflict. I had a merge conflict in gitpod when trying to commit. It occurred after doing a ‘git —amend’ to fix a typo in the last commit which I did and then worked on and did another commit after which when I tried to ‘git push’ I got the following:
-        On branch master
-        Your branch and 'origin/master' have diverged,
-        and have 1 and 2 different commits each, respectively.
-          		(use "git pull" to merge the remote branch into yours)
-I did a ‘git pull’ and then pushed with a Fix merge conflict, merge TESTING.md commit. When I then looked at my commit history, the commit I had amended is still there with the typo and the amended commit without the typo. See affected commits below.
+Commit history - merge conflict. I had a merge conflict in gitpod when trying to push. It occurred after doing a `git commit —amend` to fix a typo in the last commit which I did and then worked on and did another commit after which when I tried to `git push` I got the following:
+
+    On branch master
+    Your branch and 'origin/master' have diverged,
+    and have 1 and 2 different commits each, respectively.
+    (use "git pull" to merge the remote branch into yours)
+
+I did a `git pull` as suggested by the message and then pushed with a Fix merge conflict, merge TESTING.md commit. When I then looked at my commit history, the commit I had amended is still there with the typo and the amended commit without the typo. See affected commits below. I think I did the `git commit --amend` after having already pushed to GitHub, hence the conflict.
 
 ![merge-conflict](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/merge-conflict.png)
 
@@ -548,7 +550,7 @@ Code snippet 3: [Emailjs Submit form function](https://www.emailjs.com/docs/tuto
 
 [PyMongo Docs](https://pymongo.readthedocs.io/en/stable/) - General resource.
 
-[Falsk-Paginate Demo](https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9)
+[Falsk-Paginate Demo](https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9) - Implementing Flask-paginate.
 
 Anna Greaves How to Approach Writing Your README File webinar.
 

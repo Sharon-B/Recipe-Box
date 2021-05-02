@@ -1,18 +1,51 @@
 # Testing
 
-## Code Validators & Auto Prefixer:
-#### CSS code was passed through Auto Prefixer to add vendor prefixes:
+# Contents
+
+- [Code Validators & Auto Prefixer:](#code-validators---auto-prefixer-)
+- [Lighthouse from Chrome Dev Tools Testing:](#lighthouse-from-chrome-dev-tools-testing-)
+- [Responsiveness Testing:](#responsiveness-testing-)
+- [Device Testing:](#device-testing-)
+- [Browser Testing:](#browser-testing-)
+- [Friends & Family User Testing:](#friends---family-user-testing-)
+- [Testing User Stories](#testing-user-stories)
+  * [Testing New User Stories](#testing-new-user-stories)
+  * [Testing Registered Users Stories](#testing-registered-users-stories)
+  * [Testing Admin User Stories](#testing-admin-user-stories)
+  * [Testing Site Owner Stories](#testing-site-owner-stories)
+- [Manual Testing:](#manual-testing-)
+  * [All Pages](#all-pages-)
+  * [Home Page](#home-page-)
+  * [Recipes Page](#recipes-page-)
+  * [Full Recipe Page](#full-recipe-page-)
+  * [Profile Page](#profile-page-)
+  * [Add Recipe Page](#add-recipe-page-)
+  * [Edit Recipe Page](#edit-recipe-page-)
+  * [Register Page](#register-page-)
+  * [Log In Page](#log-in-page-)
+  * [Contact Page](#contact-page-)
+  * [Manage Recipes Page](#manage-recipes-page-)
+  * [Manage Categories Page](#manage-categories-page-)
+  * [Edit Categories Page](#edit-categories-page-)
+  * [Add Category Page](#add-category-page-)
+  * [Manage Users Page](#manage-users-page-)
+  * [Edit Users Page](#edit-users-page-)
+  * [404 Error Page](#404-error-page-)
+
+# Code Validators & Auto Prefixer:
+
+## CSS code was passed through Auto Prefixer to add vendor prefixes:
 
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v7.0.29,
 * Autoprefixer: v9.7.6
 * Browsers: last 4 version
 
-#### CSS code was passed through the W3C CSS Validator: 
+## CSS code was passed through the W3C CSS Validator: 
 
 No errors found and 44 warnings all relating to vendor prefixes.
 
-#### HTML code was passed through the W3C Markup Validator. 
+## HTML code was passed through the W3C Markup Validator. 
 
 Errors found and resolved:
 
@@ -27,18 +60,18 @@ pattern attribute from these elements.
 
 Once the above errors were addressed all pages passed through the validator with no errors.
 
-#### Javascript code was passed through jshint. 
+## Javascript code was passed through jshint. 
 
 2 undefined variables were found:
 emailjs and $
 
 emailjs refers to the emailjs api being used and $ is jquery syntax.
 
-#### Python code was passed through PEP8 online. 
+## Python code was passed through PEP8 online. 
 
 app.py passed through and returned All Right
 
-## Lighthouse from Chrome Dev Tools Testing:
+# Lighthouse from Chrome Dev Tools Testing:
 
 |                         | DESKTOP     |               |               |     | MOBILE      |               |               |     |
 |-------------------------|-------------|---------------|---------------|-----|-------------|---------------|---------------|-----|
@@ -59,28 +92,28 @@ app.py passed through and returned All Right
 | Manage Users Page:      | 99          | 100           | 93            | 100 | 99          | 100           | 93            | 100 |
 | Edit Users Page:        | 100         | 100           | 93            | 100 | 97          | 100           | 93            | 100 |
 
-## Responsiveness Testing:
+# Responsiveness Testing:
 
 The responsiveness of the website was tested using Chrome Dev Tools and setting it to display on various mobile/tablet devices that are included. Responsiveness is optimised for screen sizes from 320px up and in portrait orientation for smaller devices.
 
-## Device Testing:
+# Device Testing:
 
 All aspects of the website mentioned above were manually tested on the following 
 devices: iPad 2, iPhone 8, MacBook Pro.
 
-## Browser Testing:
+# Browser Testing:
 
 All aspects of the website mentioned above were manually tested on the following 
 browsers: Chrome, Safari, Mozilla Firefox
 
-## Friends & Family User Testing: 
+# Friends & Family User Testing: 
 
 The general feedback was that the site looks well and is easy to navigate. 
 Devices used: iPad Pro, iPhone 8 Plus, Laptop (windows running the Chrome browser).
 
-## Testing User Stories
+# Testing User Stories
 
-### Testing New User Stories
+## Testing New User Stories
 
 1. As a user I want to be able to view recipes on my tablet device so that I can use it while cooking in the kitchen.
 
@@ -140,8 +173,8 @@ Devices used: iPad Pro, iPhone 8 Plus, Laptop (windows running the Chrome browse
 
     * The search functions across the recipe name, description and category fields of the recipes collection, so a user can search for ‘chicken’ or  meal type eg ‘dinner’.
 
+## Testing Registered Users Stories
 
-### Testing Registered Users Stories
 9. As a registered user I want to be able to add my own recipes for safe keeping so that I can easily find them.
 
     * Once registered a user is directed to their profile page, ‘add recipe’ is now available as an option in the navigation menu.
@@ -162,8 +195,8 @@ Devices used: iPad Pro, iPhone 8 Plus, Laptop (windows running the Chrome browse
 
     * By clicking on the delete button the recipe is deleted.
 
+## Testing Admin User Stories
 
-### Testing Admin User Stories
 12. As a admin user I want to be able to edit/remove any recipe so that I can maintain a well curated site.
 
     * Once an admin user is logged in an ‘admin menu’ option is now available in the navigation menu, which gives the admin user the option to Manage Recipes
@@ -182,8 +215,7 @@ Devices used: iPad Pro, iPhone 8 Plus, Laptop (windows running the Chrome browse
 
     * From the Manage Users page an admin can edit or delete users as needed.
 
-
-### Testing Site Owner Stories
+## Testing Site Owner Stories
 
 1.	As a site owner I want to provide a good user experience for my users, so that they want to come back.
 

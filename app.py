@@ -385,9 +385,12 @@ def edit_category(category_id):
 
     if session["user"] == "admin":
         if request.method == "POST":
-            update_category = {
-                "category_name": request.form.get("category_name")
-            }
+            update_category = {"$set":
+                               {
+                                    "category_name": request.form.get(
+                                        "category_name")
+                               }
+                               }
             mongo.db.categories.update(
                 {"_id": ObjectId(category_id)}, update_category)
             flash("Category Updated")

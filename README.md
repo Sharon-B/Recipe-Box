@@ -520,6 +520,10 @@ Open terminal:
 
 Code Snippet 1: [Edb83](https://github.com/Edb83/self-isolution/blob/master/app.py) - Using pagination & updating the search query to work with pagination.
 
+Code snippet 2: [Emailjs scripts & initilization](https://www.emailjs.com/docs/tutorial/creating-contact-form) - used in contact.html.
+
+Code snippet 3: [Emailjs Submit form function](https://www.emailjs.com/docs/tutorial/creating-contact-form/) - used in emailjs.js with modifications and reset form data added.
+
 ## Resources
 
 [Code Institute](https://codeinstitute.net/) course material and mini projects form the main resource for this project.

@@ -10,27 +10,27 @@ Recipe Box was developed as a place where users can find, share and keep their f
 
 # Contents
 
-- [User Experience (UX)](#user-experience--ux-)
+- [User Experience (UX)](#user-experience)
 - [Strategy](#strategy)
   * [Developer Objectives](#developer-objectives)
-    + [Target Audience](#target-audience-)
+    + [Target Audience](#target-audience)
   * [User Stories](#user-stories)
     + [New User Stories](#new-user-stories)
     + [Registered User Stories](#registered-user-stories)
     + [Admin User Stories](#admin-user-stories)
     + [Site Owner Stories](#site-owner-stories)
 - [Scope](#scope)
-  * [Functional Specifications](#functional-specifications-)
-  * [Content Requirements](#content-requirements-)
+  * [Functional Specifications](#functional-specifications)
+  * [Content Requirements](#content-requirements)
 - [Structure](#structure)
-  * [Interaction Design](#interaction-design-)
-  * [Information Design](#information-design-)
+  * [Interaction Design](#interaction-design)
+  * [Information Design](#information-design)
 - [Skeleton](#skeleton)
-  * [Wireframes](#wireframes-)
-  * [Difference between final design and original wireframes](#difference-between-final-design-and-original-wireframes-)
+  * [Wireframes](#wireframes)
+  * [Difference between final design and original wireframes](#difference-between-final-design-and-original-wireframes)
 - [Surface](#surface)
-  * [Typography](#typography-)
-  * [Colour scheme](#colour-scheme-)
+  * [Typography](#typography)
+  * [Colour scheme](#colour-scheme)
 - [Features](#features)
   * [Future Features](#future-features)
 - [Technologies Used](#technologies-used)
@@ -39,12 +39,9 @@ Recipe Box was developed as a place where users can find, share and keep their f
   * [Known Bugs](#known-bugs)
 - [Defensive Design](#defensive-design)
 - [Database Collections](#database-collections)
-  * [users](#users-)
-  * [categories](#categories-)
-  * [recipes](#recipes-)
 - [Deployment](#deployment)
-  * [Heroku Deployment](#heroku-deployment-)
-  * [Creating A Local Clone](#creating-a-local-clone-)
+  * [Heroku Deployment](#heroku-deployment)
+  * [Creating A Local Clone](#creating-a-local-clone)
 - [Credits](#credits)
   * [Code](#code)
   * [Resources](#resources)
@@ -53,7 +50,7 @@ Recipe Box was developed as a place where users can find, share and keep their f
   * [Acknowledgements](#acknowledgements)
   * [Disclaimer](#disclaimer)
 
-# User Experience (UX) 
+# User Experience 
 
 # Strategy
 
@@ -61,7 +58,7 @@ Recipe Box was developed as a place where users can find, share and keep their f
 
 To grow my skills as a developer and create a simple easy to use site. Develop the project from its initial concept to the final finished product. To demonstrate my skills of Python and MongoDb, using CRUD functionality so users can create, read, update and delete information from a database. In order to do so I will create a site that allows users to add, share, keep  & update their favourite recipes online. The project will further my knowledge of Python, the Flask framework, Jinja templating language, HTML, CSS, Javascript, MongoDB and their implementation.
 
-### Target Audience:
+### Target Audience
 
 * Home cooks
 * People looking for inspiration and meal ideas
@@ -100,7 +97,7 @@ To grow my skills as a developer and create a simple easy to use site. Develop t
 # Scope
 This will be a Minimal Viable Product containing the most essential core content required.
 
-## Functional Specifications: 
+## Functional Specifications 
 
 * Home
 * All recipes
@@ -119,7 +116,7 @@ This will be a Minimal Viable Product containing the most essential core content
     - Manage Categories - Add, edit & delete categories
     - Manage Users - Edit & delete users
 
-## Content Requirements:
+## Content Requirements
 
 * Logo
 * Navigation
@@ -143,11 +140,11 @@ This will be a Minimal Viable Product containing the most essential core content
 
 # Structure
 
-## Interaction Design: 
+## Interaction Design 
 
 User interactions will be intuitive and consistent throughout the site to ensure it is easy to use and quick to learn for the user. Clickable links and buttons will have a hover effect applied so they are easily identifiable when a user hovers over them.
 
-## Information Design: 
+## Information Design 
 
 Will allow for the prioritisation of the information to be displayed in a clear and concise manner to make it as easy as possible for the user to read and quickly find the information that is most relevant to their needs.
 
@@ -155,7 +152,7 @@ Will allow for the prioritisation of the information to be displayed in a clear 
 
 # Skeleton
 
-## Wireframes:
+## Wireframes
 
 [Home Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/home.pdf)
 
@@ -189,7 +186,7 @@ Will allow for the prioritisation of the information to be displayed in a clear 
 
 [404 Error Page](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/wireframes/404.pdf)
 
-## Difference between final design and original wireframes:
+## Difference between final design and original wireframes
 
 ### Home Page:
 
@@ -234,13 +231,13 @@ Will allow for the prioritisation of the information to be displayed in a clear 
 
 # Surface
 
-## Typography:
+## Typography
 
 PlayFair Display is used for the logo and headings throughout the site. It is well suited for titling. 
 
 Roboto is used for all other text content. It’s forms are largely geometric but also features friendly and open curves, which makes for a more natural reading rhythm.
 
-## Colour scheme: 
+## Colour scheme 
 
 ![color-palette](https://github.com/Sharon-B/Recipe-Box/blob/master/readme-documentation/color-palette/color-palette.png)
 
@@ -467,7 +464,7 @@ As pagination is currently working it was decided to leave these warnings for no
 
 This website was created in the Gitpod development environment. After creating a new repository in GitHub using the Code Institute template, the green Gitpod button was used to initialise the repository in Gitpod. Throughout the process the git commands `git add` and `git commit` were used to store the work in the local Gitpod environment, `git push` would then be used to push the commits to the GitHub repository. From here the website could then deployed via Heroku.
 
-## Heroku Deployment:
+## Heroku Deployment
 
 Before creating the application in Heroku, 
 
@@ -483,7 +480,7 @@ This will save all the dependencies currently used by the app to the requirement
 
 3. `Git add`, `git commit` and `git push` these files to GitHub so they are available to Heroku which will use them to build the app.
 
-### In Heroku:
+### In Heroku
 
 1. Login and click New -> Create New App
 	- Add a name
@@ -503,7 +500,7 @@ This will save all the dependencies currently used by the app to the requirement
 	- Click Deploy Branch
  => Your app was successfully deployed will be displayed with the option to view the app.
 
-## Creating A Local Clone:
+## Creating A Local Clone
 
 You can clone the repository to create a local copy on your computer.
 

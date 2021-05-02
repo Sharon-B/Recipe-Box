@@ -2,37 +2,37 @@
 
 # Contents
 
-- [Code Validators & Auto Prefixer](#code-validators---auto-prefixer-)
-- [Lighthouse from Chrome Dev Tools Testing](#lighthouse-from-chrome-dev-tools-testing-)
-- [Responsiveness Testing](#responsiveness-testing-)
-- [Device Testing](#device-testing-)
-- [Browser Testing](#browser-testing-)
-- [Friends & Family User Testing](#friends---family-user-testing-)
+- [Code Validators](#code-validators)
+- [Lighthouse from Chrome Dev Tools Testing](#lighthouse-from-chrome-dev-tools-testing)
+- [Responsiveness Testing](#responsiveness-testing)
+- [Device Testing](#device-testing)
+- [Browser Testing](#browser-testing)
+- [Friends And Family User Testing](#friends-and-family-user-testing)
 - [Testing User Stories](#testing-user-stories)
   * [Testing New User Stories](#testing-new-user-stories)
   * [Testing Registered Users Stories](#testing-registered-users-stories)
   * [Testing Admin User Stories](#testing-admin-user-stories)
   * [Testing Site Owner Stories](#testing-site-owner-stories)
-- [Manual Testing](#manual-testing-)
-  * [All Pages](#all-pages-)
-  * [Home Page](#home-page-)
-  * [Recipes Page](#recipes-page-)
-  * [Full Recipe Page](#full-recipe-page-)
-  * [Profile Page](#profile-page-)
-  * [Add Recipe Page](#add-recipe-page-)
-  * [Edit Recipe Page](#edit-recipe-page-)
-  * [Register Page](#register-page-)
-  * [Log In Page](#log-in-page-)
-  * [Contact Page](#contact-page-)
-  * [Manage Recipes Page](#manage-recipes-page-)
-  * [Manage Categories Page](#manage-categories-page-)
-  * [Edit Categories Page](#edit-categories-page-)
-  * [Add Category Page](#add-category-page-)
-  * [Manage Users Page](#manage-users-page-)
-  * [Edit Users Page](#edit-users-page-)
-  * [404 Error Page](#404-error-page-)
+- [Manual Testing](#manual-testing)
+  * [All Pages](#all-pages)
+  * [Home Page](#home-page)
+  * [Recipes Page](#recipes-page)
+  * [Full Recipe Page](#full-recipe-page)
+  * [Profile Page](#profile-page)
+  * [Add Recipe Page](#add-recipe-page)
+  * [Edit Recipe Page](#edit-recipe-page)
+  * [Register Page](#register-page)
+  * [Log In Page](#log-in-page)
+  * [Contact Page](#contact-page)
+  * [Manage Recipes Page](#manage-recipes-page)
+  * [Manage Categories Page](#manage-categories-page)
+  * [Edit Categories Page](#edit-categories-page)
+  * [Add Category Page](#add-category-page)
+  * [Manage Users Page](#manage-users-page)
+  * [Edit Users Page](#edit-users-page)
+  * [404 Error Page](#404-error-page)
 
-# Code Validators & Auto Prefixer
+# Code Validators
 
 ## CSS code was passed through Auto Prefixer to add vendor prefixes
 
@@ -106,7 +106,7 @@ devices: iPad 2, iPhone 8, MacBook Pro.
 All aspects of the website mentioned above were manually tested on the following 
 browsers: Chrome, Safari, Mozilla Firefox
 
-# Friends & Family User Testing 
+# Friends And Family User Testing 
 
 The general feedback was that the site looks well and is easy to navigate. 
 Devices used: iPad Pro, iPhone 8 Plus, Laptop (windows running the Chrome browser).

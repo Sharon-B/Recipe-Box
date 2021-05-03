@@ -105,6 +105,14 @@ def register():
             flash("Username already exists, please choose another")
             return redirect(url_for("register"))
 
+        # check if email already exists in db
+        existing_email = mongo.db.users.find_one(
+            {"email": request.form.get("email").lower()})
+
+        if existing_email:
+            flash("Email already registered")
+            return redirect(url_for("register"))
+
         register_user = {
             "username": request.form.get("username").lower(),
             "email": request.form.get("email"),
@@ -527,4 +535,4 @@ def not_found_error(error):
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=False)
+            debug=True)

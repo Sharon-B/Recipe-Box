@@ -172,9 +172,11 @@ def profile(username):
     # Get the session user's username from the database
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
+
     # Once session['user] cookie is truthy return their profile page
     if session["user"]:
-        recipes = mongo.db.recipes.find()
+        recipes = mongo.db.recipes.find(
+            {"added_by": session["user"]}).sort("_id", -1)
         return render_template(
             "profile.html", username=username,
             recipes=recipes, title="Profile")

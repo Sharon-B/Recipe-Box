@@ -483,6 +483,8 @@ Each page was tested and passed under the criteria set out below.
 
 * If username already exists when the form is submitted a ‘Username Already Exists, Please Choose Another’ message is displayed and the page is reloaded.
 
+* If email alredy exists when the form is submitted a 'Email alredy exists' message is displayed and the page is reloaded.
+
 * User must enter an email in the valid format.
 
 * User must enter a password of between 5 - 15 characters.

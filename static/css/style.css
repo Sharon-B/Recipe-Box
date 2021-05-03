@@ -751,7 +751,9 @@ form p {
     }
     
     #hero-image {
-        max-height: 85vh;
+        max-height: 75vh;
+        -o-object-fit: cover;
+           object-fit: cover;
     }
 
     .recipe-card {
